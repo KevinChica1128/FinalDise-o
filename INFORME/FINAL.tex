@@ -1,0 +1,795 @@
+
+% -------------------------------------------------------------------------------------
+% Plantilla de un artículo para publicar en la Revista Colombiana de Estadística
+% *************************************************************************************
+% -------------------------------------------------------------------------------------
+% Establecer primero el idioma principal del artículo, por defecto es español; para
+% utilizar otro idioma, cambiar el comando "\documentclass{revcoles}" por el comando
+% "\documentclass[english]{revcoles}" o por "\documentclass[portuguese]{revcoles}"
+% **** --------------------------------------------------------------------------------
+\documentclass[14pt,report,oneside]{revcoles}
+\usepackage[top=2cm,bottom=1cm]{geometry}
+\usepackage[latin1]{inputenc}
+\labeldocument[
+university = Universidad del Valle,
+program = Programa Académico de Estadística,
+subject = Diseño y Análisis de experimentos,
+city = Cali,
+month = 4,
+year = 2019]
+
+% -------------------------------------------------------------------------------------
+% Espacio reservado para la carga de los paquetes por parte del autor
+% **** --------------------------------------------------------------------------------
+
+
+
+
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio reservado para colocar las definiciones especiales por parte del autor
+% **** --------------------------------------------------------------------------------
+
+
+
+
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio utilizado para colocar las palabras que necesitan partición silábica
+% **** --------------------------------------------------------------------------------
+\hyphenation{Colombia mul-ti-va-ria-do pro-ba-bi-li-dad es-ta-d\'{i}s-ti-ca}
+% //// --------------------------------------------------------------------------------
+\begin{document}
+% -------------------------------------------------------------------------------------
+% Espacio reservado para ingresar el título del artículo
+% "maintitle = " título original del artículo
+% "secondtitle = " título del artículo traducido al idioma alterno
+% "shorttitle = " título corto (opcional) para el encabezado
+% **** --------------------------------------------------------------------------------
+\setlength{\parskip}{-2mm}
+\title[maintitle ={TRABAJO FINAL},
+       %secondtitle = Template for report in a course,
+       shorttitle = TRABAJO FINAL]
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio reservado para ingresar el(los) autor(es) del artículo de forma individual.
+% opción "firstname = " nombres completos de cada autor
+% opción "surname = " primer apellido de cada autor
+% opción "numberinstitution = " número que identifica la institución a la que pertenece
+%         el autor, en caso de haber solo una institución el campo se elimina
+% opción "affiliation = " afiliación o cargo que desempeña el autor en la institución
+% opción "email = " dirección electrónica del autor (preferiblemente institucional)
+% **** --------------------------------------------------------------------------------
+\begin{authors}
+\author[firstname = Kevin Steven,
+        surname = García,
+        code = Código: 1533173,
+        email = kevin.chica@correounivalle.edu.co,
+]
+\author[firstname = Jose Alejandro,
+        surname = Vargas,
+        code = Código: 1525953,
+        email = jose.alejandro.vargas@correounivalle.edu.co,
+]
+\end{authors}
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio reservado para ingresar la información de la(s) institución(es) a la(s)
+% cual(es) pertenece(n) el(los) autor(es)
+% Usar un comando "\institute"  por cada una de las diferentes instituciones.
+% Los campos "subdivision" y "division" son opcionales
+% Los campos "institution", "city" y "country" son obligatorios
+% **** --------------------------------------------------------------------------------
+\begin{comment}
+\begin{institutions}
+     \institute[subdivision = Departamento de Estadística,
+                division = Facultad de Ciencias,
+                institution = Universidad del Valle,
+                city = Cali,
+                country = Colombia]
+\end{institutions}
+\end{comment}
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% CUERPO DEL DOCUMENTO
+% **** --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio reservado para colocar el resumen en el idioma principal y las palabras clave
+% !!No dejar salto de línea entre el resumen y el comando \keywords{.}¡¡
+% **** --------------------------------------------------------------------------------
+\begin{comment}
+\begin{mainabstract}
+Este documento contiene las instrucciones de presentación de los
+trabajos de cursos. Este texto está escrito utilizando \LaTeX\
+como editor según formato adjunto (archivo \emph{Template for Report.tex})
+y puede utilizarse como guía, reemplazando este contenido. Se requieren los
+archivos \emph{revcoles.cls}, \emph{references.bib} y \emph{graph\_example.eps}.%
+%
+\keywords{Formato en \LaTeX\ para documentos, carrera de Estadística}
+\end{mainabstract}
+\end{comment}
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio reservado para colocar el resumen en el idioma secundario y las palabras clave
+% !!No dejar salto de línea entre el resumen y el comando \keywords{.}¡¡
+% **** --------------------------------------------------------------------------------
+\begin{comment}
+\begin{secondaryabstract}
+This document gives the instructions to prepare a \LaTeX\ version of the graduation project of undergraduate in
+Statistics to first semester of 2008. The document is written using a \LaTeX\ format (file \emph{Plantilla para trabajo
+de grado.tex}) and can be used as a guideline just replacing its contents. It is necessary to use also the files
+\emph{revcoles.cls}, \emph{references.bib} and \emph{graph\_example.eps}.
+%
+\keywords{\LaTeX\ format for documents, undergraduate in Statistics}
+\end{secondaryabstract}
+
+\end{comment}% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Título de la primera sección
+% **** --------------------------------------------------------------------------------
+\section{Punto 1}
+~\\Un ingeniero mecánico está investigando el efecto de la velocidad de avance (plg/min) sobre la resistencia a la tensión (lb/plg$^2$), en un proceso de maquinado de piezas de acero. El ingeniero trabaja con tres velocidades (125,150 y 175 plg/min). Los resultados se muestran a continuación:
+
+~\\
+\begin{center}
+\begin{tabular}{ccc}
+\hline 
+125 & 150 & 175 \\ 
+\hline 
+100 & 76 & 108\\
+96 & 80 & 100\\
+92 & 75 & 96\\
+96 & 84 & 98\\
+92 & 82 & 100\\
+\hline 
+\end{tabular} 
+\end{center}
+~\\\textbf{a.}
+\begin{itemize}
+\item[-] Factores: Velocidad de avance(plg/min)
+\item[-] Niveles: 125,150 y 175 plg/min
+\item[-] Unidad experimental: Pieza de acero
+\item[-] Tratamientos: Son 3 tratamientos. 125, 150 y 175 plg/min 
+\item[-] Variable de respuesta: Resistencia a la tensión(lb/plg$^2$)
+\end{itemize}
+
+~\\\textbf{b.}
+~\\Se enumeran las 15 piezas de acero y los 3 tratamientos(velocidades), se obtiene un número al azar del 1 al 15 para las piezas y se obtiene un número del 1 al 3 para las velocidades de avance, la pieza seleccionada se le asigna el tratamiento seleccionado. Así se continua hasta que los 3 tratamientos cuenten con 5 piezas de acero cada uno. En este caso se esta aleatorizando tanto los individiduos como los tratamientos en la asignación.
+
+~\\El modelo estadístico es:
+$$y_{ij}=\mu+\tau_i+\varepsilon_{ij}  \;\;\;\; i=1,2,3 \;\;\;\; j=1,2,3,4,5$$
+~\\Supuestos: $$\varepsilon_{ij}\simeq N(0,\sigma^2)$$
+$$E[\varepsilon_{ij}]=0  \;\; \forall_{ij}$$
+$$V[\varepsilon_{ij}]=\sigma^2  \;\; \forall_{ij}$$
+$$Cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;  \forall_{i\neq i' \;\;\; \wedge \;\;\; j\neq j'}$$
+~\\Donde:
+~\\$y_{ij}$ es la resistencia a la tensión en lb/plg$^2$ de la pieza de acero j a una velocidad de avance i
+~\\$\mu$ es la media general de la resistencia a la tensión sin tener en cuenta la velocidad de avance
+~\\$\tau_i$ es el efecto del i-ésimo nivel de la velocidad de avance sobre la resistencia a la tensión en lb/plg$^2$
+~\\$\varepsilon_{ij}$ es el error aleatorio debido al i-ésima nivel de velocidad en la j-ésima replica
+
+~\\\textbf{c.}
+~\\Para el análisis exploratorio de datos se realizó la siguiente tabla de estadísticas descriptivas:
+
+~\\
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Estadístico & 125 & 150 & 175  \\ 
+\hline 
+Min & 92 & 75 & 96 \\ 
+1st Cuartil & 92 & 76 & 98 \\ 
+Mediana & 96 & 80 & 100 \\ 
+Media & 95.2 & 79.4 & 100.4 \\ 
+3rd Cuartil & 96 & 82 & 100 \\ 
+Maximo & 100 & 84 & 108 \\ 
+Desv. Estandar & 3.34664 & 3.847077 & 4.560702 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+~\\En esta tabla podemos observar que en general, la resistencia a la tensión de las piezas de acero es parecida para las velocidades de avance de 125 y 175(plg/min), pero para la velocidad de avance de 150(plg/min) se puede notar una disminución general en la resistencia a la tensión de las piezas. La mayor resistencia se encontró en una pieza expuesta a una velocidad de avance de 175 plg/min, la cual fue de 108 lb/plg$^2$, y la menor resistencia se encontró en una pieza expuesta a una velocidad de avance de 150 plg/min, la cual fue de 75 lb/plg$^2$. En cuanto a la variabilidad, el tratamiento que tiene mayor variabilidad en los efectos, es el de una velocidad de avance de 175, presenta una desviación estándar de 4.5607, y el tratamiento que tiene menor variabilidad en los efectos es el de una velocidad de avance de 125, presenta una desviación estándar de 3.3466.
+
+~\\También se realizó el siguiente gráfico de cajas:
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.48]{FigurasUV/1.pdf}
+\end{figure}
+~\\En este gráfico confirmamos lo dicho anteriormente, se observar que los tratamientos 1 y 3 son más parecidos entre si en cuanto a sus efectos, y el tratamiento 2 parece tener un efecto más bajo en cuanto a la resistencia a la tensión de las piezas de acero.
+
+
+~\\\textbf{d.}
+~\\Hipótesis: $$H_0:\tau_1=\tau_2=\tau_3$$
+$$H_a:Al\; menos\; una\; de\; estas\; igualdades\; no\; se\; cumple$$
+\resizebox{16.5cm}{!} {
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Fuente de Variación & Grados de Libertad & Suma de Cuadrados & Cuadrados Medios & F & Pr>F\\ 
+\hline 
+$\tau$ & 2 & $SC_{\tau}=1196.1333$ & $CM_{trat}=598.0666$ & 38.3376 & 0.00001 \\ 
+Error & 12 & $SC_{error}=187.2$ & $CM_{error}=15.6$ &  & \\ 
+Total & 14 & $SC_{total}=1383.3333$ &  &  & \\ 
+\hline 
+\end{tabular} 
+}
+~\\
+
+~\\A un nivel de significancia $\alpha=0.05$ se rechaza $H_0$ y concluimos que hay diferencias significativas entre los efectos de las velocidades de avance sobre la resistencia a la tensión.
+
+~\\\textbf{e.}
+~\\Ejercería el control local del experimento asegurándome que las piezas de acero sean lo más homogéneas posibles para que la resistencia a la tensión dependa de la velocidad de avance y no de las cualidades o características de la pieza. También me aseguraría de que la maquina este igualmente calibrada al inicio de cada tratamiento, es decir, que las velocidades de avance realmente sean las establecidas (125,150 y 175 plg/min).
+
+~\\Para evaluar el control local del experimento nos centramos en la varianza estimada y en el coeficiente de variación
+$$\sigma^2=15.6 \;\;\; \bar{y}_{..}=91.6666 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{..}}=0.04308 \cdot 100\% \simeq 4.31\%$$
+
+~\\Dado que la desviación estándar $\sigma=3.9496$ es pequeña y el coeficiente de variación también lo es, concluimos que hubo un buen control local en el experimento.
+
+~\\\textbf{f.}
+~\\Sobre los errrores se tienen los siguientes supuestos:
+$$\varepsilon_{ij}\approx N(0,\sigma^2)  \rightarrow \;\; Normalidad$$
+$$ E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij} \rightarrow \;\; Correcta\; especificacion$$
+$$V[\varepsilon_{ij}]=\sigma^2 \;\;\; \forall_{ij}\rightarrow \;\; Homocedasticidad$$ 
+$$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \wedge \;\;\; \forall_{j\neq j'} \rightarrow \;\; Independencia$$
+\begin{itemize}
+\item[Normalidad:]
+~\\Para verificar el supuesto de normalidad en los errores, se hicieron pruebas gráficas(histograma y Q-Q plot) y estadísticas, dentro de la pruebas estadísticas se realizaron pruebas para analizar la asimetria(test D'Agostino) y la curtosis(test de Anscombe-Glynn) individualmente, y se realizó la prueba de normalidad Shapiro-Wilk, para evaluar conjuntamente la normalidad de los residuos.
+
+~\\En las gráficas  se observa un posible incumplimiento de la normalidad, sobre todo en el histograma, se puede ver que las barras no coinciden con la curva teórica de la normal, cabe aclarar que la prueba gráfica no es muy confiable porque depende de la experiencia del investigador, por ello nos vamos a centrar en los resultados de las pruebas estadísticas, ya que estas son mas objetivas.
+
+\pagebreak
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/N1.pdf}
+\end{figure}
+
+~\\Los resultados para cada una de las pruebas realizadas fueron:
+\begin{itemize}
+\item[Test D'Agostino:] $$H_0:Los \; datos\; no\; tienen\; asimetria$$
+$$H_a:Los\; datos\; tienen\; asimetria$$
+$$skew = 0.5694, z = 1.1306, p-value = 0.2582$$
+
+~\\Como el p-valor=0.2582 es superior a nuestro nivel de significancia(0.05), no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos tienen asimetría. Lo cuál es un buen indicio en cuanto a la normalidad de los errores.
+
+\item[Test de Anscombe-Glynn:]Sabemos que la curtosis en una distribución normal es 3, por ello se establecen las siguientes hipótesis en este test.
+$$H_0:La\; curtosis\; es\; igual\; a\; 3$$
+$$H_a:La\; curtosis\;no\; es\; igual\; a\; 3$$
+$$kurt = 2.34890, z = -0.19307, p-value = 0.8469$$
+
+~\\Como el p-valor=0.8469 es superior a nuestro nivel de significancia, no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos no tienen una curtosis igual a 3. Lo cuál complementando la prueba anterior, es muy probable que los errores presenten una distribución normal.
+
+\item[Test Shapiro-Wilk:]$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
+$$H_0:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
+$$W = 0.92696, p-value = 0.2457$$
+
+~\\Como el p-valor=0.2457 es superior a nuestro nivel de significancia, no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos no provienen de una distribución normal. Lo cual junto con las dos pruebas anteriores, nos indica que este supuesto de normalidad en los errores parece cumplirse.
+\end{itemize}
+
+\pagebreak
+\item[Homocedasticidad:]
+~\\Para analizar la homocedasticidad se realizó una prueba gráfica(valores ajustados vs residuos) y una prueba estadísticas(Test de Levene)
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.43]{FigurasUV/H1.pdf}
+\end{figure}
+~\\Podemos observar que la varianza en los distintos grupos (podemos ver que se forman tres grupos que corresponden a los valores ajustados de los tres tratamientos) es muy parecida, asumiendo que el último punto del tercer grupo es un punto atípico, no se observar un grupo con una mayor dispersión que el resto. Por lo cuál gráficamente se podría decir que el supuesto de homocedasticidad en los errores parece cumplirse.
+
+~\\Los resultados la prueba realizada fueron:
+\begin{itemize}
+\item[Test de Levene:] $$H_0:La \; varianza\; de\; los\; grupos \; no \;son \; diferentes\; (iguales)$$
+$$H_a:La \; varianza\; de\; los\; grupos \; son \; diferentes$$
+$$ F value=0.0924 , Pr(>F)=0.9124$$
+\end{itemize}
+~\\Se utilizó el test de Levene ya que este no es sensible a las desviaciones de la normalidad como el de Bartlett. Como el p valor=0.9124 es superior a cualquier nivel de significancia de los usualmente establecidos (0.01,0.05,0.1) no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que la varianza de los grupos(3 grupos en este caso) son diferentes, por lo tanto, el supuesto de homocedasticidad en los errores parece cumplirse.
+
+\pagebreak
+\item[Independencia:]
+~\\Para analizar el supuesto de independencia en los errores, se realizaron dos pruebas gráficas(correlograma de los residuos y residuo t vs residuo anterior (t-1)) y dos pruebas estadísticas (test de Rachas y test de Durbin-Watson).
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/I1.pdf}
+\end{figure}
+~\\En la primera gráfica, podemos observar que la correlación en el retardo 1, es decir, la correlación entre el error i y el anterior i-1, es muy baja(casi nula), pero la correlación en el retardo 4, es decir, la correlación entre el error i y el  i-4, es de aproximadamente -0.45. Esta correlación se podría considerar un poco elevada, pero no sobrepasa los intervalos generados (lineas azules) para la correlación. En la segunda gráfica, no se observa una tendencia clara entre el error i y el error i-1, esto nos dice que no existe una correlación clara entre ellos. Podemos concluir que el supuesto de independencia en los errores parece no incumplirse.
+
+\begin{itemize}
+\item[Test de rachas:] $$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independientes)$$
+$$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
+$$Standard \; Normal = -0.25129, p-value = 0.8016$$
+~\\Como el p valor=0.8016 es mayor que nuestro nivel de significancia, no rechazamos la hipótesis nula y concluimos que no hay evidencia suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
+
+\item[Test de Durbin-Watson:] $$H_0:No\; existe \; autocorrelación \; en \; la \; muestra \;(\rho=0)$$
+$$H_a:Existe \; autocorrelación \; en \; la \; muestra \; (\rho\neq 0)$$
+$$DW = 1.6188, p-value = 0.1682$$
+~\\Como el p valor=0.1682 es mayor que nuestro nivel de significancia, no rechazamos la hipótesis nula y concluimos que no hay evidencia suficiente para decir que existe autocorrelación en los residuales, en otras palabras, no podemos decir que los residuales no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
+\end{itemize}
+\end{itemize}
+
+~\\\textbf{g.}
+~\\Observando las estadísticas descriptivas y el diagrama de cajas realizado en el literal c, a priori, se podría pensar que las velocidades de avance 125 y 175 plg/min generan un efecto diferente que la velocidad de avance de 150 plg/min, sobre la resistencia a la tensión de las piezas de acero. Dado esto, se plantea la siguiente hipótesis nula
+
+$$H_0:2\tau_2-\tau_1-\tau_3=0$$
+
+~\\Bajo la hipótesis nula, tenemos que el estadístico de prueba es:
+$$F=\frac{(\sum\limits_{i=1}^t a_i\bar{y_{i.}})^2}{{\hat{\sigma^2}\sum\limits_{i=1}^t \frac{{a_i}^2}{r_i}}}$$
+
+$$\rightarrow F=\frac{(-36.8)^2}{1.2\cdot 15.6}=72.341880$$
+
+~\\Como $F_{0.95(1,12)}=4.7472 < F_{cal}=72.341880$, se rechaza $H_0$ y concluimos que si hay diferencias significativas en relación a la resistencia a la tensión de las piezas de acero, entre la velocidad de avance de 150 plg/min y las velocidades de avance de 125 y 175 plg/min.
+
+~\\Con el resultado anterior sabemos que la velocidad de avance de 150 plg/min tiene un efecto distinto(probablemente inferior) en cuanto a la resistencia a la tensión de las piezas de acero, pero también nos gustaría saber si entre los efectos de las velocidades de avance de 125 y 175 plg/min también existen diferencias, para ello planteamos la siguiente hipótesis.
+
+$$H_0:\tau_1-\tau_3=0$$
+
+$$\rightarrow F=\frac{(-5.2)^2}{0.4\cdot 15.6}=4.3333$$
+
+~\\Como $F_{0.95(1,12)}=4.7472 > F_{cal}=4.3333$, no se rechaza $H_0$ y concluimos que no hay evidencia estadística para decir que existen diferencias entre el efecto de la velocidad de avance 125 plg/min y el efecto de la velocidad de avance 175 plg/min sobre la resistencia a la tensión en el proceso de maquinado de las piezas de acero.
+\pagebreak
+~\\\textbf{h.}
+~\\Las diferencias entre los promedios de los tratamientos es:
+$$Velocidad \;\; 1(125)- Velocidad \;\; 2(150)=95.2-79.4=15.8$$
+$$Velocidad \;\; 1(125)- Velocidad \;\; 3(175)=95.2-100.4=5.2$$
+$$Velocidad \;\; 2(150)- Velocidad \;\; 3(175)=79.4-100.4=21$$
+
+~\\Viendo las diferencias, nos parece razonable asumir una diferencia mínima de 15 lb/plg$^2$ para decir que existen diferencias entre los tratamientos, entonces, se tienen dos formulas esenciales para calcular la potencia del experimento:
+$$\hat{\lambda}=\frac{\sum\limits_{i=1}^t (\tau_i - \bar{\tau})^2 r_i}{2\hat{\sigma^2}} \;\;\;\; , \;\;\;\; \hat{\varPhi}=\sqrt{\frac{2\hat{\lambda}}{t}}$$
+
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^3 (15)^2 r_i}{2\hat{\sigma^2}}=\frac{3\cdot(15)^2 \cdot 5}{2(15.6)}=108.17307$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(108.17307)}{3}}=\sqrt{72.1154}=8.4920$$
+
+~\\Con la tabla de la beta no central con $f_1=2$ y $f_2=12$ tenemos que:
+$$Pr(Error \;\; tipo \;\; II)=0$$
+$$\rightarrow potencia = 1-Pr(Error \;\; tipo \;\; II)=1$$
+
+~\\El 100\% de las veces estaríamos rechazando la hipótesis nula cuando esta es falsa, en otras palabras, el 100\% de las veces, encontraríamos diferencias entre los tratamientos si de verdad las hay.
+
+\section{Punto 2}
+~\\Un ingeniero de alimentos tiene como objetivo determinar si los métodos de colado o tamizado tienen influencia sobre el rendimiento del almidón agrio de yuca. Se trabaja con las variedades MBra 12 y con tres métodos de colado o tamizado:
+
+~\\
+\begin{center}
+\begin{tabular}{ccc}
+\hline 
+Manual & Método mecánico continúo & Método mecánico discontinúo \\ 
+\hline 
+17.6 & 16.9 & 19.3\\
+18.9 & 15.3 & 21.1\\
+16.3 & 17.1 & 19.8\\
+17.4 & 18.6 & 18.9\\
+18.0 & 17.2 & 20.0\\
+\hline 
+\end{tabular} 
+\end{center}
+
+~\\\textbf{a.}
+~\\El modelo estadístico es:
+$$y_{ij}=\mu+\tau_i+\varepsilon_{ij}  \;\;\;\; i=1,2,3 \;\;\;\; j=1,2,3,4,5$$
+~\\Supuestos: $$\varepsilon_{ij}\simeq N(0,\sigma^2)$$
+$$E[\varepsilon_{ij}]=0  \;\; \forall_{ij}$$
+$$V[\varepsilon_{ij}]=\sigma^2  \;\; \forall_{ij}$$
+$$Cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;  \forall_{i\neq i' \;\;\; \wedge \;\;\; j\neq j'}$$
+~\\Donde:
+~\\$y_{ij}$ es el rendimiento en Kg de la parcela j con el método de colado o tamizado i
+~\\$\mu$ es la media general del rendimiento en Kg sin tener en cuenta el método de colado o tamizado
+~\\$\tau_i$ es el efecto del i-ésimo nivel del método de colado sobre el rendimiento en Kg por parcela
+~\\$\varepsilon_{ij}$ es el error aleatorio debido al i-ésimo tratamiento en la j-ésima replica
+
+~\\\textbf{b.}
+~\\Hipótesis: $$H_0:\tau_1=\tau_2=\tau_3$$
+$$H_a:Al\; menos\; una\; de\; estas\; igualdades\; no\; se\; cumple$$
+\resizebox{16.5cm}{!} {
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Fuente de Variación & Grados de Libertad & Suma de Cuadrados & Cuadrados Medios & F & Pr>F\\ 
+\hline 
+$\tau$ & 2 & $SC_{\tau}=21.628$ & $CM_{trat}=10.814$ & 10.9342 & 0.00198 \\ 
+Error & 12 & $SC_{error}=11.868$ & $CM_{error}=0.989$ &  & \\ 
+Total & 14 & $SC_{total}=33.496$ &  &  & \\ 
+\hline 
+\end{tabular} 
+}
+~\\
+
+~\\A un nivel de significancia $\alpha=0.05$ se rechaza $H_0$ y concluimos que hay diferencias significativas entre los efectos del método de tamizado sobre el rendimiento del almidón de yuca.
+
+~\\\textbf{c.}
+~\\Ejercería el control local del experimento, buscando que en cada tamizaje de cada parcela la herramienta a utilizar este en igualdad de condiciones para asegurarnos que el rendimiento se deba al método y no al desgaste que la herramienta podría tener, además de esto las parcelas deben ser asignadas a cada método o el método a cada parcela de forma que la posición de las parcelas no se vea incluida ya que esto puede traer sesgos donde el rendimiento se deba a la ubicación de la parcela y no al método de colado.
+
+~\\Para evaluar el control local del experimento nos centramos en la varianza estimada y en el coeficiente de variación
+$$\sigma^2=0.989 \;\;\; \bar{y}_{..}=18.16 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{..}}=0.0547 \cdot 100\% \simeq 5.476\%$$
+
+~\\Dado que la desviación estándar $\sigma=0.9945$ es pequeña y el coeficiente de variación también lo es, concluimos que hubo un buen control local en el experimento.
+
+~\\\textbf{d.}
+\begin{itemize}
+\item[Normalidad:]
+~\\Para verificar el supuesto de normalidad en los errores, se hicieron pruebas gráficas(histograma y Q-Q plot) y estadísticas, dentro de la pruebas estadísticas se realizaron pruebas para analizar la asimetria(test D'Agostino) y la curtosis(test de Anscombe-Glynn) individualmente, y se realizó la prueba de normalidad Shapiro-Wilk, para evaluar conjuntamente la normalidad de los residuos.
+
+~\\En las gráficas  se observa un posible incumplimiento de la normalidad, se puede ver que las barras de las colas sobrepasan un poco la curva teórica de la normal, y en el QQ-plot se observa que en ambas colas los puntos no están en la recta de los cuantiles teóricos, cabe aclarar que la prueba gráfica no es muy confiable porque depende de la experiencia del investigador, por ello nos vamos a centrar en los resultados de las pruebas estadísticas, ya que estas son mas objetivas.
+
+\pagebreak
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/N2.pdf}
+\end{figure}
+
+~\\Los resultados para cada una de las pruebas realizadas fueron:
+\begin{itemize}
+\item[Test D'Agostino:] $$H_0:Los \; datos\; no\; tienen\; asimetria$$
+$$H_a:Los\; datos\; tienen\; asimetria$$
+$$skew = -0.031147, z = -0.063304, p-value = 0.9495$$
+
+~\\Como el p-valor=0.9495 es superior a nuestro nivel de significancia, no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos tienen asimetría. Lo cuál es un buen indicio en cuanto a la normalidad de los errores.
+
+\item[Test de Anscombe-Glynn:]Sabemos que la curtosis en una distribución normal es 3, por ello se establecen las siguientes hipótesis en este test.
+$$H_0:La\; curtosis\; es\; igual\; a\; 3$$
+$$H_a:La\; curtosis\;no\; es\; igual\; a\; 3$$
+$$kurt = 2.57990, z = 0.16259, p-value = 0.8708$$
+
+~\\Como el p-valor=0.8708 es superior a nuestro nivel de significancia, no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos no tienen una curtosis igual a 3. Lo cuál complementando la prueba anterior, es muy probable que los errores presenten una distribución normal.
+
+\item[Test Shapiro-Wilk:]$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
+$$H_0:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
+$$W = 0.95297, p-value = 0.5725$$
+
+~\\Como el p-valor=0.5725 es superior a nuestro nivel de significancia, no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos no provienen de una distribución normal. Lo cual junto con las dos pruebas anteriores, nos indica que este supuesto de normalidad en los errores parece cumplirse.
+\end{itemize}
+
+\pagebreak
+\item[Homocedasticidad:]
+~\\Para analizar la homocedasticidad se realizó una prueba gráfica(valores ajustados vs residuos) y una prueba estadísticas(Test de Levene)
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.43]{FigurasUV/H2.pdf}
+\end{figure}
+~\\Podemos observar que la varianza en los distintos grupos (podemos ver que se forman tres grupos que corresponden a los valores ajustados de los tres tratamientos) es muy parecida, un poco más para el primero, pero no se observar una diferencia considerable. Por lo cuál gráficamente se podría decir que el supuesto de homocedasticidad en los errores parece cumplirse.
+
+~\\Los resultados la prueba realizada fueron:
+\begin{itemize}
+\item[Test de Levene:] $$H_0:La \; varianza\; de\; los\; grupos \; no \;son \; diferentes\; (iguales)$$
+$$H_a:La \; varianza\; de\; los\; grupos \; son \; diferentes$$
+$$ F value=0.0653  , Pr(>F)=0.9372$$
+\end{itemize}
+~\\Se utilizó el test de Levene ya que este no es sensible a las desviaciones de la normalidad como el de Bartlett. Como el p valor=0.9372 es superior a cualquier nivel de significancia de los usualmente establecidos (0.01,0.05,0.1) no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que la varianza de los grupos(3 grupos en este caso) son diferentes, por lo tanto, el supuesto de homocedasticidad en los errores parece cumplirse.
+
+\pagebreak
+\item[Independencia:]
+~\\Para analizar el supuesto de independencia en los errores, se realizaron dos pruebas gráficas(correlograma de los residuos y residuo t vs residuo anterior (t-1)) y dos pruebas estadísticas (test de Rachas y test de Durbin-Watson).
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/I2.pdf}
+\end{figure}
+~\\En la primera gráfica, podemos observar que la correlación en el retardo 1, es decir, la correlación entre el error i y el anterior i-1, es baja, pero la correlación en el retardo 2 y 4, es decir, la correlación entre el error i y el i-2, y el error i y el  i-4, son de aproximadamente -0.5. Esta correlación se podría considerar un poco elevada, y además sobrepasa los intervalos generados (lineas azules) para la correlación. En la segunda gráfica, no se observa una tendencia clara entre el error i y el error i-1, pero centrándonos en la primera gráfica podemos decir que no esta claro el cumplimiento de este supuesto.
+
+\begin{itemize}
+\item[Test de rachas:] $$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independientes)$$
+$$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
+$$Standard \; Normal = 0.82565, p-value = 0.409$$
+~\\Como el p valor=0.409 es mayor que nuestro nivel de significancia, no rechazamos la hipótesis nula y concluimos que no hay evidencia suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
+
+\item[Test de Durbin-Watson:] $$H_0:No\; existe \; autocorrelación \; en \; la \; muestra \;(\rho=0)$$
+$$H_a:Existe \; autocorrelación \; en \; la \; muestra \; (\rho\neq 0)$$
+$$DW = 2.334, p-value = 0.9024$$
+~\\Como el p valor=0.9024 es mayor que nuestro nivel de significancia, no rechazamos la hipótesis nula y concluimos que no hay evidencia suficiente para decir que existe autocorrelación en los residuales, en otras palabras, no podemos decir que los residuales no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
+\end{itemize}
+\end{itemize}
+
+~\\\textbf{e.}
+~\\Las diferencias entre los promedios de los tratamientos son:
+\begin{center}
+~\\Manual - Mecánico continúo= 17.64 - 17.02=0.62
+~\\Manual - Mecánico discontinúo= 17.64 - 19.82=2.18
+~\\Mecánico continúo - Mecánico discontinúo= 17.02 - 19.82=2.8
+\end{center}
+
+~\\Viendo las diferencias, nos parece razonable asumir una diferencia mínima de 2 kg para decir que existen diferencias entre los tratamientos, entonces, se tienen dos formulas esenciales para calcular la potencia del experimento:
+$$\hat{\lambda}=\frac{\sum\limits_{i=1}^t (\tau_i - \bar{\tau})^2 r_i}{2\hat{\sigma^2}} \;\;\;\; , \;\;\;\; \hat{\varPhi}=\sqrt{\frac{2\hat{\lambda}}{t}}$$
+
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^3 (2)^2 r_i}{2\hat{\sigma^2}}=\frac{3\cdot(2)^2 \cdot r_i}{2(0.989)}=\frac{12 r_i}{1.978}=6.0667 r_i$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(6.0667) r_i}{3}}=\sqrt{4.0445 r_i}$$
+
+~\\Estableciendo una potencia mínima de 0.90, tenemos la siguiente tabla de análisis de sensibilidad para determinar nuestro tamaño del experimento, comenzando con $r_i=2$ replicas:
+~\\
+\begin{center}
+\begin{tabular}{|c|cc|}
+\hline 
+r & 2 & 3 \\ 
+\hline 
+$n_1=t-1$ & 2 & 2 \\ 
+$n_2=n-t$ & 3 & 6 \\  
+$\hat\varPhi$ & 2.844 & 3.483 \\  
+P(Error II) & 0.3715 & 0.027 \\ 
+$\beta=Potencia$ & 0.6285 & 0.973 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+~\\
+~\\El número de replicas adecuado para tener una potencia superior al 90\% es de 3 (con 3 replicas se obtiene una potencia de 97.3\%)
+\section{Punto 3}
+~\\\textbf{a.}
+$2\tau_1-\tau_2-\tau_3$
+
+~\\Por el teorema 2, $\vec{\lambda'}\vec{\beta}$ es estimable si y solo si existe un vector $\vec{r'}$ tal que $\vec{r'}x'x=\lambda'$ o $x'x\vec{r}=\lambda$.
+
+\[
+\left(
+\begin{array}{cccc}
+r_1 & r_2 & r_3 & r_4 \\
+\end{array}
+\right)
+\cdot \left(
+\begin{array}{cccc}
+15&5&5&5 \\
+5&5&0&0 \\
+5&0&5&0 \\
+5&0&0&5 \\
+\end{array}
+\right)
+= \left(
+\begin{array}{ccccc}
+0&2&-1&-1 \\
+\end{array}
+\right)
+\] 
+
+~\\El sistema queda:
+$$15r_1+5r_2+5r_3+5r_4=0 \;\;\;\; (1)$$
+
+$$5r_1+5r_2=2 \;\;\;\; (2)$$
+
+$$5r_1+5r_3=-1 \;\;\;\; (3)$$
+
+$$5r_1+5r_4=-1 \;\;\;\; (4)$$
+
+
+
+~\\de (2): $5r_2=2-5r_1 \;\;\;  \to  r_2=\frac{2}{5}-r_1$
+~\\de (3): $5r_3=-1-5r_1 \;\;\;  \to  r_3=-\frac{1}{5}-r_1$
+~\\de (4): $5r_4=-1-5r_1 \;\;\;  \to  r_4=-\frac{1}{5}-r_1$
+
+~\\Entonces, un vector r el cuál resuelve el sistema es:
+\[\vec{r}'=
+\left(
+\begin{array}{cccc}
+0&\frac{2}{5}&-\frac{1}{5}&-\frac{1}{5}\\
+\end{array}
+\right)\]
+
+$\therefore$ La función propuesta en el punto a; $2\tau_1-\tau_2-\tau_3$ es estimable.
+
+
+~\\\textbf{b.}
+$\tau_2-\tau_3$
+
+~\\Por el teorema 2:
+
+\[
+\left(
+\begin{array}{cccc}
+r_1 & r_2 & r_3 & r_4 \\
+\end{array}
+\right)
+\cdot \left(
+\begin{array}{cccc}
+15&5&5&5 \\
+5&5&0&0 \\
+5&0&5&0 \\
+5&0&0&5 \\
+\end{array}
+\right)
+= \left(
+\begin{array}{ccccc}
+0&0&1&-1 \\
+\end{array}
+\right)
+\] 
+
+~\\El sistema queda:
+$$15r_1+5r_2+5r_3+5r_4=0 \;\;\;\; (1)$$
+
+$$5r_1+5r_2=0 \;\;\;\; (2)$$
+
+$$5r_1+5r_3=1 \;\;\;\; (3)$$
+
+$$5r_1+5r_4=-1 \;\;\;\; (4)$$
+
+
+
+~\\de (2): $5r_2=-5r_1 \;\;\;  \to  r_2=-r_1$
+~\\de (3): $5r_3=1-5r_1 \;\;\;  \to  r_3=\frac{1}{5}-r_1$
+~\\de (4): $5r_4=-1-5r_1 \;\;\;  \to  r_4=-\frac{1}{5}-r_1$
+
+~\\Entonces, un vector r el cuál resuelve el sistema es:
+\[\vec{r}'=
+\left(
+\begin{array}{cccc}
+0&0&\frac{1}{5}&-\frac{1}{5}\\
+\end{array}
+\right)\]
+
+$\therefore$ La función propuesta en el punto b; $\tau_2-\tau_3$ es estimable.
+
+~\\\textbf{c.}
+$\tau_1+\tau_2$
+
+~\\Por el teorema 2:
+
+\[
+\left(
+\begin{array}{cccc}
+r_1 & r_2 & r_3 & r_4 \\
+\end{array}
+\right)
+\cdot \left(
+\begin{array}{cccc}
+15&5&5&5 \\
+5&5&0&0 \\
+5&0&5&0 \\
+5&0&0&5 \\
+\end{array}
+\right)
+= \left(
+\begin{array}{ccccc}
+0&1&1&0 \\
+\end{array}
+\right)
+\] 
+
+~\\El sistema queda:
+$$15r_1+5r_2+5r_3+5r_4=0 \;\;\;\; (1)$$
+
+$$5r_1+5r_2=1 \;\;\;\; (2)$$
+
+$$5r_1+5r_3=1 \;\;\;\; (3)$$
+
+$$5r_1+5r_4=0 \;\;\;\; (4)$$
+
+
+
+~\\de (2): $5r_2=1-5r_1 \;\;\;  \to  r_2=\frac{1}{5}-r_1$
+~\\de (3): $5r_3=1-5r_1 \;\;\;  \to  r_3=\frac{1}{5}-r_1$
+~\\de (4): $5r_4=-5r_1 \;\;\;  \to  r_4=-r_1$
+
+~\\Entonces, si $r_1=0  \;\; \to r_2=\frac{1}{5} \;\; r_3=\frac{1}{5} \;\; r_4=0 $
+
+~\\Pero, reemplazando estos valores en (1):
+$$15(0)+5(\frac{1}{5})+5(\frac{1}{5})+5(0)=0 $$
+$$2\neq 0$$
+
+
+$\therefore$ La función propuesta en el punto c; $\tau_1+\tau_2$ no es estimable.
+
+~\\\textbf{d.}
+~\\Según el teorema 3, el mejor estimador lineal insesgado de $\vec{\lambda'}\vec{\beta}$ es $\vec{r'}x'y$
+
+\begin{itemize}
+\item[a.]
+
+\[r'x'y=
+\left(
+\begin{array}{cccc}
+0 & \frac{2}{5} & -\frac{1}{5} & -\frac{1}{5} \\
+\end{array}
+\right)
+\cdot \left(
+\begin{array}{c}
+y_{..} \\
+y_{1.} \\
+y_{2.} \\
+y_{3.} \\
+\end{array}
+\right)
+= \frac{2}{5}y_{1.}-\frac{1}{5}y_{2.}-\frac{1}{5}y_{3.}
+\] 
+
+$$=2\bar{y_{1.}}-\bar{y_{2.}}-\bar{y_{3.}}$$
+
+\item[b.]
+
+\[r'x'y=
+\left(
+\begin{array}{cccc}
+0 & 0 & \frac{1}{5} & -\frac{1}{5} \\
+\end{array}
+\right)
+\cdot \left(
+\begin{array}{c}
+y_{..} \\
+y_{1.} \\
+y_{2.} \\
+y_{3.} \\
+\end{array}
+\right)
+= \frac{1}{5}y_{2.}-\frac{1}{5}y_{3.}
+\] 
+
+$$=\bar{y_{2.}}-\bar{y_{3.}}$$
+\item[c.]No es estimable.
+\end{itemize}
+
+~\\\textbf{e.}
+~\\En el punto anterior tenemos los mejores estimadores lineales insesgados para cada una de las funciones, reemplazando los valores para encontrar la estimación, tenemos:
+\begin{itemize}
+\item[a.]
+$$\widehat{2\tau_1-\tau_2-\tau_3}=\bar{y_{1.}}-\bar{y_{2.}}-\bar{y_{3.}}=-1.56$$
+
+~\\Con esta estimación podemos concluir que se produce 1.56 kg menos de rendimiento del almidón de yuca cuando se usa el método de tamizado manual en lugar de alguno de los métodos mecánicos, ya sea continúo o discontinúo.
+\item[b.]
+$$\widehat{\tau_2-\tau_3}=\bar{y_{2.}}-\bar{y_{3.}}=-2.8$$
+
+~\\Con esta estimación concluimos que se produce 2.8 kg menos de rendimiento del almidón de yuca cuando se usa el método de tamizado mecánico continúo en lugar del método mecánico discontinúo.
+\item[c.]
+No es estimable
+\end{itemize}
+
+
+~\\\textbf{f.}
+~\\Teorema: Hay exactamente k funciones estimables linealmente independientes, donde k es el rango de x.
+
+~\\Dado el teorema anterior, el rango de x es igual a 3, por lo tanto, se podrían obtener 3 funciones estimables linealmente independientes.
+
+~\\\textbf{g.}
+~\\El teorema 4, establece que cualquier vector $\vec{r}$ produce la misma estimación insesgada de $\vec{\lambda}'\vec{\beta}$
+
+~\\Para la función del literal a, $2\tau_1-\tau_2-\tau_3$, la cual es estimable y tenemos una estimación de -1.56, encontraremos otro vector $\vec{r}$ y calcularemos una nueva estimación.
+
+~\\Otro vector sería $\vec{r}=[1 \;\; -\frac{3}{5} \;\; -\frac{6}{5} \;\; -\frac{6}{5}]$
+
+~\\Obteniendo una estimación con este nuevo vector, tenemos:
+
+\[r'x'y=
+\left(
+\begin{array}{cccc}
+1 & -\frac{3}{5} & -\frac{6}{5} & -\frac{6}{5} \\
+\end{array}
+\right)
+\cdot \left(
+\begin{array}{c}
+y_{..} \\
+y_{1.} \\
+y_{2.} \\
+y_{3.} \\
+\end{array}
+\right)
+= y_{..}-\frac{3}{5}y_{1.}-\frac{6}{5}y_{2.}-\frac{6}{5}y_{3.}
+\] 
+
+$$=y_{..}-3\bar{y_{1.}}-6\bar{y_{2.}}-6\bar{y_{3.}}$$
+
+$$=272.4-3(17.64)-6(17.02)-6(19.82)=-1.56$$
+
+~\\Obteniendo así, la misma estimación anterior, lo cual comprueba el teorema 4.
+
+~\\Para la función del literal b, $\tau_2-\tau_3$, la cual es estimable y tenemos una estimación de -2.8, encontraremos otro vector $\vec{r}$ y calcularemos una nueva estimación.
+
+~\\Otro vector sería $\vec{r}=[1 \;\; -1 \;\; -\frac{4}{5} \;\; -\frac{6}{5}]$
+
+~\\Obteniendo una estimación con este nuevo vector, tenemos:
+
+\[r'x'y=
+\left(
+\begin{array}{cccc}
+1 & -1 & -\frac{4}{5} & -\frac{6}{5} \\
+\end{array}
+\right)
+\cdot \left(
+\begin{array}{c}
+y_{..} \\
+y_{1.} \\
+y_{2.} \\
+y_{3.} \\
+\end{array}
+\right)
+= y_{..}-y_{1.}-\frac{4}{5}y_{2.}-\frac{6}{5}y_{3.}
+\] 
+
+$$=y_{..}-y_{1.}-4\bar{y_{2.}}-6\bar{y_{3.}}$$
+
+$$=272.4-88.2-4(17.02)-6(19.82)=-2.8$$
+
+~\\Obteniendo así, la misma estimación anterior, lo cual comprueba el teorema 4.
+
+
+
+% -------------------------------------------------------------------------------------
+% Fin del artículo
+% **** --------------------------------------------------------------------------------
+\end{document}
