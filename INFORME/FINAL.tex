@@ -127,23 +127,17 @@ de grado.tex}) and can be used as a guideline just replacing its contents. It is
 % -------------------------------------------------------------------------------------
 % Título de la primera sección
 % **** --------------------------------------------------------------------------------
-\section{Punto 1}
-~\\Un ingeniero mecánico está investigando el efecto de la velocidad de avance (plg/min) sobre la resistencia a la tensión (lb/plg$^2$), en un proceso de maquinado de piezas de acero. El ingeniero trabaja con tres velocidades (125,150 y 175 plg/min). Los resultados se muestran a continuación:
+\section{Problema 1}
+\begin{itemize}
+\item[1.]
+\textbf{a.}
 
-~\\
-\begin{center}
-\begin{tabular}{ccc}
-\hline 
-125 & 150 & 175 \\ 
-\hline 
-100 & 76 & 108\\
-96 & 80 & 100\\
-92 & 75 & 96\\
-96 & 84 & 98\\
-92 & 82 & 100\\
-\hline 
-\end{tabular} 
-\end{center}
+\textbf{b.}
+
+\textbf{c.}
+
+\item[2.]
+\end{itemize}
 ~\\\textbf{a.}
 \begin{itemize}
 \item[-] Factores: Velocidad de avance(plg/min)
@@ -341,27 +335,89 @@ $$\rightarrow potencia = 1-Pr(Error \;\; tipo \;\; II)=1$$
 
 ~\\El 100\% de las veces estaríamos rechazando la hipótesis nula cuando esta es falsa, en otras palabras, el 100\% de las veces, encontraríamos diferencias entre los tratamientos si de verdad las hay.
 
-\section{Punto 2}
-~\\Un ingeniero de alimentos tiene como objetivo determinar si los métodos de colado o tamizado tienen influencia sobre el rendimiento del almidón agrio de yuca. Se trabaja con las variedades MBra 12 y con tres métodos de colado o tamizado:
+\section{Problema 2}
+~\\Un ingeniero de alimentos evalúa el rendimiento del almidón agrio de yuca (en kg), el cual ha sido sometido a tres métodos de secado: 1) al sol, 2) con aire caliente, 3) 50\% al sol y 50\% aire caliente. El experimento se lleva a cabo en dos rallanderias diferentes, utilizando el mismo lote de almidón agrio (obtenido en Julio de 2008) y por cada rallanderia tres trabajadores llevan a cabo la experimentación. Los resultados se muestran a continuación:
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.6]{FigurasUV/DATOS1.png}
+\end{figure}
 
-~\\
+~\\\textbf{a.}
+El objetivo del estudio es evaluar el rendimiento del almidón agrio de yuca (en Kg) con respecto a tres métodos de secado diferentes, dos rallanderias y tres trabajadores dentro de cada rallanderia, el objetivo final sería obtener una conclusión acerca de qué método de secado, qué rallanderia y cuáles trabajadores están generando un mayor rendimiento del almidón, lo cual es lo que interesa finalmente.
+
+~\\\textbf{b.}
+\begin{itemize}
+\item[-] Factores: 
+\begin{itemize}
+\item Factor 1: Método de secado.
+\item Factor 2: Rallanderia.
+\item Factor anidado: Trabajador.
+\end{itemize}
+\item[-] Niveles:  
+\begin{itemize}
+\item Factor 1: Sol(S), aire caliente(A) y 50\% al sol y 50\% aire caliente(SA).
+\item Factor 2: Rallanderia 1(R1) y Rallanderia 2(R2).
+\item Factor anidado: Trabajador 1(T1), trabajador 2(T2) y trabajador 3(T3).
+\end{itemize}
+\item[-] Tratamientos: Son 18 tratamientos en total. S-R1-T1, S-R1-T2, S-R1-T3, S-R2-T1, S-R2-T2, S-R2-T3, A-R1-T1, A-R1-T2, A-R1-T3, A-R2-T1, A-R2-T2, A-R2-T3, SA-R1-T1, SA-R1-T2, SA-R1-T3, SA-R2-T1, SA-R2-T2, SA-R2-T3.
+\end{itemize}
+
+~\\\textbf{c.}
+La unidad experimental es el almidón agrio de yuca.
+
+~\\\textbf{d.}
+Dado que el almidón agrio utilizado para todo el experimento fue del mismo lote, simplemente se debe asignar al azar una parte de este a cada método de secado, a cada lavandería y a cada trabajador, es decir, se debe dividir el lote de almidón agrio de yuca en 18 partes, enumerar cada uno y seleccionar de forma aleatoria un numero entre 1 y 18, asignándole a cada tratamiento el lote de almidón que le corresponda.
+
+~\\\textbf{e.}
+Para el análisis exploratorio de datos, dado que nos interesa encontrar diferencias entre método de secado, entre rallanderias y entre trabajadores dentro de las rallanderias, se obtendrán descriptivas para los factores principales y para el factor anidado, además, también se quiere evaluar si existen diferencias entre la interacción método de secado y rallanderia, por ello también se sacaran estadísticas descriptivas de este cruce.
+~\\\textbf{Método de secado:}
+
 \begin{center}
-\begin{tabular}{ccc}
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline 
-Manual & Método mecánico continúo & Método mecánico discontinúo \\ 
+Método de secado & $\bar{X}$ & 	$S$ & $CV(\%)$ & $Min$ & $Max$ \\ 
 \hline 
-17.6 & 16.9 & 19.3\\
-18.9 & 15.3 & 21.1\\
-16.3 & 17.1 & 19.8\\
-17.4 & 18.6 & 18.9\\
-18.0 & 17.2 & 20.0\\
+Sol & 41.06 & 4.530049 & 11.03 & 33.6 & 49.6 \\
+Aire caliente & 45.12 & 3.965521 & 8.78 & 39.4 & 52.2 \\
+Sol y Aire caliente & 54.73& 6.128525 & 11.19 & 44.9 & 63.8 \\
 \hline 
+\end{tabular} 
+\end{center}
+
+~\\\textbf{Rallanderia:}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Rallanderia & $\bar{X}$ & 	$S$ & $CV(\%)$ & $Min$ & $Max$ \\ 
+\hline 
+Rallanderia 1 & 48.38 & 7.358581 & 15.21 & 34.5 & 62.5 \\
+Rallanderia 2 & 45.57 & 7.633227 & 16.75 & 33.6 & 63.8 \\
+\hline 
+\end{tabular} 
+\end{center}
+
+~\\\textbf{Trabajador:}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Trabajador & $\bar{X}$ & 	$S$ & $CV(\%)$ & $Min$ & $Max$ \\ 
+\hline 
+\textbf{Rallanderia 1} & & & & &\\
+Trabajador 1 & 46.06 & 8.290071 & 18 & 34.5 & 58 \\
+Trabajador 2 & 53.68 & 6.365881 & 11.86 & 45.2 & 62.5 \\
+Trabajador 3 & 45.4 & 4.36921 & 9.62 & 39.4 & 51.4 \\
+\hline 
+\textbf{Rallanderia 2} & & & & &\\
+Trabajador 1 & 43.38 & 7.655027 & 17.64 & 33.6 & 55.8 \\
+Trabajador 2 & 50.88 & 8.193103 & 16.10 & 43.9 & 63.8 \\
+Trabajador 3 & 42.44 &  3.943067 & 9.29 & 36.5 & 49\\
+\hline
 \end{tabular} 
 \end{center}
 
 ~\\\textbf{a.}
 ~\\El modelo estadístico es:
-$$y_{ij}=\mu+\tau_i+\varepsilon_{ij}  \;\;\;\; i=1,2,3 \;\;\;\; j=1,2,3,4,5$$
+$$y_{ijkr}=\mu+\tau_i+\alpha_j+(\tau\alpha)_{ij}+\gamma_{k}(j)+\varepsilon_{ijkr}  \;\;\;\; i=1,2,3 \;\;\;\; j=1,2,3,4,5$$
 ~\\Supuestos: $$\varepsilon_{ij}\simeq N(0,\sigma^2)$$
 $$E[\varepsilon_{ij}]=0  \;\; \forall_{ij}$$
 $$V[\varepsilon_{ij}]=\sigma^2  \;\; \forall_{ij}$$

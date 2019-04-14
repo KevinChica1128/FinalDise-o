@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.2)  13 APR 2019 12:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.2)  14 APR 2019 00:48
 entering extended mode
 **./FINAL.tex
 (FINAL.tex
@@ -458,12 +458,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 LaTeX Warning: Characters dropped after `\end{comment}' on input line 126.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
@@ -473,25 +468,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--175
 <FigurasUV/1.pdf, id=21, 1027.84pt x 545.03625pt>
 File: FigurasUV/1.pdf Graphic file (type pdf)
 <use FigurasUV/1.pdf>
-Package pdftex.def Info: FigurasUV/1.pdf  used on input line 196.
+Package pdftex.def Info: FigurasUV/1.pdf  used on input line 190.
 (pdftex.def)             Requested size: 493.3576pt x 261.61443pt.
 
-Overfull \hbox (63.35298pt too wide) in paragraph at lines 196--197
+Overfull \hbox (63.35298pt too wide) in paragraph at lines 190--191
  [][] 
  []
 
 
-Overfull \hbox (39.4865pt too wide) in paragraph at lines 203--216
+Overfull \hbox (39.4865pt too wide) in paragraph at lines 197--210
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--216
+Underfull \hbox (badness 10000) in paragraph at lines 197--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--216
+Underfull \hbox (badness 10000) in paragraph at lines 197--210
 
  []
 
@@ -499,10 +494,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--216
 <FigurasUV/N1.pdf, id=34, 1027.84pt x 545.03625pt>
 File: FigurasUV/N1.pdf Graphic file (type pdf)
 <use FigurasUV/N1.pdf>
-Package pdftex.def Info: FigurasUV/N1.pdf  used on input line 242.
+Package pdftex.def Info: FigurasUV/N1.pdf  used on input line 236.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (83.91412pt too wide) in paragraph at lines 242--243
+Overfull \hbox (83.91412pt too wide) in paragraph at lines 236--237
  [][] 
  []
 
@@ -510,10 +505,10 @@ Overfull \hbox (83.91412pt too wide) in paragraph at lines 242--243
 <FigurasUV/H1.pdf, id=43, 1027.84pt x 545.03625pt>
 File: FigurasUV/H1.pdf Graphic file (type pdf)
 <use FigurasUV/H1.pdf>
-Package pdftex.def Info: FigurasUV/H1.pdf  used on input line 272.
+Package pdftex.def Info: FigurasUV/H1.pdf  used on input line 266.
 (pdftex.def)             Requested size: 441.96259pt x 234.36102pt.
 
-Overfull \hbox (11.95796pt too wide) in paragraph at lines 272--273
+Overfull \hbox (11.95796pt too wide) in paragraph at lines 266--267
  [][] 
  []
 
@@ -521,134 +516,131 @@ Overfull \hbox (11.95796pt too wide) in paragraph at lines 272--273
 <FigurasUV/I1.pdf, id=52, 1027.84pt x 545.03625pt>
 File: FigurasUV/I1.pdf Graphic file (type pdf)
 <use FigurasUV/I1.pdf>
-Package pdftex.def Info: FigurasUV/I1.pdf  used on input line 289.
+Package pdftex.def Info: FigurasUV/I1.pdf  used on input line 283.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (83.91412pt too wide) in paragraph at lines 289--290
+Overfull \hbox (83.91412pt too wide) in paragraph at lines 283--284
  [][] 
  []
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 299.
+LaTeX Warning: Command \' invalid in math mode on input line 293.
 
 Missing character: There is no ó in font cmr10!
 
-LaTeX Warning: Command \' invalid in math mode on input line 300.
+LaTeX Warning: Command \' invalid in math mode on input line 294.
 
 Missing character: There is no ó in font cmr10!
 [6 <./FigurasUV/I1.pdf>] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
-
- []
-
-[8]
-Overfull \hbox (39.4895pt too wide) in paragraph at lines 377--390
+<FigurasUV/DATOS1.png, id=68, 372.64218pt x 251.43938pt>
+File: FigurasUV/DATOS1.png Graphic file (type png)
+<use FigurasUV/DATOS1.png>
+Package pdftex.def Info: FigurasUV/DATOS1.png  used on input line 342.
+(pdftex.def)             Requested size: 223.58702pt x 150.86478pt.
+ [8 <./FigurasUV/DATOS1.png>] [9]
+Overfull \hbox (39.4895pt too wide) in paragraph at lines 433--446
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--390
+Underfull \hbox (badness 10000) in paragraph at lines 433--446
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--390
+Underfull \hbox (badness 10000) in paragraph at lines 433--446
 
  []
 
-[9]
-<FigurasUV/N2.pdf, id=74, 1027.84pt x 545.03625pt>
+[10]
+<FigurasUV/N2.pdf, id=80, 1027.84pt x 545.03625pt>
 File: FigurasUV/N2.pdf Graphic file (type pdf)
 <use FigurasUV/N2.pdf>
-Package pdftex.def Info: FigurasUV/N2.pdf  used on input line 411.
+Package pdftex.def Info: FigurasUV/N2.pdf  used on input line 467.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (83.91412pt too wide) in paragraph at lines 411--412
+Overfull \hbox (83.91412pt too wide) in paragraph at lines 467--468
  [][] 
  []
 
-[10 <./FigurasUV/N2.pdf>]
-<FigurasUV/H2.pdf, id=83, 1027.84pt x 545.03625pt>
+[11 <./FigurasUV/N2.pdf>]
+<FigurasUV/H2.pdf, id=89, 1027.84pt x 545.03625pt>
 File: FigurasUV/H2.pdf Graphic file (type pdf)
 <use FigurasUV/H2.pdf>
-Package pdftex.def Info: FigurasUV/H2.pdf  used on input line 441.
+Package pdftex.def Info: FigurasUV/H2.pdf  used on input line 497.
 (pdftex.def)             Requested size: 441.96259pt x 234.36102pt.
 
-Overfull \hbox (11.95796pt too wide) in paragraph at lines 441--442
+Overfull \hbox (11.95796pt too wide) in paragraph at lines 497--498
  [][] 
  []
 
-[11 <./FigurasUV/H2.pdf>]
-<FigurasUV/I2.pdf, id=92, 1027.84pt x 545.03625pt>
+[12 <./FigurasUV/H2.pdf>]
+<FigurasUV/I2.pdf, id=98, 1027.84pt x 545.03625pt>
 File: FigurasUV/I2.pdf Graphic file (type pdf)
 <use FigurasUV/I2.pdf>
-Package pdftex.def Info: FigurasUV/I2.pdf  used on input line 458.
+Package pdftex.def Info: FigurasUV/I2.pdf  used on input line 514.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (83.91412pt too wide) in paragraph at lines 458--459
+Overfull \hbox (83.91412pt too wide) in paragraph at lines 514--515
  [][] 
  []
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 468.
+LaTeX Warning: Command \' invalid in math mode on input line 524.
 
 Missing character: There is no ó in font cmr10!
 
-LaTeX Warning: Command \' invalid in math mode on input line 469.
+LaTeX Warning: Command \' invalid in math mode on input line 525.
 
 Missing character: There is no ó in font cmr10!
-[12 <./FigurasUV/I2.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 489--491
+[13 <./FigurasUV/I2.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 545--547
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--506
+Underfull \hbox (badness 10000) in paragraph at lines 560--562
 
  []
 
-[13] [14] [15] [16] (FINAL.aux
+[14] [15] [16] [17] (FINAL.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
-)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+) ) 
 Here is how much of TeX's memory you used:
- 5935 strings out of 492946
- 83620 string characters out of 3135510
+ 5941 strings out of 492946
+ 83733 string characters out of 3135510
  175884 words of memory out of 3000000
- 9695 multiletter control sequences out of 15000+200000
+ 9699 multiletter control sequences out of 15000+200000
  18900 words of font info for 57 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  43i,9n,40p,912b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecti0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2
-.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\KEVINSTEVEN\AppDat
-a\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\KE
-VINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.
-pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecrm0700.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
-our/jknappen/ec/dpi600\eccc1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\
-2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\KEVINSTEVEN\AppDa
-ta\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\K
-EVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900
-.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on FINAL.pdf (16 pages, 248376 bytes).
+ <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecti0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\
+2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\KEVINSTEVEN\AppDa
+ta\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\K
+EVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000
+.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecrm0700.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/lj
+four/jknappen/ec/dpi600\eccc1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX
+\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\KEVINSTEVEN\AppD
+ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\
+KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx090
+0.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on FINAL.pdf (17 pages, 283385 bytes).
 PDF statistics:
- 406 PDF objects out of 1000 (max. 8388607)
+ 433 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
