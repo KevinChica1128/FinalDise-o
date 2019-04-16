@@ -62,12 +62,33 @@ sd(rendimiento[c(13:15,31:33,49:51)])
 summary(rendimiento[c(16:18,34:36,52:54)])
 sd(rendimiento[c(16:18,34:36,52:54)])
 
+#Interacción método de secado - rallanderia:
+#Rallanderia 1:
+#Sol
+summary(rendimiento[1:9])
+sd(rendimiento[1:9])
+#Aire caliente
+summary(rendimiento[19:27])
+sd(rendimiento[19:27])
+#Sol y Aire caliente
+summary(rendimiento[37:45])
+sd(rendimiento[37:45])
+#Rallanderia 2:
+#Sol
+summary(rendimiento[10:18])
+sd(rendimiento[10:18])
+#Aire caliente
+summary(rendimiento[28:36])
+sd(rendimiento[28:36])
+#Sol y Aire caliente
+summary(rendimiento[46:54])
+sd(rendimiento[46:54])
 
 
 #Boxplots
 #Método de secado
 x11()
-boxplot(rendimiento~secado)
+boxplot(rendimiento~secado,main="Gráfico de cajas del rendimiento(Kg) por método de secado")
 #Rallanderia
 x11()
 boxplot(rendimiento~rallanderia)
@@ -78,6 +99,69 @@ boxplot(rendimiento~secado*rallanderia)
 x11()
 boxplot(rendimiento~rallanderia*trabajador)
 
+#Todos juntos
+x11()
+par(mfrow=c(2,2))
+boxplot(rendimiento~secado,main="Gráfico de cajas del rendimiento(Kg) por método de secado")
+boxplot(rendimiento~rallanderia,main="Gráfico de cajas del rendimiento(Kg) por rallanderia")
+boxplot(rendimiento~secado*rallanderia,main="Gráfico de cajas del rendimiento(Kg) por la interacción método de secado-rallanderia")
+boxplot(rendimiento~trabajador*rallanderia,main="Gráfico de cajas del rendimiento(Kg) por trabajador dentro de cada rallanderia")
+
+#Gráfico con todos los factores
+x11()
+interaction.plot(rallanderia:trabajador,secado,rendimiento,lwd=2,main="Gráfico de lineas del rendimiento(Kg) por método de secado, rallanderia y trabajador")
+
 #Anova
-anova<-aov(rendimiento~secado*rallanderia+trabajador%in%rallanderia)
+anova<-aov(rendimiento~secado*rallanderia*trabajador%in%rallanderia)
 summary(anova)
+
+
+#Supuestos de los errores del modelo
+#Obtenemos los residuales
+residuales=residuals(anova)
+
+#Normalidad
+#QQ plot e histograma con curva normal superpuesta
+x11()
+par(mfcol=c(1,2))
+hist(residuales, density=5, freq=FALSE, main="Histograma residuos del modelo")
+curve(dnorm(x, mean=mean(residuales), sd=sd(residuales)), col="red",
+      lwd=2, add=TRUE, yaxt="n")
+qqnorm(residuales, main="Q-Q Plot residuos modelo") ## el típico de R
+qqline(residuales)
+
+#Test Shapiro wilk(<30 datos)
+shapiro.test(residuales)
+
+#Anderson-Darling(>30 datos)
+library("nortest")
+ad.test(residuales)
+
+#Homocedasticidad de los residuos
+datos <- interaction(secado,rallanderia,trabajador)
+bartlett.test(residuales~datos)
+
+#Independencia(no correlación) en los errores
+#Prueba de rachas: H0:Los residuales se distribuyen de manera aleatoria
+library("tseries")
+residuales1<-residuales[-31]
+residualesfactor<-c()
+for (i in 1:length(residuales1)) {
+  if (residuales1[i]>0){
+    residualesfactor[i]=1
+  }
+  if (residuales1[i]<0){
+    residualesfactor[i]=-1
+  }
+}
+runs.test(factor(residualesfactor))
+
+#Comparaciones múltiples
+library(multcompView)
+library(lsmeans)
+leastsquare3 = lsmeans(anova, ~secado|rallanderia,  adjust="tukey")
+cld(leastsquare3, alpha=.05, Letters=letters)
+
+leastsquare2 = lsmeans(anova, ~trabajador|rallanderia,  adjust="tukey")
+cld(leastsquare2, alpha=.05, Letters=letters)
+

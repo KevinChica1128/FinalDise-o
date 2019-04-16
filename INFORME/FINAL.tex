@@ -130,211 +130,35 @@ de grado.tex}) and can be used as a guideline just replacing its contents. It is
 \section{Problema 1}
 \begin{itemize}
 \item[1.]
-\textbf{a.}
-
-\textbf{b.}
-
-\textbf{c.}
-
-\item[2.]
-\end{itemize}
 ~\\\textbf{a.}
-\begin{itemize}
-\item[-] Factores: Velocidad de avance(plg/min)
-\item[-] Niveles: 125,150 y 175 plg/min
-\item[-] Unidad experimental: Pieza de acero
-\item[-] Tratamientos: Son 3 tratamientos. 125, 150 y 175 plg/min 
-\item[-] Variable de respuesta: Resistencia a la tensión(lb/plg$^2$)
-\end{itemize}
 
 ~\\\textbf{b.}
-~\\Se enumeran las 15 piezas de acero y los 3 tratamientos(velocidades), se obtiene un número al azar del 1 al 15 para las piezas y se obtiene un número del 1 al 3 para las velocidades de avance, la pieza seleccionada se le asigna el tratamiento seleccionado. Así se continua hasta que los 3 tratamientos cuenten con 5 piezas de acero cada uno. En este caso se esta aleatorizando tanto los individiduos como los tratamientos en la asignación.
-
-~\\El modelo estadístico es:
-$$y_{ij}=\mu+\tau_i+\varepsilon_{ij}  \;\;\;\; i=1,2,3 \;\;\;\; j=1,2,3,4,5$$
-~\\Supuestos: $$\varepsilon_{ij}\simeq N(0,\sigma^2)$$
-$$E[\varepsilon_{ij}]=0  \;\; \forall_{ij}$$
-$$V[\varepsilon_{ij}]=\sigma^2  \;\; \forall_{ij}$$
-$$Cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;  \forall_{i\neq i' \;\;\; \wedge \;\;\; j\neq j'}$$
-~\\Donde:
-~\\$y_{ij}$ es la resistencia a la tensión en lb/plg$^2$ de la pieza de acero j a una velocidad de avance i
-~\\$\mu$ es la media general de la resistencia a la tensión sin tener en cuenta la velocidad de avance
-~\\$\tau_i$ es el efecto del i-ésimo nivel de la velocidad de avance sobre la resistencia a la tensión en lb/plg$^2$
-~\\$\varepsilon_{ij}$ es el error aleatorio debido al i-ésima nivel de velocidad en la j-ésima replica
 
 ~\\\textbf{c.}
-~\\Para el análisis exploratorio de datos se realizó la siguiente tabla de estadísticas descriptivas:
 
-~\\
-\begin{center}
-\begin{tabular}{|c|c|c|c|}
-\hline 
-Estadístico & 125 & 150 & 175  \\ 
-\hline 
-Min & 92 & 75 & 96 \\ 
-1st Cuartil & 92 & 76 & 98 \\ 
-Mediana & 96 & 80 & 100 \\ 
-Media & 95.2 & 79.4 & 100.4 \\ 
-3rd Cuartil & 96 & 82 & 100 \\ 
-Maximo & 100 & 84 & 108 \\ 
-Desv. Estandar & 3.34664 & 3.847077 & 4.560702 \\ 
-\hline 
-\end{tabular} 
-\end{center}
+\item[2.]
+~\\\textbf{a.}
 
-~\\En esta tabla podemos observar que en general, la resistencia a la tensión de las piezas de acero es parecida para las velocidades de avance de 125 y 175(plg/min), pero para la velocidad de avance de 150(plg/min) se puede notar una disminución general en la resistencia a la tensión de las piezas. La mayor resistencia se encontró en una pieza expuesta a una velocidad de avance de 175 plg/min, la cual fue de 108 lb/plg$^2$, y la menor resistencia se encontró en una pieza expuesta a una velocidad de avance de 150 plg/min, la cual fue de 75 lb/plg$^2$. En cuanto a la variabilidad, el tratamiento que tiene mayor variabilidad en los efectos, es el de una velocidad de avance de 175, presenta una desviación estándar de 4.5607, y el tratamiento que tiene menor variabilidad en los efectos es el de una velocidad de avance de 125, presenta una desviación estándar de 3.3466.
+~\\\textbf{b.}
 
-~\\También se realizó el siguiente gráfico de cajas:
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.48]{FigurasUV/1.pdf}
-\end{figure}
-~\\En este gráfico confirmamos lo dicho anteriormente, se observar que los tratamientos 1 y 3 son más parecidos entre si en cuanto a sus efectos, y el tratamiento 2 parece tener un efecto más bajo en cuanto a la resistencia a la tensión de las piezas de acero.
-
+~\\\textbf{c.}
 
 ~\\\textbf{d.}
-~\\Hipótesis: $$H_0:\tau_1=\tau_2=\tau_3$$
-$$H_a:Al\; menos\; una\; de\; estas\; igualdades\; no\; se\; cumple$$
-\resizebox{16.5cm}{!} {
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline 
-Fuente de Variación & Grados de Libertad & Suma de Cuadrados & Cuadrados Medios & F & Pr>F\\ 
-\hline 
-$\tau$ & 2 & $SC_{\tau}=1196.1333$ & $CM_{trat}=598.0666$ & 38.3376 & 0.00001 \\ 
-Error & 12 & $SC_{error}=187.2$ & $CM_{error}=15.6$ &  & \\ 
-Total & 14 & $SC_{total}=1383.3333$ &  &  & \\ 
-\hline 
-\end{tabular} 
-}
-~\\
-
-~\\A un nivel de significancia $\alpha=0.05$ se rechaza $H_0$ y concluimos que hay diferencias significativas entre los efectos de las velocidades de avance sobre la resistencia a la tensión.
 
 ~\\\textbf{e.}
-~\\Ejercería el control local del experimento asegurándome que las piezas de acero sean lo más homogéneas posibles para que la resistencia a la tensión dependa de la velocidad de avance y no de las cualidades o características de la pieza. También me aseguraría de que la maquina este igualmente calibrada al inicio de cada tratamiento, es decir, que las velocidades de avance realmente sean las establecidas (125,150 y 175 plg/min).
-
-~\\Para evaluar el control local del experimento nos centramos en la varianza estimada y en el coeficiente de variación
-$$\sigma^2=15.6 \;\;\; \bar{y}_{..}=91.6666 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{..}}=0.04308 \cdot 100\% \simeq 4.31\%$$
-
-~\\Dado que la desviación estándar $\sigma=3.9496$ es pequeña y el coeficiente de variación también lo es, concluimos que hubo un buen control local en el experimento.
 
 ~\\\textbf{f.}
-~\\Sobre los errrores se tienen los siguientes supuestos:
-$$\varepsilon_{ij}\approx N(0,\sigma^2)  \rightarrow \;\; Normalidad$$
-$$ E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij} \rightarrow \;\; Correcta\; especificacion$$
-$$V[\varepsilon_{ij}]=\sigma^2 \;\;\; \forall_{ij}\rightarrow \;\; Homocedasticidad$$ 
-$$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \wedge \;\;\; \forall_{j\neq j'} \rightarrow \;\; Independencia$$
-\begin{itemize}
-\item[Normalidad:]
-~\\Para verificar el supuesto de normalidad en los errores, se hicieron pruebas gráficas(histograma y Q-Q plot) y estadísticas, dentro de la pruebas estadísticas se realizaron pruebas para analizar la asimetria(test D'Agostino) y la curtosis(test de Anscombe-Glynn) individualmente, y se realizó la prueba de normalidad Shapiro-Wilk, para evaluar conjuntamente la normalidad de los residuos.
-
-~\\En las gráficas  se observa un posible incumplimiento de la normalidad, sobre todo en el histograma, se puede ver que las barras no coinciden con la curva teórica de la normal, cabe aclarar que la prueba gráfica no es muy confiable porque depende de la experiencia del investigador, por ello nos vamos a centrar en los resultados de las pruebas estadísticas, ya que estas son mas objetivas.
-
-\pagebreak
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.5]{FigurasUV/N1.pdf}
-\end{figure}
-
-~\\Los resultados para cada una de las pruebas realizadas fueron:
-\begin{itemize}
-\item[Test D'Agostino:] $$H_0:Los \; datos\; no\; tienen\; asimetria$$
-$$H_a:Los\; datos\; tienen\; asimetria$$
-$$skew = 0.5694, z = 1.1306, p-value = 0.2582$$
-
-~\\Como el p-valor=0.2582 es superior a nuestro nivel de significancia(0.05), no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos tienen asimetría. Lo cuál es un buen indicio en cuanto a la normalidad de los errores.
-
-\item[Test de Anscombe-Glynn:]Sabemos que la curtosis en una distribución normal es 3, por ello se establecen las siguientes hipótesis en este test.
-$$H_0:La\; curtosis\; es\; igual\; a\; 3$$
-$$H_a:La\; curtosis\;no\; es\; igual\; a\; 3$$
-$$kurt = 2.34890, z = -0.19307, p-value = 0.8469$$
-
-~\\Como el p-valor=0.8469 es superior a nuestro nivel de significancia, no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos no tienen una curtosis igual a 3. Lo cuál complementando la prueba anterior, es muy probable que los errores presenten una distribución normal.
-
-\item[Test Shapiro-Wilk:]$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
-$$H_0:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
-$$W = 0.92696, p-value = 0.2457$$
-
-~\\Como el p-valor=0.2457 es superior a nuestro nivel de significancia, no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos no provienen de una distribución normal. Lo cual junto con las dos pruebas anteriores, nos indica que este supuesto de normalidad en los errores parece cumplirse.
-\end{itemize}
-
-\pagebreak
-\item[Homocedasticidad:]
-~\\Para analizar la homocedasticidad se realizó una prueba gráfica(valores ajustados vs residuos) y una prueba estadísticas(Test de Levene)
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.43]{FigurasUV/H1.pdf}
-\end{figure}
-~\\Podemos observar que la varianza en los distintos grupos (podemos ver que se forman tres grupos que corresponden a los valores ajustados de los tres tratamientos) es muy parecida, asumiendo que el último punto del tercer grupo es un punto atípico, no se observar un grupo con una mayor dispersión que el resto. Por lo cuál gráficamente se podría decir que el supuesto de homocedasticidad en los errores parece cumplirse.
-
-~\\Los resultados la prueba realizada fueron:
-\begin{itemize}
-\item[Test de Levene:] $$H_0:La \; varianza\; de\; los\; grupos \; no \;son \; diferentes\; (iguales)$$
-$$H_a:La \; varianza\; de\; los\; grupos \; son \; diferentes$$
-$$ F value=0.0924 , Pr(>F)=0.9124$$
-\end{itemize}
-~\\Se utilizó el test de Levene ya que este no es sensible a las desviaciones de la normalidad como el de Bartlett. Como el p valor=0.9124 es superior a cualquier nivel de significancia de los usualmente establecidos (0.01,0.05,0.1) no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que la varianza de los grupos(3 grupos en este caso) son diferentes, por lo tanto, el supuesto de homocedasticidad en los errores parece cumplirse.
-
-\pagebreak
-\item[Independencia:]
-~\\Para analizar el supuesto de independencia en los errores, se realizaron dos pruebas gráficas(correlograma de los residuos y residuo t vs residuo anterior (t-1)) y dos pruebas estadísticas (test de Rachas y test de Durbin-Watson).
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.5]{FigurasUV/I1.pdf}
-\end{figure}
-~\\En la primera gráfica, podemos observar que la correlación en el retardo 1, es decir, la correlación entre el error i y el anterior i-1, es muy baja(casi nula), pero la correlación en el retardo 4, es decir, la correlación entre el error i y el  i-4, es de aproximadamente -0.45. Esta correlación se podría considerar un poco elevada, pero no sobrepasa los intervalos generados (lineas azules) para la correlación. En la segunda gráfica, no se observa una tendencia clara entre el error i y el error i-1, esto nos dice que no existe una correlación clara entre ellos. Podemos concluir que el supuesto de independencia en los errores parece no incumplirse.
-
-\begin{itemize}
-\item[Test de rachas:] $$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independientes)$$
-$$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
-$$Standard \; Normal = -0.25129, p-value = 0.8016$$
-~\\Como el p valor=0.8016 es mayor que nuestro nivel de significancia, no rechazamos la hipótesis nula y concluimos que no hay evidencia suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
-
-\item[Test de Durbin-Watson:] $$H_0:No\; existe \; autocorrelación \; en \; la \; muestra \;(\rho=0)$$
-$$H_a:Existe \; autocorrelación \; en \; la \; muestra \; (\rho\neq 0)$$
-$$DW = 1.6188, p-value = 0.1682$$
-~\\Como el p valor=0.1682 es mayor que nuestro nivel de significancia, no rechazamos la hipótesis nula y concluimos que no hay evidencia suficiente para decir que existe autocorrelación en los residuales, en otras palabras, no podemos decir que los residuales no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
-\end{itemize}
-\end{itemize}
 
 ~\\\textbf{g.}
-~\\Observando las estadísticas descriptivas y el diagrama de cajas realizado en el literal c, a priori, se podría pensar que las velocidades de avance 125 y 175 plg/min generan un efecto diferente que la velocidad de avance de 150 plg/min, sobre la resistencia a la tensión de las piezas de acero. Dado esto, se plantea la siguiente hipótesis nula
 
-$$H_0:2\tau_2-\tau_1-\tau_3=0$$
-
-~\\Bajo la hipótesis nula, tenemos que el estadístico de prueba es:
-$$F=\frac{(\sum\limits_{i=1}^t a_i\bar{y_{i.}})^2}{{\hat{\sigma^2}\sum\limits_{i=1}^t \frac{{a_i}^2}{r_i}}}$$
-
-$$\rightarrow F=\frac{(-36.8)^2}{1.2\cdot 15.6}=72.341880$$
-
-~\\Como $F_{0.95(1,12)}=4.7472 < F_{cal}=72.341880$, se rechaza $H_0$ y concluimos que si hay diferencias significativas en relación a la resistencia a la tensión de las piezas de acero, entre la velocidad de avance de 150 plg/min y las velocidades de avance de 125 y 175 plg/min.
-
-~\\Con el resultado anterior sabemos que la velocidad de avance de 150 plg/min tiene un efecto distinto(probablemente inferior) en cuanto a la resistencia a la tensión de las piezas de acero, pero también nos gustaría saber si entre los efectos de las velocidades de avance de 125 y 175 plg/min también existen diferencias, para ello planteamos la siguiente hipótesis.
-
-$$H_0:\tau_1-\tau_3=0$$
-
-$$\rightarrow F=\frac{(-5.2)^2}{0.4\cdot 15.6}=4.3333$$
-
-~\\Como $F_{0.95(1,12)}=4.7472 > F_{cal}=4.3333$, no se rechaza $H_0$ y concluimos que no hay evidencia estadística para decir que existen diferencias entre el efecto de la velocidad de avance 125 plg/min y el efecto de la velocidad de avance 175 plg/min sobre la resistencia a la tensión en el proceso de maquinado de las piezas de acero.
-\pagebreak
 ~\\\textbf{h.}
-~\\Las diferencias entre los promedios de los tratamientos es:
-$$Velocidad \;\; 1(125)- Velocidad \;\; 2(150)=95.2-79.4=15.8$$
-$$Velocidad \;\; 1(125)- Velocidad \;\; 3(175)=95.2-100.4=5.2$$
-$$Velocidad \;\; 2(150)- Velocidad \;\; 3(175)=79.4-100.4=21$$
 
-~\\Viendo las diferencias, nos parece razonable asumir una diferencia mínima de 15 lb/plg$^2$ para decir que existen diferencias entre los tratamientos, entonces, se tienen dos formulas esenciales para calcular la potencia del experimento:
-$$\hat{\lambda}=\frac{\sum\limits_{i=1}^t (\tau_i - \bar{\tau})^2 r_i}{2\hat{\sigma^2}} \;\;\;\; , \;\;\;\; \hat{\varPhi}=\sqrt{\frac{2\hat{\lambda}}{t}}$$
+~\\\textbf{i.}
 
-$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^3 (15)^2 r_i}{2\hat{\sigma^2}}=\frac{3\cdot(15)^2 \cdot 5}{2(15.6)}=108.17307$$
-$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(108.17307)}{3}}=\sqrt{72.1154}=8.4920$$
+~\\\textbf{j.}
+\end{itemize}
 
-~\\Con la tabla de la beta no central con $f_1=2$ y $f_2=12$ tenemos que:
-$$Pr(Error \;\; tipo \;\; II)=0$$
-$$\rightarrow potencia = 1-Pr(Error \;\; tipo \;\; II)=1$$
-
-~\\El 100\% de las veces estaríamos rechazando la hipótesis nula cuando esta es falsa, en otras palabras, el 100\% de las veces, encontraríamos diferencias entre los tratamientos si de verdad las hay.
-
+\pagebreak
 \section{Problema 2}
 ~\\Un ingeniero de alimentos evalúa el rendimiento del almidón agrio de yuca (en kg), el cual ha sido sometido a tres métodos de secado: 1) al sol, 2) con aire caliente, 3) 50\% al sol y 50\% aire caliente. El experimento se lleva a cabo en dos rallanderias diferentes, utilizando el mismo lote de almidón agrio (obtenido en Julio de 2008) y por cada rallanderia tres trabajadores llevan a cabo la experimentación. Los resultados se muestran a continuación:
 \begin{figure}[h!]
@@ -415,436 +239,219 @@ Trabajador 3 & 42.44 &  3.943067 & 9.29 & 36.5 & 49\\
 \end{tabular} 
 \end{center}
 
-~\\\textbf{a.}
-~\\El modelo estadístico es:
-$$y_{ijkr}=\mu+\tau_i+\alpha_j+(\tau\alpha)_{ij}+\gamma_{k}(j)+\varepsilon_{ijkr}  \;\;\;\; i=1,2,3 \;\;\;\; j=1,2,3,4,5$$
-~\\Supuestos: $$\varepsilon_{ij}\simeq N(0,\sigma^2)$$
-$$E[\varepsilon_{ij}]=0  \;\; \forall_{ij}$$
-$$V[\varepsilon_{ij}]=\sigma^2  \;\; \forall_{ij}$$
-$$Cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;  \forall_{i\neq i' \;\;\; \wedge \;\;\; j\neq j'}$$
-~\\Donde:
-~\\$y_{ij}$ es el rendimiento en Kg de la parcela j con el método de colado o tamizado i
-~\\$\mu$ es la media general del rendimiento en Kg sin tener en cuenta el método de colado o tamizado
-~\\$\tau_i$ es el efecto del i-ésimo nivel del método de colado sobre el rendimiento en Kg por parcela
-~\\$\varepsilon_{ij}$ es el error aleatorio debido al i-ésimo tratamiento en la j-ésima replica
-
-~\\\textbf{b.}
-~\\Hipótesis: $$H_0:\tau_1=\tau_2=\tau_3$$
-$$H_a:Al\; menos\; una\; de\; estas\; igualdades\; no\; se\; cumple$$
-\resizebox{16.5cm}{!} {
+~\\\textbf{Interacción método de secado - rallanderia:}
+\begin{center}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline 
-Fuente de Variación & Grados de Libertad & Suma de Cuadrados & Cuadrados Medios & F & Pr>F\\ 
+Método de secado - rallanderia & $\bar{X}$ & 	$S$ & $CV(\%)$ & $Min$ & $Max$ \\ 
 \hline 
-$\tau$ & 2 & $SC_{\tau}=21.628$ & $CM_{trat}=10.814$ & 10.9342 & 0.00198 \\ 
-Error & 12 & $SC_{error}=11.868$ & $CM_{error}=0.989$ &  & \\ 
-Total & 14 & $SC_{total}=33.496$ &  &  & \\ 
+\textbf{Rallanderia 1} & & & & &\\
+Sol & 42.83 &  4.44719 & 10.38 & 34.5 & 49.6 \\
+Aire caliente & 46.28 & 4.858698 & 10.5 & 39.4 & 52.2 \\
+Sol y aire caliente & 56.02 & 5.226083 & 9.32 & 48.5 & 62.5 \\
 \hline 
-\end{tabular} 
-}
-~\\
-
-~\\A un nivel de significancia $\alpha=0.05$ se rechaza $H_0$ y concluimos que hay diferencias significativas entre los efectos del método de tamizado sobre el rendimiento del almidón de yuca.
-
-~\\\textbf{c.}
-~\\Ejercería el control local del experimento, buscando que en cada tamizaje de cada parcela la herramienta a utilizar este en igualdad de condiciones para asegurarnos que el rendimiento se deba al método y no al desgaste que la herramienta podría tener, además de esto las parcelas deben ser asignadas a cada método o el método a cada parcela de forma que la posición de las parcelas no se vea incluida ya que esto puede traer sesgos donde el rendimiento se deba a la ubicación de la parcela y no al método de colado.
-
-~\\Para evaluar el control local del experimento nos centramos en la varianza estimada y en el coeficiente de variación
-$$\sigma^2=0.989 \;\;\; \bar{y}_{..}=18.16 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{..}}=0.0547 \cdot 100\% \simeq 5.476\%$$
-
-~\\Dado que la desviación estándar $\sigma=0.9945$ es pequeña y el coeficiente de variación también lo es, concluimos que hubo un buen control local en el experimento.
-
-~\\\textbf{d.}
-\begin{itemize}
-\item[Normalidad:]
-~\\Para verificar el supuesto de normalidad en los errores, se hicieron pruebas gráficas(histograma y Q-Q plot) y estadísticas, dentro de la pruebas estadísticas se realizaron pruebas para analizar la asimetria(test D'Agostino) y la curtosis(test de Anscombe-Glynn) individualmente, y se realizó la prueba de normalidad Shapiro-Wilk, para evaluar conjuntamente la normalidad de los residuos.
-
-~\\En las gráficas  se observa un posible incumplimiento de la normalidad, se puede ver que las barras de las colas sobrepasan un poco la curva teórica de la normal, y en el QQ-plot se observa que en ambas colas los puntos no están en la recta de los cuantiles teóricos, cabe aclarar que la prueba gráfica no es muy confiable porque depende de la experiencia del investigador, por ello nos vamos a centrar en los resultados de las pruebas estadísticas, ya que estas son mas objetivas.
-
-\pagebreak
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.5]{FigurasUV/N2.pdf}
-\end{figure}
-
-~\\Los resultados para cada una de las pruebas realizadas fueron:
-\begin{itemize}
-\item[Test D'Agostino:] $$H_0:Los \; datos\; no\; tienen\; asimetria$$
-$$H_a:Los\; datos\; tienen\; asimetria$$
-$$skew = -0.031147, z = -0.063304, p-value = 0.9495$$
-
-~\\Como el p-valor=0.9495 es superior a nuestro nivel de significancia, no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos tienen asimetría. Lo cuál es un buen indicio en cuanto a la normalidad de los errores.
-
-\item[Test de Anscombe-Glynn:]Sabemos que la curtosis en una distribución normal es 3, por ello se establecen las siguientes hipótesis en este test.
-$$H_0:La\; curtosis\; es\; igual\; a\; 3$$
-$$H_a:La\; curtosis\;no\; es\; igual\; a\; 3$$
-$$kurt = 2.57990, z = 0.16259, p-value = 0.8708$$
-
-~\\Como el p-valor=0.8708 es superior a nuestro nivel de significancia, no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos no tienen una curtosis igual a 3. Lo cuál complementando la prueba anterior, es muy probable que los errores presenten una distribución normal.
-
-\item[Test Shapiro-Wilk:]$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
-$$H_0:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
-$$W = 0.95297, p-value = 0.5725$$
-
-~\\Como el p-valor=0.5725 es superior a nuestro nivel de significancia, no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los datos no provienen de una distribución normal. Lo cual junto con las dos pruebas anteriores, nos indica que este supuesto de normalidad en los errores parece cumplirse.
-\end{itemize}
-
-\pagebreak
-\item[Homocedasticidad:]
-~\\Para analizar la homocedasticidad se realizó una prueba gráfica(valores ajustados vs residuos) y una prueba estadísticas(Test de Levene)
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.43]{FigurasUV/H2.pdf}
-\end{figure}
-~\\Podemos observar que la varianza en los distintos grupos (podemos ver que se forman tres grupos que corresponden a los valores ajustados de los tres tratamientos) es muy parecida, un poco más para el primero, pero no se observar una diferencia considerable. Por lo cuál gráficamente se podría decir que el supuesto de homocedasticidad en los errores parece cumplirse.
-
-~\\Los resultados la prueba realizada fueron:
-\begin{itemize}
-\item[Test de Levene:] $$H_0:La \; varianza\; de\; los\; grupos \; no \;son \; diferentes\; (iguales)$$
-$$H_a:La \; varianza\; de\; los\; grupos \; son \; diferentes$$
-$$ F value=0.0653  , Pr(>F)=0.9372$$
-\end{itemize}
-~\\Se utilizó el test de Levene ya que este no es sensible a las desviaciones de la normalidad como el de Bartlett. Como el p valor=0.9372 es superior a cualquier nivel de significancia de los usualmente establecidos (0.01,0.05,0.1) no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que la varianza de los grupos(3 grupos en este caso) son diferentes, por lo tanto, el supuesto de homocedasticidad en los errores parece cumplirse.
-
-\pagebreak
-\item[Independencia:]
-~\\Para analizar el supuesto de independencia en los errores, se realizaron dos pruebas gráficas(correlograma de los residuos y residuo t vs residuo anterior (t-1)) y dos pruebas estadísticas (test de Rachas y test de Durbin-Watson).
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.5]{FigurasUV/I2.pdf}
-\end{figure}
-~\\En la primera gráfica, podemos observar que la correlación en el retardo 1, es decir, la correlación entre el error i y el anterior i-1, es baja, pero la correlación en el retardo 2 y 4, es decir, la correlación entre el error i y el i-2, y el error i y el  i-4, son de aproximadamente -0.5. Esta correlación se podría considerar un poco elevada, y además sobrepasa los intervalos generados (lineas azules) para la correlación. En la segunda gráfica, no se observa una tendencia clara entre el error i y el error i-1, pero centrándonos en la primera gráfica podemos decir que no esta claro el cumplimiento de este supuesto.
-
-\begin{itemize}
-\item[Test de rachas:] $$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independientes)$$
-$$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
-$$Standard \; Normal = 0.82565, p-value = 0.409$$
-~\\Como el p valor=0.409 es mayor que nuestro nivel de significancia, no rechazamos la hipótesis nula y concluimos que no hay evidencia suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
-
-\item[Test de Durbin-Watson:] $$H_0:No\; existe \; autocorrelación \; en \; la \; muestra \;(\rho=0)$$
-$$H_a:Existe \; autocorrelación \; en \; la \; muestra \; (\rho\neq 0)$$
-$$DW = 2.334, p-value = 0.9024$$
-~\\Como el p valor=0.9024 es mayor que nuestro nivel de significancia, no rechazamos la hipótesis nula y concluimos que no hay evidencia suficiente para decir que existe autocorrelación en los residuales, en otras palabras, no podemos decir que los residuales no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
-\end{itemize}
-\end{itemize}
-
-~\\\textbf{e.}
-~\\Las diferencias entre los promedios de los tratamientos son:
-\begin{center}
-~\\Manual - Mecánico continúo= 17.64 - 17.02=0.62
-~\\Manual - Mecánico discontinúo= 17.64 - 19.82=2.18
-~\\Mecánico continúo - Mecánico discontinúo= 17.02 - 19.82=2.8
-\end{center}
-
-~\\Viendo las diferencias, nos parece razonable asumir una diferencia mínima de 2 kg para decir que existen diferencias entre los tratamientos, entonces, se tienen dos formulas esenciales para calcular la potencia del experimento:
-$$\hat{\lambda}=\frac{\sum\limits_{i=1}^t (\tau_i - \bar{\tau})^2 r_i}{2\hat{\sigma^2}} \;\;\;\; , \;\;\;\; \hat{\varPhi}=\sqrt{\frac{2\hat{\lambda}}{t}}$$
-
-$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^3 (2)^2 r_i}{2\hat{\sigma^2}}=\frac{3\cdot(2)^2 \cdot r_i}{2(0.989)}=\frac{12 r_i}{1.978}=6.0667 r_i$$
-$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(6.0667) r_i}{3}}=\sqrt{4.0445 r_i}$$
-
-~\\Estableciendo una potencia mínima de 0.90, tenemos la siguiente tabla de análisis de sensibilidad para determinar nuestro tamaño del experimento, comenzando con $r_i=2$ replicas:
-~\\
-\begin{center}
-\begin{tabular}{|c|cc|}
-\hline 
-r & 2 & 3 \\ 
-\hline 
-$n_1=t-1$ & 2 & 2 \\ 
-$n_2=n-t$ & 3 & 6 \\  
-$\hat\varPhi$ & 2.844 & 3.483 \\  
-P(Error II) & 0.3715 & 0.027 \\ 
-$\beta=Potencia$ & 0.6285 & 0.973 \\ 
-\hline 
+\textbf{Rallanderia 2} & & & & &\\
+Sol & 39.29 & 4.094339 & 10.42 & 33.6 & 44.4 \\
+Aire caliente & 43.97 & 2.608639 & 5.93 & 40.8 & 47.5 \\
+Sol y aire caliente & 53.44 & 6.983035 & 13.06 & 44.9 & 63.8 \\
+\hline
 \end{tabular} 
 \end{center}
-~\\
-~\\El número de replicas adecuado para tener una potencia superior al 90\% es de 3 (con 3 replicas se obtiene una potencia de 97.3\%)
-\section{Punto 3}
-~\\\textbf{a.}
-$2\tau_1-\tau_2-\tau_3$
 
-~\\Por el teorema 2, $\vec{\lambda'}\vec{\beta}$ es estimable si y solo si existe un vector $\vec{r'}$ tal que $\vec{r'}x'x=\lambda'$ o $x'x\vec{r}=\lambda$.
-
-\[
-\left(
-\begin{array}{cccc}
-r_1 & r_2 & r_3 & r_4 \\
-\end{array}
-\right)
-\cdot \left(
-\begin{array}{cccc}
-15&5&5&5 \\
-5&5&0&0 \\
-5&0&5&0 \\
-5&0&0&5 \\
-\end{array}
-\right)
-= \left(
-\begin{array}{ccccc}
-0&2&-1&-1 \\
-\end{array}
-\right)
-\] 
-
-~\\El sistema queda:
-$$15r_1+5r_2+5r_3+5r_4=0 \;\;\;\; (1)$$
-
-$$5r_1+5r_2=2 \;\;\;\; (2)$$
-
-$$5r_1+5r_3=-1 \;\;\;\; (3)$$
-
-$$5r_1+5r_4=-1 \;\;\;\; (4)$$
-
-
-
-~\\de (2): $5r_2=2-5r_1 \;\;\;  \to  r_2=\frac{2}{5}-r_1$
-~\\de (3): $5r_3=-1-5r_1 \;\;\;  \to  r_3=-\frac{1}{5}-r_1$
-~\\de (4): $5r_4=-1-5r_1 \;\;\;  \to  r_4=-\frac{1}{5}-r_1$
-
-~\\Entonces, un vector r el cuál resuelve el sistema es:
-\[\vec{r}'=
-\left(
-\begin{array}{cccc}
-0&\frac{2}{5}&-\frac{1}{5}&-\frac{1}{5}\\
-\end{array}
-\right)\]
-
-$\therefore$ La función propuesta en el punto a; $2\tau_1-\tau_2-\tau_3$ es estimable.
-
-
-~\\\textbf{b.}
-$\tau_2-\tau_3$
-
-~\\Por el teorema 2:
-
-\[
-\left(
-\begin{array}{cccc}
-r_1 & r_2 & r_3 & r_4 \\
-\end{array}
-\right)
-\cdot \left(
-\begin{array}{cccc}
-15&5&5&5 \\
-5&5&0&0 \\
-5&0&5&0 \\
-5&0&0&5 \\
-\end{array}
-\right)
-= \left(
-\begin{array}{ccccc}
-0&0&1&-1 \\
-\end{array}
-\right)
-\] 
-
-~\\El sistema queda:
-$$15r_1+5r_2+5r_3+5r_4=0 \;\;\;\; (1)$$
-
-$$5r_1+5r_2=0 \;\;\;\; (2)$$
-
-$$5r_1+5r_3=1 \;\;\;\; (3)$$
-
-$$5r_1+5r_4=-1 \;\;\;\; (4)$$
-
-
-
-~\\de (2): $5r_2=-5r_1 \;\;\;  \to  r_2=-r_1$
-~\\de (3): $5r_3=1-5r_1 \;\;\;  \to  r_3=\frac{1}{5}-r_1$
-~\\de (4): $5r_4=-1-5r_1 \;\;\;  \to  r_4=-\frac{1}{5}-r_1$
-
-~\\Entonces, un vector r el cuál resuelve el sistema es:
-\[\vec{r}'=
-\left(
-\begin{array}{cccc}
-0&0&\frac{1}{5}&-\frac{1}{5}\\
-\end{array}
-\right)\]
-
-$\therefore$ La función propuesta en el punto b; $\tau_2-\tau_3$ es estimable.
-
-~\\\textbf{c.}
-$\tau_1+\tau_2$
-
-~\\Por el teorema 2:
-
-\[
-\left(
-\begin{array}{cccc}
-r_1 & r_2 & r_3 & r_4 \\
-\end{array}
-\right)
-\cdot \left(
-\begin{array}{cccc}
-15&5&5&5 \\
-5&5&0&0 \\
-5&0&5&0 \\
-5&0&0&5 \\
-\end{array}
-\right)
-= \left(
-\begin{array}{ccccc}
-0&1&1&0 \\
-\end{array}
-\right)
-\] 
-
-~\\El sistema queda:
-$$15r_1+5r_2+5r_3+5r_4=0 \;\;\;\; (1)$$
-
-$$5r_1+5r_2=1 \;\;\;\; (2)$$
-
-$$5r_1+5r_3=1 \;\;\;\; (3)$$
-
-$$5r_1+5r_4=0 \;\;\;\; (4)$$
-
-
-
-~\\de (2): $5r_2=1-5r_1 \;\;\;  \to  r_2=\frac{1}{5}-r_1$
-~\\de (3): $5r_3=1-5r_1 \;\;\;  \to  r_3=\frac{1}{5}-r_1$
-~\\de (4): $5r_4=-5r_1 \;\;\;  \to  r_4=-r_1$
-
-~\\Entonces, si $r_1=0  \;\; \to r_2=\frac{1}{5} \;\; r_3=\frac{1}{5} \;\; r_4=0 $
-
-~\\Pero, reemplazando estos valores en (1):
-$$15(0)+5(\frac{1}{5})+5(\frac{1}{5})+5(0)=0 $$
-$$2\neq 0$$
-
-
-$\therefore$ La función propuesta en el punto c; $\tau_1+\tau_2$ no es estimable.
-
-~\\\textbf{d.}
-~\\Según el teorema 3, el mejor estimador lineal insesgado de $\vec{\lambda'}\vec{\beta}$ es $\vec{r'}x'y$
-
-\begin{itemize}
-\item[a.]
-
-\[r'x'y=
-\left(
-\begin{array}{cccc}
-0 & \frac{2}{5} & -\frac{1}{5} & -\frac{1}{5} \\
-\end{array}
-\right)
-\cdot \left(
-\begin{array}{c}
-y_{..} \\
-y_{1.} \\
-y_{2.} \\
-y_{3.} \\
-\end{array}
-\right)
-= \frac{2}{5}y_{1.}-\frac{1}{5}y_{2.}-\frac{1}{5}y_{3.}
-\] 
-
-$$=2\bar{y_{1.}}-\bar{y_{2.}}-\bar{y_{3.}}$$
-
-\item[b.]
-
-\[r'x'y=
-\left(
-\begin{array}{cccc}
-0 & 0 & \frac{1}{5} & -\frac{1}{5} \\
-\end{array}
-\right)
-\cdot \left(
-\begin{array}{c}
-y_{..} \\
-y_{1.} \\
-y_{2.} \\
-y_{3.} \\
-\end{array}
-\right)
-= \frac{1}{5}y_{2.}-\frac{1}{5}y_{3.}
-\] 
-
-$$=\bar{y_{2.}}-\bar{y_{3.}}$$
-\item[c.]No es estimable.
-\end{itemize}
-
-~\\\textbf{e.}
-~\\En el punto anterior tenemos los mejores estimadores lineales insesgados para cada una de las funciones, reemplazando los valores para encontrar la estimación, tenemos:
-\begin{itemize}
-\item[a.]
-$$\widehat{2\tau_1-\tau_2-\tau_3}=\bar{y_{1.}}-\bar{y_{2.}}-\bar{y_{3.}}=-1.56$$
-
-~\\Con esta estimación podemos concluir que se produce 1.56 kg menos de rendimiento del almidón de yuca cuando se usa el método de tamizado manual en lugar de alguno de los métodos mecánicos, ya sea continúo o discontinúo.
-\item[b.]
-$$\widehat{\tau_2-\tau_3}=\bar{y_{2.}}-\bar{y_{3.}}=-2.8$$
-
-~\\Con esta estimación concluimos que se produce 2.8 kg menos de rendimiento del almidón de yuca cuando se usa el método de tamizado mecánico continúo en lugar del método mecánico discontinúo.
-\item[c.]
-No es estimable
-\end{itemize}
+~\\Para ver de forma gráfica posibles diferencias entre los niveles de los factores principales(método de secado y rallanderia) y entre los niveles del factor anidado(trabajador), se realizaron los siguientes gráficos de cajas. No se hizo el de la interacción triple, porque se perdía claridad en la interpretación, para esta interacción se tiene un gráfico de lineas posterior.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.46]{FigurasUV/Descriptivas2.pdf}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.46]{FigurasUV/D2.pdf}
+\end{figure}
 
 
 ~\\\textbf{f.}
-~\\Teorema: Hay exactamente k funciones estimables linealmente independientes, donde k es el rango de x.
-
-~\\Dado el teorema anterior, el rango de x es igual a 3, por lo tanto, se podrían obtener 3 funciones estimables linealmente independientes.
+~\\El modelo estadístico es:
+$$y_{ijkl}=\mu+\tau_i+\alpha_j+\gamma_{k(j)}+(\tau\alpha)_{ij}+(\tau\gamma)_{ik(j)}+\varepsilon_{(ijk)l}$$  
+$$ i=1,2,3 \;\;\;\; j=1,2 \;\;\;\; k=1,2,3 \;\;\; l=1,2,3$$
+~\\Supuestos: $$\varepsilon_{ijkl}\simeq N(0,\sigma^2)$$
+$$E[\varepsilon_{ijkl}]=0  \;\; \forall_{ijkl}$$
+$$V[\varepsilon_{ijkl}]=\sigma^2  \;\; \forall_{ijkl}$$
+$$Cov[\varepsilon_{ijkl},\varepsilon_{i'j'k'l'}]=0 \;\;  \forall_{i\neq i' \;\;\; \wedge \;\;\; j\neq j' \wedge \;\;\; k\neq k' \wedge \;\;\; l\neq l'}$$
+~\\Donde:
+~\\$y_{ijkl}$ es el rendimiento del almidón agrio de yuca en Kg bajo el método de secado i, en la rallanderia j y bajo el trabajador k en la l-ésima réplica.
+~\\$\mu$ es la media general del rendimiento del almidón agrio de yuca en Kg sin tener en cuenta el método de secado, la rallanderia ni el trabajador.
+~\\$\tau_i$ es el efecto del i-ésimo método de secado sobre el rendimiento del almidón agrio de yuca en Kg.
+~\\$\alpha_j$ es el efecto de la j-ésima rallanderia sobre el rendimiento del almidón agrio de yuca en Kg. 
+~\\$\gamma_{k(j)}$ es el efecto del k-ésimo trabajador anidado a la j-ésima rallanderia sobre el rendimiento del almidón agrio de yuca en Kg.
+~\\$(\tau\alpha)_{ij}$ es el efecto de la interacción del método de secado i-ésimo y la rallanderia j-ésima sobre el rendimiento del almidón agrio de yuca en Kg.
+~\\$(\tau\gamma)_{ik(j)}$ es el efecto de la interacción del método de secado i-ésimo y el trabajador k-ésimo anidado a la j-ésima rallanderia sobre el rendimiento del almidón agrio de yuca en Kg.
+~\\$\varepsilon_{(ijk)l}$ es el error aleatorio debido al i-ésimo método de secado, a la j-ésima rallanderia, al k-ésimo trabajador anidado a la j-ésima rallanderia y a la l-ésima réplica.
 
 ~\\\textbf{g.}
-~\\El teorema 4, establece que cualquier vector $\vec{r}$ produce la misma estimación insesgada de $\vec{\lambda}'\vec{\beta}$
-
-~\\Para la función del literal a, $2\tau_1-\tau_2-\tau_3$, la cual es estimable y tenemos una estimación de -1.56, encontraremos otro vector $\vec{r}$ y calcularemos una nueva estimación.
-
-~\\Otro vector sería $\vec{r}=[1 \;\; -\frac{3}{5} \;\; -\frac{6}{5} \;\; -\frac{6}{5}]$
-
-~\\Obteniendo una estimación con este nuevo vector, tenemos:
-
-\[r'x'y=
-\left(
-\begin{array}{cccc}
-1 & -\frac{3}{5} & -\frac{6}{5} & -\frac{6}{5} \\
-\end{array}
-\right)
-\cdot \left(
-\begin{array}{c}
-y_{..} \\
-y_{1.} \\
-y_{2.} \\
-y_{3.} \\
-\end{array}
-\right)
-= y_{..}-\frac{3}{5}y_{1.}-\frac{6}{5}y_{2.}-\frac{6}{5}y_{3.}
-\] 
-
-$$=y_{..}-3\bar{y_{1.}}-6\bar{y_{2.}}-6\bar{y_{3.}}$$
-
-$$=272.4-3(17.64)-6(17.02)-6(19.82)=-1.56$$
-
-~\\Obteniendo así, la misma estimación anterior, lo cual comprueba el teorema 4.
-
-~\\Para la función del literal b, $\tau_2-\tau_3$, la cual es estimable y tenemos una estimación de -2.8, encontraremos otro vector $\vec{r}$ y calcularemos una nueva estimación.
-
-~\\Otro vector sería $\vec{r}=[1 \;\; -1 \;\; -\frac{4}{5} \;\; -\frac{6}{5}]$
-
-~\\Obteniendo una estimación con este nuevo vector, tenemos:
-
-\[r'x'y=
-\left(
-\begin{array}{cccc}
-1 & -1 & -\frac{4}{5} & -\frac{6}{5} \\
-\end{array}
-\right)
-\cdot \left(
-\begin{array}{c}
-y_{..} \\
-y_{1.} \\
-y_{2.} \\
-y_{3.} \\
-\end{array}
-\right)
-= y_{..}-y_{1.}-\frac{4}{5}y_{2.}-\frac{6}{5}y_{3.}
-\] 
-
-$$=y_{..}-y_{1.}-4\bar{y_{2.}}-6\bar{y_{3.}}$$
-
-$$=272.4-88.2-4(17.02)-6(19.82)=-2.8$$
-
-~\\Obteniendo así, la misma estimación anterior, lo cual comprueba el teorema 4.
+Las hipótesis a evaluar son:
+\begin{itemize}
+\item[1).] $$H_0:\tau_1=\tau_2=\tau_3=\tau$$
+$$H_a:Al\; menos\; una\; de\; estas\; igualdades\; no\; se\; cumple$$
+\item[2).] $$H_0:\alpha_1=\alpha_2=\alpha$$
+$$H_a:Al\; menos\; una\; de\; estas\; igualdades\; no\; se\; cumple$$
+\item[3).] $$H_0:\gamma_{1(1)}=\gamma_{2(1)}=\gamma_{3(1)}=\gamma_{1(2)}=\gamma_{2(2)}=\gamma_{3(2)}=\gamma$$
+$$H_a:Al\; menos\; una\; de\; estas\; igualdades\; no\; se\; cumple$$
+\item[4).] $$H_0:(\tau\alpha)_{ij}=0$$
+$$H_a:(\tau\alpha)_{ij}\neq 0$$
+\item[5).] $$H_0:(\tau\gamma)_{ik(j)}=0$$
+$$H_a:(\tau\gamma)_{ik(j)}\neq 0$$
+\end{itemize}
 
 
+~\\\textbf{h.}
 
+\begin{center}
+\resizebox{16.5cm}{!} {
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+Fuente de Variación & Grados de Libertad & Suma de Cuadrados & Cuadrados Medios & F & Pr>F & ECM\\ 
+\hline 
+$\tau$ & 2 & 1774.8 & 887.4 & 180.140 & 0 & $\sigma^2+9\sum\limits_{i=1}^3 \tau_i^2+3\sigma^2_{\tau\gamma}$ \\ 
+$\alpha$ & 1 & 106.7 & 106.7  & 21.656  & 0.0000431 & $\sigma^2+27\sum\limits_{j=1}^2 \alpha_j^2+9\sigma^2_\gamma$ \\
+$\tau\alpha$ & 2 & 3.8 & 1.9 & 0.385 & 0.683429 & $\sigma^2+\frac{9}{2}\sum\limits_{i=1}^3\sum\limits_{j=1}^2(\tau\alpha)_{ij}+3\sigma^2_{\tau\gamma}$\\
+$\gamma_{(j)}$ & 4 & 765.9 & 191.5 & 38.868 & 0 & $\sigma^2+9\sigma^2_\gamma$\\
+$\tau\gamma_{(j)}$ & 8 & 201 & 25.1 & 5.101 & 0.000274 & $\sigma^2+3\sigma^2_{\tau\gamma}$\\
+Error & 36 & 177.3 & 4.9 &  &  & $\sigma^2$\\ 
+Total & 53 & 3029.5 &  &  &  & \\ 
+\hline 
+\end{tabular} 
+}
+\end{center}
+
+~\\
+
+~\\A un nivel de significancia $\alpha=0.05$ se rechaza $H_0$ en las hipótesis (1),(2),(3) y (5) del literal anterior.
+
+~\\\textbf{i.}
+\begin{itemize}
+\item[Normalidad:]
+~\\Para verificar el supuesto de normalidad en los errores, se hicieron pruebas gráficas(histograma y Q-Q plot) y se realizó la prueba de normalidad Anderson-Darling por ser más potente, ya que se tiene una cantidad de datos superior a 30.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.45]{FigurasUV/N2.pdf}
+\end{figure}
+
+~\\En las gráficas no se observa un posible incumplimiento de la normalidad, se puede ver que las barras del histograma se ajustan muy bien a la curva teórica de la normal, y en el QQ-plot se observa que la gran mayoría de los puntos están sobre la recta de los cuantiles teóricos, cabe aclarar que la prueba gráfica no es muy confiable porque depende de la experiencia del investigador, por ello nos vamos a centrar en los resultados de la prueba estadística, ya que estas son más objetivas.
+
+~\\Los resultados para la prueba estadística realizada fueron:
+$$H_0:Los\; residuales\; provienen\; de\; una\; distribucion\; normal$$
+$$H_0:Los\; residuales\; no\; provienen\; de\; una\; distribucion\; normal$$
+$$A = 0.43888, p-value = 0.2832$$
+
+~\\Como el p-valor=0.2832 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que los residuales no provienen de una distribución normal. Lo cual nos indica que este supuesto de normalidad en los errores parece cumplirse.
+
+\item[Homocedasticidad:]
+~\\Para analizar este supuesto se realizó el test de Bartlett, ya que bajo el cumplimiento de la normalidad este es más potente.
+~\\Los resultados la prueba realizada fueron:
+$$H_0:La \; varianza\; de\; los\; grupos \; no \;son \; diferentes\; (iguales)$$
+$$H_a:La \; varianza\; de\; los\; grupos \; son \; diferentes$$
+$$Bartlett's \;\; K-squared = 25.586, df = 17, p-value = 0.08234$$
+
+~\\Como el p valor=0.08234 es superior a nuestro nivel de significancia establecido $\alpha=0.05$ no se rechaza la hipótesis nula, y concluimos que no hay evidencia suficiente para decir que la varianza de los grupos(18 grupos en este caso) son diferentes, por lo tanto, el supuesto de homocedasticidad en los errores parece cumplirse.
+
+\item[Independencia:]
+~\\Para analizar el supuesto de independencia se realizó el test de Rachas, ya que este no se puede evaluar con un test Durbin- Watson o un correlograma porque estos requieren conocer el orden en el cuál fueron obtenidos los datos y esa información no se tiene.
+~\\Los resultados la prueba realizada fueron:
+$$H_0:La \; muestra\; es\; aleatoria\; (los \; residuales \;son \; independientes)$$
+$$H_a:La \; muestra\; no \;es\; aleatoria\; (los \; residuales \; no\;son \; independientes)$$
+$$Standard \; Normal = 1.8326, p-value = 0.06685$$
+
+~\\Como el p valor=0.06685 es mayor que nuestro nivel de significancia $\alpha=0.05$, no rechazamos la hipótesis nula y concluimos que no hay evidencia suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, se puede concluir que este supuesto de independencia en los errores parece cumplirse.
+\end{itemize}
+
+~\\\textbf{j.}
+INTERPRETAR
+
+~\\\textbf{k.}
+Para evaluar el control local del experimento nos centramos en la varianza estimada y en el coeficiente de variación
+$$\sigma^2=4.9 \;\;\; \bar{y}_{....}=46.97222 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.047125 \cdot 100\% \simeq 4.7125\%$$
+
+~\\Dado que la desviación estándar $\sigma=2.2136$ es pequeña y el coeficiente de variación también lo es, concluimos que hubo un buen control local en el experimento.
+
+~\\\textbf{l.}
+~\\Dado que en la anova se obtuvo que la interacción método de secado-rallanderia no es significativa, se puede proceder a evaluar los factores individualmente, es decir, realizaremos contrastes para ver cuál o cuáles niveles del factor método de secado difieren en su efecto en el rendimiento del almidón agrio de yuca, también sería interesante saber qué trabajador difiere en cuanto a su efecto en el rendimiento del almidón. No se realizarán contrastes para el factor rallanderia, ya que solo tiene dos niveles, y dado que en la anova ya se obtuvo que existen diferencias, resultaría redundante realizar contrastes para este factor.
+
+~\\\textbf{Método de secado:}
+En las estadísticas descriptivas y en el gráfico de cajas se vio que aparentemente, el método de secado Sol y aire caliente son parecidos, pero estos a su vez difieren del método 50\% sol y 50\% aire caliente. Esto se verificará teóricamente con los siguientes contrastes.
+$$H_0:\tau_1-\tau_2=0$$
+
+~\\Bajo la hipótesis nula, tenemos que el estadístico de prueba es:
+$$F=\frac{(\sum\limits_{i=1}^t a_i\bar{y_{i.}})^2}{{\hat{\sigma^2}\sum\limits_{i=1}^t \frac{{a_i}^2}{r_i}}}$$
+
+$$\rightarrow F=\frac{(-4.06)^2}{4.9\cdot \frac{1}{9}}=30.276$$
+
+~\\Como $F_{0.95(1,51)}=4.030393 < F_{cal}=30.276$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del método de secado al sol y el método de secado a aire caliente sobre el rendimiento (en Kg) del almidón agrio de yuca.
+~\\Ahora se verificará si el método de secado 50\% sol y 50\% aire caliente difiere de los otros dos métodos de secado (sol y aire caliente).
+
+$$H_0:\tau_1+\tau_2-\tau_3=0$$
+
+$$\rightarrow F=\frac{(-23.28)^2}{4.9\cdot \frac{1}{3}}=331.81$$
+
+~\\Como $F_{0.95(1,51)}=4.030393 < F_{cal}=331.81$, se rechaza $H_0$ y concluimos que si hay diferencias significativas entre los efectos de los métodos de secado sol y aire caliente con el método de secado 50\% sol y 50\% aire caliente sobre el rendimiento del almidón agrio de yuca.
+
+~\\Con los resultados de las dos hipótesis anteriores, se puede concluir que los efectos de los 3 métodos de secado son distintos, complementando esto con las estadisticas descriptivas obtenidas, se podría decir que en general, el método de secado que mayor rendimiento(en Kg) produce sobre el almidón agrio de yuca es el de 50\% sol y 50\% aire caliente seguido por el método de secado aire caliente y finalmente, el método que aparentemente menor rendimiento produce es el de secado al sol.
+
+~\\\textbf{Trabajador:}
+Con respecto a la \textbf{rallanderia 1}, se vio en las estadísticas descriptivas y en el gráfico de cajas que los trabajadores 1 y 3 parecen generar el mismo rendimiento del almidón agrio de yuca, y estos dos a su vez difieren del rendimiento del trabajador 2. Esto se verificará con los siguientes contrastes.
+$$H_0:\gamma_{1(1)}-\gamma_{3(1)}=0$$
+
+$$\rightarrow F=\frac{(0.66)^2}{4.9\cdot \frac{2}{9}}=0.4$$
+
+~\\Como $F_{0.95(1,51)}=4.030393 > F_{cal}=0.4$, no se rechaza $H_0$ y concluimos que no hay diferencias significativas entre los efectos del trabajador 1 y el trabajador 3 de la rallanderia 1 sobre el rendimiento del almidón agrio de yuca.
+
+$$H_0:\gamma_{1(1)}+\gamma_{3(1)}-2\gamma_{2(1)}=0$$ 
+
+$$\rightarrow F=\frac{(-15.9)^2}{4.9\cdot \frac{2}{3}}=77.39$$
+
+~\\Como $F_{0.95(1,51)}=4.030393 < F_{cal}=77.39$, se rechaza $H_0$ y concluimos que hay diferencias significativas entre los efectos del trabajador 1 y 3 y el trabajador 2 de la rallanderia 1 sobre el rendimiento del almidón agrio de yuca.
+
+~\\Con estos resultados se puede concluir que el trabajador 2 genera mayor rendimiento del almidón de yuca en la rallanderia 1 sin importar el método de secado.
+
+~\\Con respecto a la \textbf{rallanderia 2}, en las estadísticas descriptivas y en el gráfico de cajas se observó lo mismo que en la rallanderia 1, que los trabajadores 1 y 3 parecen generar el mismo rendimiento del almidón agrio de yuca, y estos dos a su vez difieren del rendimiento del trabajador 2. Esto se verificará con los siguientes contrastes.
+$$H_0:\gamma_{1(2)}-\gamma_{3(2)}=0$$
+
+$$\rightarrow F=\frac{(0.94)^2}{4.9\cdot \frac{2}{9}}=0.8114$$
+
+~\\Como $F_{0.95(1,51)}=4.030393 > F_{cal}=0.8114$, no se rechaza $H_0$ y concluimos que no hay diferencias significativas entre los efectos del trabajador 1 y el trabajador 3 de la rallanderia 2 sobre el rendimiento del almidón agrio de yuca.
+
+$$H_0:\gamma_{1(2)}+\gamma_{3(2)}-2\gamma_{2(2)}=0$$ 
+
+$$\rightarrow F=\frac{(-15.94)^2}{4.9\cdot \frac{2}{3}}=77.78$$
+
+~\\Como $F_{0.95(1,51)}=4.030393 < F_{cal}=77.78$, se rechaza $H_0$ y concluimos que hay diferencias significativas entre los efectos del trabajador 1 y 3 y el trabajador 2 de la rallanderia 2 sobre el rendimiento del almidón agrio de yuca.
+
+~\\Con estos resultados se puede concluir que el trabajador 2 genera mayor rendimiento del almidón de yuca en la rallanderia 2 sin importar el método de secado.
+
+~\\\textbf{m.}
+
+~\\\textbf{Para la primera hipótesis de literal g:}
+~\\Las diferencias en valor absoluto entre los promedios son:
+$$\tau_1-\tau_2=41.06-45.12=4.06$$
+
+$$\tau_1-\tau_3=41.06-54.73=13.67$$
+
+$$\tau_2-\tau_3=45.12-54.73=9.61$$
+
+
+~\\Observando las diferencias, nos parece razonable asumir una diferencia mínima de 4 kg para decir que existen diferencias entre los tratamientos, entonces, se tienen dos formulas esenciales para calcular la potencia del experimento:
+$$\hat{\lambda}=\frac{\sum\limits_{i=1}^t (\tau_i - \bar{\tau})^2 r}{2\hat{\sigma^2}} \;\;\;\; , \;\;\;\; \hat{\varPhi}=\sqrt{\frac{2\hat{\lambda}}{t}}$$
+
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^3 (4)^2 18}{2\cdot 4.9}=\frac{3\cdot 16\cdot 18}{2(4.9)}=88.1632$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(88.1632)}{3}}=\sqrt{58.7754}=7.66$$
+
+~\\Utilizando la tabla de la beta no central con $f_1=2$ grados de libertad en el numerador y $f_2=51$ grados de libertad en el denominador, se obtiene:
+$$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
+
+~\\\textbf{Para la segunda hipótesis de literal g:}
+~\\Las diferencias en valor absoluto entre los promedios son:
+
+~\\\textbf{n.}
 % -------------------------------------------------------------------------------------
 % Fin del artículo
 % **** --------------------------------------------------------------------------------
