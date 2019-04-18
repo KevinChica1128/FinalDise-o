@@ -63,27 +63,92 @@ summary(rendimiento[c(16:18,34:36,52:54)])
 sd(rendimiento[c(16:18,34:36,52:54)])
 
 #Interacción método de secado - rallanderia:
-#Rallanderia 1:
-#Sol
+#Sol:
+#Rallanderia 1
 summary(rendimiento[1:9])
 sd(rendimiento[1:9])
-#Aire caliente
+#Rallanderia 2
+summary(rendimiento[10:18])
+sd(rendimiento[10:18])
+#Aire caliente:
+#Rallanderia 1
 summary(rendimiento[19:27])
 sd(rendimiento[19:27])
-#Sol y Aire caliente
+#Rallanderia 2
+summary(rendimiento[28:36])
+sd(rendimiento[28:36])
+#Sol y Aire caliente:
+#Rallanderia 1
 summary(rendimiento[37:45])
 sd(rendimiento[37:45])
 #Rallanderia 2:
-#Sol
-summary(rendimiento[10:18])
-sd(rendimiento[10:18])
-#Aire caliente
-summary(rendimiento[28:36])
-sd(rendimiento[28:36])
-#Sol y Aire caliente
 summary(rendimiento[46:54])
 sd(rendimiento[46:54])
 
+#Interacción método de secado - trabajador(rallanderia):
+#Sol:
+#Rallanderia 1:
+#Trabajador 1
+summary(rendimiento[1:3])
+sd(rendimiento[1:3])
+#Trabajador 2
+summary(rendimiento[4:6])
+sd(rendimiento[4:6])
+#Trabajador 3
+summary(rendimiento[7:9])
+sd(rendimiento[7:9])
+#Rallanderia 2:
+#Trabajador 1
+summary(rendimiento[10:12])
+sd(rendimiento[10:12])
+#Trabajador 2
+summary(rendimiento[13:15])
+sd(rendimiento[13:15])
+#Trabajador 3
+summary(rendimiento[16:18])
+sd(rendimiento[16:18])
+#Aire caliente:
+#Rallanderia 1:
+#Trabajador 1
+summary(rendimiento[19:21])
+sd(rendimiento[19:21])
+#Trabajador 2
+summary(rendimiento[22:24])
+sd(rendimiento[22:24])
+#Trabajador 3
+summary(rendimiento[25:27])
+sd(rendimiento[25:27])
+#Rallanderia 2:
+#Trabajador 1
+summary(rendimiento[28:30])
+sd(rendimiento[28:30])
+#Trabajador 2
+summary(rendimiento[31:33])
+sd(rendimiento[31:33])
+#Trabajador 3
+summary(rendimiento[34:36])
+sd(rendimiento[34:36])
+#Sol y Aire caliente:
+#Rallanderia 1:
+#Trabajador 1
+summary(rendimiento[37:39])
+sd(rendimiento[37:39])
+#Trabajador 2
+summary(rendimiento[40:42])
+sd(rendimiento[40:42])
+#Trabajador 3
+summary(rendimiento[43:45])
+sd(rendimiento[43:45])
+#Rallanderia 2:
+#Trabajador 1
+summary(rendimiento[46:48])
+sd(rendimiento[46:48])
+#Trabajador 2
+summary(rendimiento[49:51])
+sd(rendimiento[49:51])
+#Trabajador 3
+summary(rendimiento[52:54])
+sd(rendimiento[52:54])
 
 #Boxplots
 #Método de secado
