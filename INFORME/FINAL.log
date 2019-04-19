@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.2)  18 APR 2019 12:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.2)  18 APR 2019 20:50
 entering extended mode
 **./FINAL.tex
 (FINAL.tex
@@ -460,49 +460,49 @@ LaTeX Warning: Characters dropped after `\end{comment}' on input line 126.
 [1
 
 {C:/Users/KEVINSTEVEN/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2] [3]
-<FigurasUV/DATOS1.png, id=21, 372.64218pt x 251.43938pt>
+[2] [3] [4]
+<FigurasUV/DATOS1.png, id=29, 372.64218pt x 251.43938pt>
 File: FigurasUV/DATOS1.png Graphic file (type png)
 <use FigurasUV/DATOS1.png>
-Package pdftex.def Info: FigurasUV/DATOS1.png  used on input line 207.
+Package pdftex.def Info: FigurasUV/DATOS1.png  used on input line 224.
 (pdftex.def)             Requested size: 223.58702pt x 150.86478pt.
- [4 <./FigurasUV/DATOS1.png>] [5] [6]
-<FigurasUV/Descriptivas2.pdf, id=36, 1027.84pt x 545.03625pt>
+ [5 <./FigurasUV/DATOS1.png>] [6] [7]
+<FigurasUV/Descriptivas2.pdf, id=42, 1027.84pt x 545.03625pt>
 File: FigurasUV/Descriptivas2.pdf Graphic file (type pdf)
 <use FigurasUV/Descriptivas2.pdf>
-Package pdftex.def Info: FigurasUV/Descriptivas2.pdf  used on input line 356.
+Package pdftex.def Info: FigurasUV/Descriptivas2.pdf  used on input line 373.
 (pdftex.def)             Requested size: 472.81213pt x 250.71971pt.
 
-Overfull \hbox (42.80751pt too wide) in paragraph at lines 356--357
+Overfull \hbox (42.80751pt too wide) in paragraph at lines 373--374
  [][] 
  []
 
-<FigurasUV/D2.pdf, id=37, 1027.84pt x 545.03625pt>
+<FigurasUV/D2.pdf, id=43, 1027.84pt x 545.03625pt>
 File: FigurasUV/D2.pdf Graphic file (type pdf)
 <use FigurasUV/D2.pdf>
-Package pdftex.def Info: FigurasUV/D2.pdf  used on input line 361.
+Package pdftex.def Info: FigurasUV/D2.pdf  used on input line 378.
 (pdftex.def)             Requested size: 411.12872pt x 218.01064pt.
-[7 <./FigurasUV/Descriptivas2.pdf> <./FigurasUV/D2.pdf>] [8]
-Overfull \hbox (39.47089pt too wide) in paragraph at lines 403--418
+[8 <./FigurasUV/Descriptivas2.pdf> <./FigurasUV/D2.pdf>] [9]
+Overfull \hbox (39.47089pt too wide) in paragraph at lines 420--435
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
 
-<FigurasUV/N2.pdf, id=58, 1027.84pt x 545.03625pt>
+<FigurasUV/N2.pdf, id=61, 1027.84pt x 545.03625pt>
 File: FigurasUV/N2.pdf Graphic file (type pdf)
 <use FigurasUV/N2.pdf>
-Package pdftex.def Info: FigurasUV/N2.pdf  used on input line 431.
+Package pdftex.def Info: FigurasUV/N2.pdf  used on input line 448.
 (pdftex.def)             Requested size: 462.52373pt x 245.26405pt.
 
-Overfull \hbox (32.5191pt too wide) in paragraph at lines 431--432
+Overfull \hbox (32.5191pt too wide) in paragraph at lines 448--449
  [][] 
  []
 
-[9 <./FigurasUV/N2.pdf>] [10] [11] [12] [13] [14] [15] (FINAL.aux
+[10 <./FigurasUV/N2.pdf>] [11] [12] [13] [14] [15] [16] (FINAL.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
@@ -535,9 +535,9 @@ e1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on FINAL.pdf (15 pages, 268199 bytes).
+Output written on FINAL.pdf (16 pages, 270681 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
+ 410 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

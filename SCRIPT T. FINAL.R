@@ -5,7 +5,9 @@
 
 
 #Problema 1
-
+library(readxl)
+CAMPANA1 <- read_excel("CAMPANA1.xlsx")
+View(CAMPANA1)
 
 
 
@@ -230,3 +232,5 @@ cld(leastsquare3, alpha=.05, Letters=letters)
 leastsquare2 = lsmeans(anova, ~trabajador|rallanderia,  adjust="tukey")
 cld(leastsquare2, alpha=.05, Letters=letters)
 
+leastsquare = lsmeans(anova, ~rallanderia,  adjust="tukey")
+cld(leastsquare, alpha=.05, Letters=letters)
