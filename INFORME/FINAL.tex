@@ -399,6 +399,19 @@ $$Standard \; Normal = 1.4152, p-value = 0.06685$$
 ~\\\textbf{f.}
 
 ~\\\textbf{g.}
+Para evaluar el control local del experimento nos centramos en la varianza estimada y en el coeficiente de variación
+
+~\\Tallos
+$$\sigma^2=2.5571 \;\;\; \bar{y}_{....}=3.5425 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.4514025 \cdot 100\% \simeq 45.14025\%$$
+
+~\\Altura
+$$\sigma^2=3.1385 \;\;\; \bar{y}_{....}=24.96975 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.0709491 \cdot 100\% \simeq 7.09491\%$$
+
+~\\Hojas verdes
+$$\sigma^2=3.2828 \;\;\; \bar{y}_{....}=5.5575 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.3260189 \cdot 100\% \simeq 32.60189\%$$
+
+
+~\\Podemos ver que existe mayor variabilidad en las variables Tallos y Hojas, para la variable Altura tenemos un coeficiente de variación relativamente bajo, así pues podemos decir que se ejerció un buen control local sin embargo el numero de tallos y la cantidad de hojas verdes totalmente expandidas resultan tener mayor variabilidad.
 
 ~\\\textbf{h.}
 ~\\Dado que en la anova realizada para cada modelo se obtuvo que la interacción bloque-tratamiento resultó ser significativa, no es adecuado usar contrastes por factor individual, por lo que se van a realizar contrastes para las interacciones por cada modelo. Para realizar dichos contrastes, nos basamos en los gráficos de cajas realizados para las interacciones en cada uno de los modelos, observando en ellos posibles diferencias entre los distintos tratamientos. La metodología que se llevara a cabo es hacer contrastes entre tratamientos por cada bloque y finalmente se hará un contraste entre los mejores tratamientos de cada bloque, para así lograr saber qué interacción fue la que generó mejores resultados para cada una de las variables de respuesta, teniendo en cuenta lo anterior, se realizarán 6 contrastes(uno de cada uno de los cinco bloques y un contraste final entre los mejores de cada bloque) para cada uno de los modelos planteados.
@@ -459,7 +472,75 @@ $$\rightarrow F=\frac{(6.92)^2}{3.1385\cdot \frac{8}{20}}=38.1443$$
 
 
 ~\\\textbf{i.}
+~\\\textbf{Para la primera hipótesis de la variable Tallos:}
+~\\Las diferencias en valor absoluto entre los promedios de numero de tallos:
+$$\tau_1-\tau_2=41.06-45.12=4.06$$
 
+$$\tau_1-\tau_3=41.06-54.73=13.67$$
+
+$$\tau_2-\tau_3=45.12-54.73=9.61$$
+
+
+~\\Observando las diferencias y teniendo en cuenta los contrastes, donde nos decían que los efectos sobre el rendimiento del almidón de yuca de los 3 métodos de secado eran diferentes, nos parece razonable asumir una diferencia mínima de 4 kg para decir que existen diferencias entre los tratamientos, entonces, se tienen dos formulas esenciales para calcular la potencia del experimento:
+$$\hat{\lambda}=\frac{\sum\limits_{i=1}^t (\tau_i - \bar{\tau})^2 r}{2\hat{\sigma^2}} \;\;\;\; , \;\;\;\; \hat{\varPhi}=\sqrt{\frac{2\hat{\lambda}}{t}}$$
+
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^3 (4)^2 18}{2\cdot 4.9}=\frac{3\cdot 16\cdot 18}{2(4.9)}=88.1632$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(88.1632)}{3}}=\sqrt{58.7754}=7.66$$
+
+~\\Utilizando la tabla de la beta no central con $f_1=2$ grados de libertad en el numerador y $f_2=51$ grados de libertad en el denominador, se obtiene:
+$$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
+
+~\\\textbf{Para la segunda hipótesis del literal g:}
+~\\Las diferencias en valor absoluto entre los promedios de rendimiento(en Kg) del almidón de yuca de las 2 rallanderias son:
+$$\alpha_1-\alpha_2=48.38-45.57=2.81$$
+
+~\\Observando las diferencias y teniendo en cuenta los contrastes, donde nos decían que no había diferencias en los efectos de las dos rallanderias sobre el rendimiento del almidón de yuca, nos parece razonable asumir una diferencia mínima de 3 kg para decir que existen diferencias entre los tratamientos, entonces:
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^2 (3)^2 27}{2\cdot 4.9}=\frac{2\cdot 9\cdot 27}{2(4.9)}=49.5918$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(49.5918)}{2}}=\sqrt{49.5918}=7.04$$
+
+~\\Utilizando la tabla de la beta no central con $f_1=1$ grados de libertad en el numerador y $f_2=52$ grados de libertad en el denominador, se obtiene:
+$$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
+
+~\\\textbf{Para la tercera hipótesis del literal g:}
+~\\Las diferencias en valor absoluto entre los promedios de rendimiento(en Kg) del almidón agrio de yuca de los 3 trabajadores dentro de cada una de las 2 rallanderias son:
+$$\gamma_{1(1)}-\gamma_{2(1)}=46.06-53.68=7.62 \;\;\;\;\;\;\; \gamma_{1(2)}-\gamma_{2(2)}=43.38-50.88=7.5$$
+
+$$\gamma_{1(1)}-\gamma_{3(1)}=46.06-45.4=0.66 \;\;\;\;\;\;\; \gamma_{1(2)}-\gamma_{3(2)}=43.38-42.44=0.94$$
+
+$$\gamma_{2(1)}-\gamma_{3(1)}=53.68-45.4=8.28 \;\;\;\;\;\;\; \gamma_{2(2)}-\gamma_{3(2)}=50.88-42.44=8.44$$
+
+~\\Observando las diferencias y teniendo en cuenta los contrastes, donde nos decían que no había diferencias en los efectos de los trabajadores 1 y 3 en cada rallanderia sobre el rendimiento del almidón de yuca, nos parece razonable asumir una diferencia mínima de 7 kg para decir que existen diferencias entre los efectos de los trabajadores, entonces, para los trabajadores de la \textbf{rallanderia 1}, se tiene:
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^3 (7)^2 9}{2\cdot 4.9}=\frac{3\cdot 49\cdot 9}{2(4.9)}=135$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(135)}{3}}=\sqrt{90}=9.48$$
+
+~\\Utilizando la tabla de la beta no central con $f_1=2$ grados de libertad en el numerador y $f_2=51$ grados de libertad en el denominador, se obtiene:
+$$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
+
+~\\Para los trabajadores de la \textbf{rallanderia 2}, como se asume la misma diferencia mínima de 7 kg, se obtienen los mismos resultados:
+
+$$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
+
+~\\Por lo tanto, como la potencia de las hipótesis para los trabajadores en las dos rallanderias es 1, podemos cocnluir que la \textbf{potencia global para la hipótesis 3 del literal g es de 1}.
+
+~\\\textbf{Para la cuarta hipótesis del literal g:}
+~\\En este caso no se mostrarán las diferencias entre los promedios de rendimiento(en Kg) del almidón agrio de yuca de la interacción entre método de secado y rallanderia, ya que se tienen un total de $\binom{6}{2}=15$ combinaciones entre pares de tratamientos, lo cual hace bastante extenso poner todas las diferencias.
+
+~\\Realizando todas las diferencias y teniendo en cuenta los resultados de la anova, donde se obtuvo que el efecto de la interacción método de secado-rallanderia no era significativo sobre el rendimiento del almidón de yuca, nos parece razonable asumir una diferencia mínima de 4 kg para decir que existen diferencias entre los efectos de las interacciones, entonces:
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^6 (4)^2 9}{2\cdot 4.9}=\frac{6\cdot 16\cdot 9}{2(4.9)}=88.1632$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(88.1632)}{6}}=\sqrt{29.38}=5.4210$$
+
+~\\Utilizando la tabla de la beta no central con $f_1=5$ grados de libertad en el numerador y $f_2=49$ grados de libertad en el denominador, se obtiene:
+$$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
+
+~\\\textbf{Para la quinta hipótesis del literal g:}
+~\\En este caso al igual que en el anterior, no se mostrarán las diferencias entre los promedios de rendimiento(en Kg) del almidón agrio de yuca de la interacción entre método de secado y el trabajador dentro de cada rallanderia, ya que se tienen muchas combinaciones entre pares de tratamientos, lo cual hace bastante extenso poner todas las diferencias.
+
+~\\Realizando todas las diferencias y teniendo en cuenta los resultados de la anova, donde se obtuvo que el efecto de la interacción método de secado-trabajador era significativo sobre el rendimiento del almidón de yuca, nos parece razonable asumir una diferencia mínima de 6 kg para decir que existen diferencias entre los efectos de las interacciones, entonces:
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^9 (6)^2 9}{2\cdot 4.9}=\frac{9\cdot 36\cdot 9}{2(4.9)}=297.5510$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(297.5510)}{9}}=\sqrt{66.12}=8.1315$$
+
+~\\Utilizando la tabla de la beta no central con $f_1=8$ grados de libertad en el numerador y $f_2=45$ grados de libertad en el denominador, se obtiene:
+$$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
 ~\\\textbf{j.}
 \end{itemize}
 
