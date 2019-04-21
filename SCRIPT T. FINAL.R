@@ -59,30 +59,41 @@ des=sd(se$T1)
 cv=(des/mean(se$T1))*100
 
 #Descriptivas por interacción
-p=c()
-t=c("B1","B2","B3","B4","B5")
-g=c("T1","T2","T3","T4")
+CAMPANA1$int <- interaction( Bloque,Tratamiento)
+inter=CAMPANA1$int
+j=c()
+a=c("B1.T1","B2.T1","B3.T1","B4.T1","B5.T1","B1.T2","B2.T2","B3.T2","B4.T2","B5.T2","B1.T3","B2.T3","B3.T3","B4.T3","B5.T3","B1.T4","B2.T4","B3.T4","B4.T4","B5.T4")
 se=data.frame(c(1:20))
-for (h in 1:length(t)) {
-  p=c()
-  for (d in 1:length(g)) {
-    for (i in 1:length(Bloque)) {
-      if((Bloque[i]==t[h]) & (Tratamiento==g[d])){
-        p=c(p,Altura[i])
-      }
+for (d in 1:length(a)) {
+  print(j)
+  j=c()
+  for (i in 1:length(inter)) {
+    if(inter[i]==a[d]){
+      j=c(j,Altura[i])
       
     }
-    se=data.frame(se,p)
+    
   }
+  se=data.frame(se,j)
 }
-#ciclo que me saca los datos por niveles del factor
-colnames(se)=c("#","T1.B1","T1.B2","T1,B3","T1.B4","T1.B5","T2.B1","T2.B2","T2,B3","T2.B4","T2.B5","T3.B1","T3.B2","T3,B3","T3.B4","T3.B5","T4.B1","T4.B2","T4.B3","T4.B4","T4.B5")
-summary(se)
+colnames(se)=c("#","B1.T1","B2.T1","B3.T1","B4.T1","B5.T1","B1.T2","B2.T2","B3.T2","B4.T2","B5.T2","B1.T3","B2.T3","B3.T3","B4.T3","B5.T3","B1.T4","B2.T4","B3.T4","B4.T4","B5.T4")
+summary(se[-1])
+des=sd(se$B4.T4)
+cv=(des/mean(se$B1.T1))*100
 
-#Rallanderia-trabajador
+
+#Tratamiento-Bloque
+#Altura
 x11()
 boxplot(Altura~Tratamiento*Bloque)
 
+#Tallos
+x11()
+boxplot(Tallos~Tratamiento*Bloque)
+
+#Hojas verdes
+x11()
+boxplot(HVerdes~Tratamiento*Bloque)
 
 
 

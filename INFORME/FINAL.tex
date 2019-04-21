@@ -401,6 +401,62 @@ $$Standard \; Normal = 1.4152, p-value = 0.06685$$
 ~\\\textbf{g.}
 
 ~\\\textbf{h.}
+~\\Dado que en la anova realizada para cada modelo se obtuvo que la interacción bloque-tratamiento resultó ser significativa, no es adecuado usar contrastes por factor individual, por lo que se van a realizar contrastes para las interacciones por cada modelo. Para realizar dichos contrastes, nos basamos en los gráficos de cajas realizados para las interacciones en cada uno de los modelos, observando en ellos posibles diferencias entre los distintos tratamientos. La metodología que se llevara a cabo es hacer contrastes entre tratamientos por cada bloque y finalmente se hará un contraste entre los mejores tratamientos de cada bloque, para así lograr saber qué interacción fue la que generó mejores resultados para cada una de las variables de respuesta, teniendo en cuenta lo anterior, se realizarán 6 contrastes(uno de cada uno de los cinco bloques y un contraste final entre los mejores de cada bloque) para cada uno de los modelos planteados.
+\begin{itemize}
+\item[1).] Tallos
+
+
+\item[2).] Altura
+
+Con respecto al bloque 1, se pudo notar que al parecer el tratamiento 4 genera mayores alturas que los demás, para ello se plantea el siguiente contraste:
+$$H_0:3\tau_4-\tau_1-\tau_2-\tau_3=0$$
+
+~\\Bajo la hipótesis nula, tenemos que el estadístico de prueba es:
+$$F=\frac{(\sum\limits_{i=1}^t a_i\bar{y_{i.}})^2}{{\hat{\sigma^2}\sum\limits_{i=1}^t \frac{{a_i}^2}{r_i}}}$$
+
+$$\rightarrow F=\frac{(13.99)^2}{3.1385\cdot \frac{12}{20}}=103.935$$
+
+~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=103.935$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 4 y los tratamientos 1,2 y 3 sobre la altura de las plantas.
+
+Con respecto al bloque 2, se pudo notar que al parecer el tratamiento 1 genera mayores alturas que los demás, para ello se plantea el siguiente contraste:
+$$H_0:3\tau_1-\tau_2-\tau_3-\tau_4=0$$
+
+$$\rightarrow F=\frac{(21.34)^2}{3.1385\cdot \frac{12}{20}}=241.8329$$
+
+~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=241.8329$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 1 y los tratamientos 2,3 y 4 sobre la altura de las plantas.
+
+Con respecto al bloque 3, se pudo notar que al parecer el tratamiento 4 genera mayores alturas que los demás, para ello se plantea el siguiente contraste:
+$$H_0:3\tau_4-\tau_1-\tau_2-\tau_3=0$$
+
+$$\rightarrow F=\frac{(10.77)^2}{3.1385\cdot \frac{12}{20}}=61.5967$$
+
+~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=61.5967$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 4 y los tratamientos 1,2,y 3 sobre la altura de las plantas.
+
+Con respecto al bloque 4, se pudo notar en las descriptivas que al parecer el tratamiento 4 genera un mayor promedio en las alturas que los demás, para ello se plantea el siguiente contraste:
+$$H_0:3\tau_4-\tau_1-\tau_2-\tau_3=0$$
+
+$$\rightarrow F=\frac{(7.7)^2}{3.1385\cdot \frac{12}{20}}=31.4853$$
+
+~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=31.4853$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 4 y los tratamientos 1,2,y 3 sobre la altura de las plantas.
+
+Con respecto al bloque 5, se pudo notar en las descriptivas que al parecer el tratamiento 1 genera un mayor promedio en las alturas que los demás, para ello se plantea el siguiente contraste:
+$$H_0:3\tau_1-\tau_2-\tau_3-\tau_4=0$$
+
+$$\rightarrow F=\frac{(6.72)^2}{3.1385\cdot \frac{12}{20}}=23.981$$
+
+~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=23.981$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 1 y los tratamientos 2,3 y 4 sobre la altura de las plantas.
+
+Finalmente, como se tuvo que los mejores tratamientos en cada uno de los bloques respectivamente son el 4,1,4,4 y 1, se hará un contraste para darnos cuenta qué interacción generó mejores resultados en la altura de las plantas. Observando los promedios de estas interacciones, se puede notar que aparentemente las interacciones que generaron un mayor promedio fue la del bloque 1 - tratamiento 4 y bloque 2 - tratamiento 1, las cuales tienen un promedio muy parecido (29.36 y 29.41 respectivamente). Dicho lo anterior se planteó el siguiente contraste:
+$$2(\tau\rho)_{41}+(\tau\rho)_{12}-(\tau\rho)_{43}-(\tau\rho)_{44}-(\tau\rho)_{15}=0$$
+
+$$\rightarrow F=\frac{(6.92)^2}{3.1385\cdot \frac{8}{20}}=38.1443$$
+
+~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=38.1443$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto de las interacciones bloque 1 - tratamiento 4 y bloque 2 - tratamiento 1 contra las interacciones bloque 3 - tratamiento 4, bloque 4 - tratamiento 4 y bloque 5 - tratamiento 1 sobre la altura de las plantas.
+~\\Teniendo en cuenta esto, se puede concluir que las interacciones que generaron mejores efectos sobre la altura de las plantas fueron el tratamiento 4 en el bloque 1 y el tratamiento 1 en el bloque 2.
+\item[3).] Hojas Verdes
+
+\end{itemize}
+
 
 ~\\\textbf{i.}
 
