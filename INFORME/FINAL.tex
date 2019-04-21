@@ -181,29 +181,220 @@ Hay un área efectiva para tomar las mediciones, esto quiere decir que las planta
 ~\\\textbf{a.}
 
 ~\\\textbf{b.}
-En este caso, se deben plantear tres modelos, uno para cada variable de respuesta (tallos, altura y hojas verdes), las variables independiente del modelo es el mismo para las tres variables de respuesta. Por ello se plantea el siguiente modelo:
+En este caso, se deben plantear tres modelos, uno para cada variable de respuesta (tallos, altura y hojas verdes), las variables independiente del modelo son las mismas para las tres variables de respuesta. Por ello se plantea el siguiente modelo:
 $$y_{ijk}=\mu+\tau_i+\rho_j+(\tau\rho)_{ij}+\varepsilon_{ijk} $$ 
 $$ i=1,2,3,4 \;\;\;\; j=1,2,3,4,5 \;\;\;\; k=1,2,3,\cdots,20$$
 ~\\Donde:
-~\\$y_{ijk}$ es el número de tallos bajo la fertilización i, en el bloque j y en la k-ésima réplica.
+~\\$y_{ijk}$ es el número de tallos bajo la fertilización i, en el bloque j y de una planta en la k-ésima parcela.
 ~\\$\mu$ es la media general del número de tallos sin tener en cuenta la fertilización ni el bloque.
 ~\\$\tau_i$ es el efecto de la i-ésima fertilización sobre el número de tallos.
 ~\\$\rho_j$ es el efecto del bloque j-ésimo sobre el  el número de tallos. 
 ~\\$(\tau\rho)_{ij}$ es el efecto de la interacción entre la i-ésima fertilización y el j-ésimo bloque sobre el número de tallos.
-~\\$\varepsilon_{(ijk)l}$ es el error aleatorio debido a la i-ésima fertilizacón, al j-ésimo bloque y a la k-ésima réplica.
+~\\$\varepsilon_{(ijk)l}$ es el error aleatorio debido a la i-ésima fertilizacón, al j-ésimo bloque y a una planta en la k-ésima parcela.
 
 ~\\Los otros dos modelos son exactamente iguales, modificando la variable de respuesta, para el modelo 2 y 3, se tiene que:
 
-$y_{ijk}$ es la altura bajo la fertilización i, en el bloque j y en la k-ésima réplica.
+$y_{ijk}$ es la altura bajo la fertilización i, en el bloque j y de una planta en la k-ésima parcela.
 
 ~\\y
 
-$y_{ijk}$ es el número de hojas completamente expandidas bajo la fertilización i, en el bloque j y en la k-ésima réplica.
+$y_{ijk}$ es el número de hojas completamente expandidas bajo la fertilización i, en el bloque j y de una planta en la k-ésima parcela.
+\\
 ~\\\textbf{c.}
+Las hipótesis a evaluar para los 3 modelos son:
+\begin{itemize}
+\item[1).] $$H_0:\tau_1=\tau_2=\tau_3=\tau_4=\tau$$
+$$H_a:Al\; menos\; una\; de\; estas\; igualdades\; no\; se\; cumple$$
+\item[2).] $$H_0:\rho_1=\rho_2=\rho_3=\rho_4=\rho_5=\rho$$
+$$H_a:Al\; menos\; una\; de\; estas\; igualdades\; no\; se\; cumple$$
+\item[3).] $$H_0:(\tau\rho)_{ij}=0$$
+$$H_a:(\tau\rho)_{ij}\neq 0$$
+\end{itemize}
 
 ~\\\textbf{d.}
+Para este punto se realiza la tabla de análisis de varianza ANOVA correspondiente a cada uno de los modelos planteados anteriormente.
+\begin{itemize}
+\item[1).] Tallos
+
+\begin{center}
+\resizebox{16.5cm}{!} {
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+Fuente de Variación & Grados de Libertad & Suma de Cuadrados & Cuadrados Medios & F & Pr>F & ECM\\ 
+\hline 
+$\tau$ & 3 & 3.025 & 1.0085 & 1.2745 & 0.2827981 & $\sigma^2+9\sum\limits_{i=1}^3 \tau_i^2+3\sigma^2_{\tau\gamma}$ \\ 
+$\rho$ & 4 & 15.449 & 3.8622  & 4.8809  & 0.0007551 & $\sigma^2+27\sum\limits_{j=1}^2 \alpha_j^2+9\sigma^2_\gamma$ \\
+$\tau\rho$ & 12 & 24.280 & 2.0234 & 2.557 & 0.0028975 & $\sigma^2+\frac{9}{2}\sum\limits_{i=1}^3\sum\limits_{j=1}^2(\tau\alpha)_{ij}+3\sigma^2_{\tau\gamma}$\\
+Error & 380 & 300.689 & 0.7913 &  &  & $\sigma^2$\\ 
+Total & 399 &  &  &  &  & \\ 
+\hline 
+\end{tabular} 
+}
+\end{center}
+
+~\\A un nivel de significancia $\alpha=0.05$ se rechaza $H_0$ en las hipótesis (2) y (3) del literal anterior.
+
+\item[2).] Altura
+
+\begin{center}
+\resizebox{16.5cm}{!} {
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+Fuente de Variación & Grados de Libertad & Suma de Cuadrados & Cuadrados Medios & F & Pr>F & ECM\\ 
+\hline 
+$\tau$ & 3 & 470.8 & 156.926 & 3.2011 & 0.0233706 & $\sigma^2+9\sum\limits_{i=1}^3 \tau_i^2+3\sigma^2_{\tau\gamma}$ \\ 
+$\rho$ & 4 & 191.0 & 47.738  & 0.9738  & 0.4217238 & $\sigma^2+27\sum\limits_{j=1}^2 \alpha_j^2+9\sigma^2_\gamma$ \\
+$\tau\rho$ & 12 & 1846.3 & 153.857 & 3.1385 & 0.0002817 & $\sigma^2+\frac{9}{2}\sum\limits_{i=1}^3\sum\limits_{j=1}^2(\tau\alpha)_{ij}+3\sigma^2_{\tau\gamma}$\\
+Error & 380 & 18628.8 & 49.023 &  &  & $\sigma^2$\\ 
+Total & 399 &  &  &  &  & \\ 
+\hline 
+\end{tabular} 
+}
+\end{center}
+
+~\\A un nivel de significancia $\alpha=0.05$ se rechaza $H_0$ en las hipótesis (1) y (3) del literal anterior.
+
+
+\item[3).] Hojas verdes
+
+\begin{center}
+\resizebox{16.5cm}{!} {
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+Fuente de Variación & Grados de Libertad & Suma de Cuadrados & Cuadrados Medios & F & Pr>F & ECM\\ 
+\hline 
+$\tau$ & 3 & 642 & 213.92 & 1.2304 & 0.2983675 & $\sigma^2+9\sum\limits_{i=1}^3 \tau_i^2+3\sigma^2_{\tau\gamma}$ \\ 
+$\rho$ & 4 & 3250 & 812.38  & 4.6727  & 0.0010813 & $\sigma^2+27\sum\limits_{j=1}^2 \alpha_j^2+9\sigma^2_\gamma$ \\
+$\tau\rho$ & 12 & 6849 & 570.74 & 3.2828 & 0.0001553 & $\sigma^2+\frac{9}{2}\sum\limits_{i=1}^3\sum\limits_{j=1}^2(\tau\alpha)_{ij}+3\sigma^2_{\tau\gamma}$\\
+Error & 380 & 66065 & 173.86 &  &  & $\sigma^2$\\ 
+Total & 399 &  &  &  &  & \\ 
+\hline 
+\end{tabular} 
+}
+\end{center}
+\end{itemize}
+
+~\\A un nivel de significancia $\alpha=0.05$ se rechaza $H_0$ en las hipótesis (2) y (3) del literal anterior.
+\\
+~\\Podemos observar que en todos los casos existe diferencias significativas entre la interacción de la fertilización y los bloques, ademas que por si solos los bloques no tienen ningún efecto sobre la altura de la planta, pero la cantidad de tallos y el numero de hojas si se ven afectados por este, sin embargo la fertilización por si sola no tiene ningún efecto sobre el numero de tallos y la cantidad de hojas totalmente expandidas.
 
 ~\\\textbf{e.}
+Probaremos los supuestos sobre el error para cada uno de los modelos planteados.
+~\\
+\begin{itemize}
+\item[Normalidad:]
+~\\Para verificar el supuesto de normalidad en los errores, se hicieron pruebas gráficas para cada uno de los modelos(histograma y Q-Q plot) y se realizó la prueba de normalidad Anderson-Darling por ser más potente, ya que se tiene una cantidad de datos superior a 30.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/HTA.pdf}
+\end{figure}
+
+~\\Según se observa en el gráfico QQ-plot los datos siguen una distribucion de colas pesadas, lo que indicaria que el supuesto de normalidad parece no cumplirse.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/HAL.pdf}
+\end{figure}
+
+~\\En el caso del modelo para la variable de respuesta altura tanto el histograma como el QQ-plot parece indicar que los datos siguen una distribución normal.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/HHO.pdf}
+\end{figure}
+
+~\\Los residuales correspondientes al modelo de la variable Hojas parece (al igual que el primero) tener colas pesadas lo que indicaría que el supuesto posiblemente no se cumpla.
+
+~\\Los resultados para las pruebas estadísticas realizadas fueron:
+$$H_0:Los\; residuales\; provienen\; de\; una\; distribucion\; normal$$
+$$H_0:Los\; residuales\; no\; provienen\; de\; una\; distribucion\; normal$$
+~\\Tallos
+$$A = 1.5677, p-value = 0.0004871$$
+
+~\\Altura
+$$A = 0.2092, p-value = 0.862$$
+
+~\\Hojas verdes
+$$A = 1.6556, p-value = 0.000296$$
+
+
+~\\Con las pruebas estadísticas comprobamos nuestras sospechas, observamos que el supuesto de normalidad se incumple para 2 de los modelos, los cuales son los correspondientes a la variables Tallos y Hojas verdes, esto nos indica a priori que se debe realizar una transformación a los datos para lograr realizar el análisis de varianza.
+
+\item[Homocedasticidad:]
+~\\Para analizar este supuesto se realizó el test de Bartlett, ya que bajo el cumplimiento de la normalidad este es más potente, para los modelos en los cuales se incumplía el supuesto de normalidad realizamos el test de Levene.
+~\\Los resultados para las pruebas realizadas fueron:
+$$H_0:La \; varianza\; de\; los\; grupos \; no \;son \; diferentes\; (iguales)$$
+$$H_a:La \; varianza\; de\; los\; grupos \; son \; diferentes$$
+
+~\\Tallos
+$$F \;\; Value = 1.1381, df = 19, p-value = 0.31$$
+
+~\\Altura
+$$Bartlett's \;\; K-squared = 18.916, df = 19, p-value = 0.4623$$
+
+~\\Hojas verdes
+$$F \;\; Value = 0.8569, df = 19, p-value = 0.6375$$
+
+
+~\\En este caso para los 3 modelos se cumple el supuesto de homogeneidad de varianzas.
+
+\item[Independencia:]
+~\\Para analizar el supuesto de independencia se realizó el test de Rachas, ya que este no se puede evaluar con un test Durbin- Watson o un correlograma porque estos requieren conocer el orden en el cuál fueron obtenidos los datos y esa información no se tiene.
+~\\Los resultados de las pruebas realizadas fueron:
+$$H_0:La \; muestra\; es\; aleatoria\; (los \; residuales \;son \; independientes)$$
+$$H_a:La \; muestra\; no \;es\; aleatoria\; (los \; residuales \; no\;son \; independientes)$$
+
+~\\Tallos
+$$Standard \; Normal = 0.90584, p-value = 0.365$$
+
+~\\Altura
+$$Standard \; Normal = 1.4152, p-value = 0.157$$
+
+~\\Hojas verdes
+$$Standard \; Normal = 1.4152, p-value = 0.06685$$
+
+~\\El supuesto de independencia se cumple de igual forma para todos los modelos.
+\\
+~\\Como el supuesto de normalidad no se cumplió hay que realizar una trasformación a los datos para que estos sean normales, para esto haremos uso de dos trasformaciones, la transformación de box-cox y la trasformación de johnson.
+~\\Luego de realizar las trasformaciones a los datos los supuestos sobre el error arrojaron los siguientes resultados.
+\\
+\item[Normalidad:]
+$$H_0:Los\; residuales\; provienen\; de\; una\; distribucion\; normal$$
+$$H_0:Los\; residuales\; no\; provienen\; de\; una\; distribucion\; normal$$
+~\\Tallos
+$$A = 0.84802, p-value = 0.02892$$
+
+~\\Hojas verdes
+$$A = 0.5612, p-value = 0.146$$
+
+~\\Para la variable Hojas verdes se utilizo la trasformación de box y cox, la cual consiste en buscar un landa máximo, en este caso el valor de dicho landa fue de aproximadamente 2 por lo que la mejor trasformación según box y cox fue el cuadrado de los datos, esto dio como resultado que los residuales de dicho modelo cumplieran con el supuesto de normalidad.
+~\\Para la variable Tallos utilizamos también box-cox sin embargo este no dio resultados muy favorables, así que optamos por utilizar la alternativa que propone Johnson, esta resulto ser mas efectiva, aunque los residuales a un nivel de 0.05 no son normales, resultan serlo a un nivel de 0.1 por lo que realizar una tabla ANOVA es mas viable ahora.
+
+\item[Homocedasticidad:]
+
+$$H_0:La \; varianza\; de\; los\; grupos \; no \;son \; diferentes\; (iguales)$$
+$$H_a:La \; varianza\; de\; los\; grupos \; son \; diferentes$$
+
+~\\Tallos
+$$Bartlett's \;\; K-squared = 15.815, df = 19, p-value = 0.6696$$
+~\\Hojas verdes
+$$Bartlett's \;\; K-squared = 17.702, df = 19, p-value = 0.5424$$
+
+~\\Ahora que se cumple el supuesto de normalidad utilizamos la prueba de Bartlett y comprobamos que se sigue cumpliendo el supuesto de Homocedasticidad.
+
+\item[Independencia:]
+$$H_0:La \; muestra\; es\; aleatoria\; (los \; residuales \;son \; independientes)$$
+$$H_a:La \; muestra\; no \;es\; aleatoria\; (los \; residuales \; no\;son \; independientes)$$
+
+~\\Tallos
+$$Standard \; Normal = 1.8044, p-value = 0.07116$$
+
+~\\Hojas verdes
+$$Standard \; Normal = 1.4152, p-value = 0.06685$$
+
+~\\El supuesto de independencia aun se cumple, ahora podemos interpretar los resultados de la tabla ANOVA.
+\end{itemize}
 
 ~\\\textbf{f.}
 

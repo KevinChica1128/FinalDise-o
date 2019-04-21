@@ -8,9 +8,221 @@
 library(readxl)
 CAMPANA1 <- read_excel("CAMPANA1.xlsx")
 View(CAMPANA1)
+attach(CAMPANA1)
+#Variables de respuesta
+Tallos=CAMPANA1$TALLOS
+Altura=CAMPANA1$ALTURA
+HVerdes=CAMPANA1$`HOJAS VERDES`
+
+#Factores
+Tratamiento=as.factor(CAMPANA1$TRATAMIENTO)
+Bloque=as.factor(CAMPANA1$BLOQUE)
+Parcela=as.factor(CAMPANA1$PARCELA)
+
+#descriptivas por bloque
+sum(Altura)
+j=c()
+a=c("B1","B2","B3","B4","B5")
+se=data.frame(c(1:80))
+for (d in 1:length(a)) {
+  j=c()
+  for (i in 1:length(Bloque)) {
+    if(Bloque[i]==a[d]){
+      j=c(j,Altura[i])
+    }
+    
+  }
+  se=data.frame(se,j)
+}#ciclo que me saca los datos por niveles del factor
+colnames(se)=c("#","B1","B2","B3","B4","B5")
+summary(se) #descriptivas por cada nivel
+des=sd(se$B1)
+cv=(des/mean(se$B1))*100
+
+#Descriptivas por tratamiento
+j=c()
+a=c("T1","T2","T3","T4")
+se=data.frame(c(1:100))
+for (d in 1:length(a)) {
+  j=c()
+  for (i in 1:length(Tratamiento)) {
+    if(Tratamiento[i]==a[d]){
+      j=c(j,Altura[i])
+    }
+    
+  }
+  se=data.frame(se,j)
+}#ciclo que me saca los datos por niveles del factor
+colnames(se)=c("#","T1","T2","T3","T4")
+summary(se) #descriptivas por cada nivel
+des=sd(se$T1)
+cv=(des/mean(se$T1))*100
+
+#Descriptivas por interacción
+p=c()
+t=c("B1","B2","B3","B4","B5")
+g=c("T1","T2","T3","T4")
+se=data.frame(c(1:20))
+for (h in 1:length(t)) {
+  p=c()
+  for (d in 1:length(g)) {
+    for (i in 1:length(Bloque)) {
+      if((Bloque[i]==t[h]) & (Tratamiento==g[d])){
+        p=c(p,Altura[i])
+      }
+      
+    }
+    se=data.frame(se,p)
+  }
+}
+#ciclo que me saca los datos por niveles del factor
+colnames(se)=c("#","T1.B1","T1.B2","T1,B3","T1.B4","T1.B5","T2.B1","T2.B2","T2,B3","T2.B4","T2.B5","T3.B1","T3.B2","T3,B3","T3.B4","T3.B5","T4.B1","T4.B2","T4.B3","T4.B4","T4.B5")
+summary(se)
+
+#Rallanderia-trabajador
+x11()
+boxplot(Altura~Tratamiento*Bloque)
 
 
 
+
+#Modelos:
+#Modelo 1
+mod1<-aov(Tallos~Tratamiento*Bloque)
+summary(mod1)
+
+#Modelo 2
+mod2<-aov(Altura~Tratamiento*Bloque)
+summary(mod2)
+
+#Modelo 3
+mod3<-aov(HVerdes~Tratamiento*Bloque)
+summary(mod3)
+
+#Supuestos
+#Modelo 1
+residuales1=residuals(mod1)
+
+#Normalidad
+#QQ plot e histograma con curva normal superpuesta
+x11()
+par(mfcol=c(1,2))
+hist(residuales1, density=5, freq=FALSE, main="Histograma residuos del modelo")
+curve(dnorm(x, mean=mean(residuales1), sd=sd(residuales1)), col="red",
+      lwd=2, add=TRUE, yaxt="n")
+qqnorm(residuales1, main="Q-Q Plot residuos modelo") ## el típico de R
+qqline(residuales1)
+
+#Test Shapiro wilk(<30 datos)
+shapiro.test(residuales1)
+
+#Anderson-Darling(>30 datos)
+library("nortest")
+ad.test(residuales1)
+
+#Homocedasticidad de los residuos
+datos1 <- interaction(Tratamiento,Bloque)
+bartlett.test(residuales1~datos1)
+
+#Independencia(no correlación) en los errores
+#Prueba de rachas: H0:Los residuales se distribuyen de manera aleatoria
+library("tseries")
+residuales1<-residuales[-31]
+residualesfactor<-c()
+for (i in 1:length(residuales1)) {
+  if (residuales1[i]>0){
+    residualesfactor[i]=1
+  }
+  if (residuales1[i]<0){
+    residualesfactor[i]=-1
+  }
+}
+runs.test(factor(residualesfactor))
+
+#Modelo 2
+residuales2=residuals(mod2)
+
+#Normalidad
+#QQ plot e histograma con curva normal superpuesta
+x11()
+par(mfcol=c(1,2))
+hist(residuales2, density=5, freq=FALSE, main="Histograma residuos del modelo")
+curve(dnorm(x, mean=mean(residuales2), sd=sd(residuales2)), col="red",
+      lwd=2, add=TRUE, yaxt="n")
+qqnorm(residuales2, main="Q-Q Plot residuos modelo") ## el típico de R
+qqline(residuales2)
+
+#Test Shapiro wilk(<30 datos)
+shapiro.test(residuales2)
+
+#Anderson-Darling(>30 datos)
+library("nortest")
+ad.test(residuales2)
+
+#Homocedasticidad de los residuos
+datos1 <- interaction(Tratamiento,Bloque)
+bartlett.test(residuales2~datos1)
+
+#Independencia(no correlación) en los errores
+#Prueba de rachas: H0:Los residuales se distribuyen de manera aleatoria
+library("tseries")
+residuales1<-residuales[-31]
+residualesfactor<-c()
+for (i in 1:length(residuales1)) {
+  if (residuales1[i]>0){
+    residualesfactor[i]=1
+  }
+  if (residuales1[i]<0){
+    residualesfactor[i]=-1
+  }
+}
+runs.test(factor(residualesfactor))
+
+#Modelo 3
+residuales3=residuals(mod3)
+
+#Normalidad
+#QQ plot e histograma con curva normal superpuesta
+x11()
+par(mfcol=c(1,2))
+hist(residuales3, density=5, freq=FALSE, main="Histograma residuos del modelo")
+curve(dnorm(x, mean=mean(residuales3), sd=sd(residuales3)), col="red",
+      lwd=2, add=TRUE, yaxt="n")
+qqnorm(residuales3, main="Q-Q Plot residuos modelo") ## el típico de R
+qqline(residuales3)
+
+#Test Shapiro wilk(<30 datos)
+shapiro.test(residuales3)
+
+#Anderson-Darling(>30 datos)
+library("nortest")
+ad.test(residuales3)
+
+#Homocedasticidad de los residuos
+datos1 <- interaction(Tratamiento,Bloque)
+bartlett.test(residuales3~datos1)
+
+#Independencia(no correlación) en los errores
+#Prueba de rachas: H0:Los residuales se distribuyen de manera aleatoria
+library("tseries")
+residuales1<-residuales[-31]
+residualesfactor<-c()
+for (i in 1:length(residuales1)) {
+  if (residuales1[i]>0){
+    residualesfactor[i]=1
+  }
+  if (residuales1[i]<0){
+    residualesfactor[i]=-1
+  }
+}
+runs.test(factor(residualesfactor))
+
+#POSTANOVA
+#MODELO 1
+library(multcompView)
+library(lsmeans)
+leastsquare = lsmeans(mod1, ~Tratamiento|Bloque,  adjust="tukey")
+cld(leastsquare, alpha=.05, Letters=letters)
 #----------------------------------------------------------#
 #Problema 2
 secado<-as.factor(c(rep("S",18),rep("A",18),rep("SA",18)))
@@ -226,11 +438,11 @@ runs.test(factor(residualesfactor))
 #Comparaciones múltiples
 library(multcompView)
 library(lsmeans)
-leastsquare3 = lsmeans(anova, ~secado|rallanderia,  adjust="tukey")
-cld(leastsquare3, alpha=.05, Letters=letters)
+leastsquare4 = lsmeans(anova, ~secado|rallanderia,  adjust="tukey")
+cld(leastsquare4, alpha=.05, Letters=letters)
 
-leastsquare2 = lsmeans(anova, ~trabajador|rallanderia,  adjust="tukey")
-cld(leastsquare2, alpha=.05, Letters=letters)
+leastsquare5 = lsmeans(anova, ~trabajador|rallanderia,  adjust="tukey")
+cld(leastsquare5, alpha=.05, Letters=letters)
 
-leastsquare = lsmeans(anova, ~rallanderia,  adjust="tukey")
-cld(leastsquare, alpha=.05, Letters=letters)
+leastsquare6 = lsmeans(anova, ~rallanderia,  adjust="tukey")
+cld(leastsquare6, alpha=.05, Letters=letters)
