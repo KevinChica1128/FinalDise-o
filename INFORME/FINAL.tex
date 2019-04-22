@@ -222,18 +222,17 @@ Para este punto se realiza la tabla de análisis de varianza ANOVA correspondient
 \hline 
 Fuente de Variación & Grados de Libertad & Suma de Cuadrados & Cuadrados Medios & F & Pr>F & ECM\\ 
 \hline 
-$\tau$ & 3 & 3.025 & 1.0085 & 1.2745 & 0.2827981 & $\sigma^2+9\sum\limits_{i=1}^3 \tau_i^2+3\sigma^2_{\tau\gamma}$ \\ 
-$\rho$ & 4 & 15.449 & 3.8622  & 4.8809  & 0.0007551 & $\sigma^2+27\sum\limits_{j=1}^2 \alpha_j^2+9\sigma^2_\gamma$ \\
-$\tau\rho$ & 12 & 24.280 & 2.0234 & 2.557 & 0.0028975 & $\sigma^2+\frac{9}{2}\sum\limits_{i=1}^3\sum\limits_{j=1}^2(\tau\alpha)_{ij}+3\sigma^2_{\tau\gamma}$\\
-Error & 380 & 300.689 & 0.7913 &  &  & $\sigma^2$\\ 
-Total & 399 &  &  &  &  & \\ 
+$\tau$ & 3 & 11.19 & 3.7292 & 0.428 &0.736 & $\sigma^{2}_{M}+20\sigma^{2}_{E}+100\sum\limits_{i=1}^4\frac{\tau_i^2}{t-1} $ \\ 
+$\rho$ & 4 & 66.39 & 16.5975  & 1.907  & 0.174 & $\sigma^{2}_{M}+20\sigma^{2}_{E}+80\sum\limits_{j=1}^5 \frac{\rho_j^2}{b-1}$ \\
+EE & 12 & 104.45 & 8.7042 & 2.4921 & 0.0037281 & $\sigma^{2}_{M}+20\sigma^{2}_{E}$\\
+EM & 380 & 1327.25 & 3.493 &  &  & $\sigma^{2}_{m}$\\ 
+Total & 399 & 1509.28 &  &  &  & \\ 
 \hline 
 \end{tabular} 
 }
 \end{center}
 
-~\\A un nivel de significancia $\alpha=0.05$ se rechaza $H_0$ en las hipótesis (2) y (3) del literal anterior.
-
+~\\Interpretacion.
 \item[2).] Altura
 
 \begin{center}
@@ -242,17 +241,17 @@ Total & 399 &  &  &  &  & \\
 \hline 
 Fuente de Variación & Grados de Libertad & Suma de Cuadrados & Cuadrados Medios & F & Pr>F & ECM\\ 
 \hline 
-$\tau$ & 3 & 470.8 & 156.926 & 3.2011 & 0.0233706 & $\sigma^2+9\sum\limits_{i=1}^3 \tau_i^2+3\sigma^2_{\tau\gamma}$ \\ 
-$\rho$ & 4 & 191.0 & 47.738  & 0.9738  & 0.4217238 & $\sigma^2+27\sum\limits_{j=1}^2 \alpha_j^2+9\sigma^2_\gamma$ \\
-$\tau\rho$ & 12 & 1846.3 & 153.857 & 3.1385 & 0.0002817 & $\sigma^2+\frac{9}{2}\sum\limits_{i=1}^3\sum\limits_{j=1}^2(\tau\alpha)_{ij}+3\sigma^2_{\tau\gamma}$\\
-Error & 380 & 18628.8 & 49.023 &  &  & $\sigma^2$\\ 
-Total & 399 &  &  &  &  & \\ 
+$\tau$ & 3 & 470.8 & 156.926 & 1.02 & 0.418 & $\sigma^{2}_{M}+20\sigma^{2}_{E}+100\sum\limits_{i=1}^4\frac{\tau_i^2}{t-1} $ \\ 
+$\rho$ & 4 & 191.0 & 47.738  & 0.31  & 0.866 & $\sigma^{2}_{M}+20\sigma^{2}_{E}+80\sum\limits_{j=1}^5 \frac{\rho_j^2}{b-1}$\\
+EE & 12 & 1846.3 & 153.857 & 3.1385 & 0.0002817 & $\sigma^{2}_{M}+20\sigma^{2}_{E}$\\
+EM & 380 & 18628.8 & 49.023 &  &  & $\sigma^{2}_{m}$\\ 
+Total & 399 & 21136.9 &  &  &  & \\ 
 \hline 
 \end{tabular} 
 }
 \end{center}
 
-~\\A un nivel de significancia $\alpha=0.05$ se rechaza $H_0$ en las hipótesis (1) y (3) del literal anterior.
+~\\Interpretacion...
 
 
 \item[3).] Hojas verdes
@@ -263,79 +262,77 @@ Total & 399 &  &  &  &  & \\
 \hline 
 Fuente de Variación & Grados de Libertad & Suma de Cuadrados & Cuadrados Medios & F & Pr>F & ECM\\ 
 \hline 
-$\tau$ & 3 & 642 & 213.92 & 1.2304 & 0.2983675 & $\sigma^2+9\sum\limits_{i=1}^3 \tau_i^2+3\sigma^2_{\tau\gamma}$ \\ 
-$\rho$ & 4 & 3250 & 812.38  & 4.6727  & 0.0010813 & $\sigma^2+27\sum\limits_{j=1}^2 \alpha_j^2+9\sigma^2_\gamma$ \\
-$\tau\rho$ & 12 & 6849 & 570.74 & 3.2828 & 0.0001553 & $\sigma^2+\frac{9}{2}\sum\limits_{i=1}^3\sum\limits_{j=1}^2(\tau\alpha)_{ij}+3\sigma^2_{\tau\gamma}$\\
-Error & 380 & 66065 & 173.86 &  &  & $\sigma^2$\\ 
-Total & 399 &  &  &  &  & \\ 
+$\tau$ & 3 & 6.03 & 2.0092 & 0.402 & 0.754 & $\sigma^{2}_{M}+20\sigma^{2}_{E}+100\sum\limits_{i=1}^4\frac{\tau_i^2}{t-1} $ \\ 
+$\rho$ & 4 & 28.39 & 7.0975  & 1.419  & 0.286 & $\sigma^{2}_{M}+20\sigma^{2}_{E}+80\sum\limits_{j=1}^5 \frac{\rho_j^2}{b-1}$\\
+EE & 12 & 60.0 & 5.0008 & 3.2637 & 0.000168 & $\sigma^{2}_{M}+20\sigma^{2}_{E}$\\
+EM & 380 & 582.25 & 1.5322 &  &  & $\sigma^{2}_{m}$\\ 
+Total & 399 & 676.68 &  &  &  & \\ 
 \hline 
 \end{tabular} 
 }
 \end{center}
 \end{itemize}
 
-~\\A un nivel de significancia $\alpha=0.05$ se rechaza $H_0$ en las hipótesis (2) y (3) del literal anterior.
-\\
-~\\Podemos observar que en todos los casos existe diferencias significativas entre la interacción de la fertilización y los bloques, ademas que por si solos los bloques no tienen ningún efecto sobre la altura de la planta, pero la cantidad de tallos y el numero de hojas si se ven afectados por este, sin embargo la fertilización por si sola no tiene ningún efecto sobre el numero de tallos y la cantidad de hojas totalmente expandidas.
+~\\Interpretacion...
+
+~\\Interpretacion general...
 
 ~\\\textbf{e.}
 Probaremos los supuestos sobre el error para cada uno de los modelos planteados.
 ~\\
 \begin{itemize}
 \item[Normalidad:]
-~\\Para verificar el supuesto de normalidad en los errores, se hicieron pruebas gráficas para cada uno de los modelos(histograma y Q-Q plot) y se realizó la prueba de normalidad Anderson-Darling por ser más potente, ya que se tiene una cantidad de datos superior a 30.
+~\\Para verificar el supuesto de normalidad en los errores, se hicieron pruebas gráficas para cada uno de los modelos(histograma y Q-Q plot) y se realizó la prueba de normalidad Shapiro Wilk.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.35]{FigurasUV/HTA.pdf}
 \end{figure}
 
-~\\Según se observa en el gráfico QQ-plot los datos siguen una distribucion de colas pesadas, lo que indicaria que el supuesto de normalidad parece no cumplirse.
+~\\Para la variable tallo los residuales en el QQ-plot no se salen de las bandas de confianza, esto y el histograma a priori nos indican que los residuales siguen una distribución normal
 
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.35]{FigurasUV/HAL.pdf}
 \end{figure}
 
-~\\En el caso del modelo para la variable de respuesta altura tanto el histograma como el QQ-plot parece indicar que los datos siguen una distribución normal.
+~\\En el caso de la Altura el QQ-plot nos indica que a priori se cumple el supuesto sin embargo el histograma no parece indicar esto.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.35]{FigurasUV/HHO.pdf}
 \end{figure}
 
-~\\Los residuales correspondientes al modelo de la variable Hojas parece (al igual que el primero) tener colas pesadas lo que indicaría que el supuesto posiblemente no se cumpla.
+~\\Para la variable Hojas verdes sucede igual que para la Altura, el QQ-plot indica normalidad sin embargo el histograma no, ya  veremos a continuación si esto es cierto con una prueba estadística.
 
 ~\\Los resultados para las pruebas estadísticas realizadas fueron:
 $$H_0:Los\; residuales\; provienen\; de\; una\; distribucion\; normal$$
 $$H_0:Los\; residuales\; no\; provienen\; de\; una\; distribucion\; normal$$
 ~\\Tallos
-$$A = 1.5677, p-value = 0.0004871$$
+$$W = 0.97874, p-value = 0.9268$$
 
 ~\\Altura
-$$A = 0.2092, p-value = 0.862$$
+$$W = 0.95791, p-value = 0.5319$$
 
 ~\\Hojas verdes
-$$A = 1.6556, p-value = 0.000296$$
+$$W = 0.97675, p-value = 0.8983$$
 
 
-~\\Con las pruebas estadísticas comprobamos nuestras sospechas, observamos que el supuesto de normalidad se incumple para 2 de los modelos, los cuales son los correspondientes a la variables Tallos y Hojas verdes, esto nos indica a priori que se debe realizar una transformación a los datos para lograr realizar el análisis de varianza.
+~\\Con las pruebas estadísticas comprobamos lo que habíamos observado en los gráficos, el supuesto de normalidad se cumple para los errores en todos los modelos.
 
 \item[Homocedasticidad:]
-~\\Para analizar este supuesto se realizó el test de Bartlett, ya que bajo el cumplimiento de la normalidad este es más potente, para los modelos en los cuales se incumplía el supuesto de normalidad realizamos el test de Levene.
+~\\Para analizar este supuesto se realizó el test de Bartlett, ya que bajo el cumplimiento de la normalidad este es más potente.
 ~\\Los resultados para las pruebas realizadas fueron:
 $$H_0:La \; varianza\; de\; los\; grupos \; no \;son \; diferentes\; (iguales)$$
 $$H_a:La \; varianza\; de\; los\; grupos \; son \; diferentes$$
 
 ~\\Tallos
-$$F \;\; Value = 1.1381, df = 19, p-value = 0.31$$
-
+$$Bartlett's \;\; K-squared = 1.0042, df = 3, p-value = 0.8002$$
 ~\\Altura
-$$Bartlett's \;\; K-squared = 18.916, df = 19, p-value = 0.4623$$
+$$Bartlett's \;\; K-squared = 0.70377, df = 3, p-value = 0.8723$$
 
 ~\\Hojas verdes
-$$F \;\; Value = 0.8569, df = 19, p-value = 0.6375$$
-
+$$Bartlett's \;\; K-squared = 2.6903, df = 19, p-value = 0.4419$$
 
 ~\\En este caso para los 3 modelos se cumple el supuesto de homogeneidad de varianzas.
 
@@ -346,54 +343,16 @@ $$H_0:La \; muestra\; es\; aleatoria\; (los \; residuales \;son \; independiente
 $$H_a:La \; muestra\; no \;es\; aleatoria\; (los \; residuales \; no\;son \; independientes)$$
 
 ~\\Tallos
-$$Standard \; Normal = 0.90584, p-value = 0.365$$
+$$Standard \; Normal = 1.4927, p-value = 0.1355$$
 
 ~\\Altura
 $$Standard \; Normal = 1.4152, p-value = 0.157$$
 
 ~\\Hojas verdes
-$$Standard \; Normal = 1.4152, p-value = 0.06685$$
+$$Standard \; Normal = 0.90584, p-value = 0.365$$
 
 ~\\El supuesto de independencia se cumple de igual forma para todos los modelos.
-\\
-~\\Como el supuesto de normalidad no se cumplió hay que realizar una trasformación a los datos para que estos sean normales, para esto haremos uso de dos trasformaciones, la transformación de box-cox y la trasformación de johnson.
-~\\Luego de realizar las trasformaciones a los datos los supuestos sobre el error arrojaron los siguientes resultados.
-\\
-\item[Normalidad:]
-$$H_0:Los\; residuales\; provienen\; de\; una\; distribucion\; normal$$
-$$H_0:Los\; residuales\; no\; provienen\; de\; una\; distribucion\; normal$$
-~\\Tallos
-$$A = 0.84802, p-value = 0.02892$$
-
-~\\Hojas verdes
-$$A = 0.5612, p-value = 0.146$$
-
-~\\Para la variable Hojas verdes se utilizo la trasformación de box y cox, la cual consiste en buscar un landa máximo, en este caso el valor de dicho landa fue de aproximadamente 2 por lo que la mejor trasformación según box y cox fue el cuadrado de los datos, esto dio como resultado que los residuales de dicho modelo cumplieran con el supuesto de normalidad.
-~\\Para la variable Tallos utilizamos también box-cox sin embargo este no dio resultados muy favorables, así que optamos por utilizar la alternativa que propone Johnson, esta resulto ser mas efectiva, aunque los residuales a un nivel de 0.05 no son normales, resultan serlo a un nivel de 0.1 por lo que realizar una tabla ANOVA es mas viable ahora.
-
-\item[Homocedasticidad:]
-
-$$H_0:La \; varianza\; de\; los\; grupos \; no \;son \; diferentes\; (iguales)$$
-$$H_a:La \; varianza\; de\; los\; grupos \; son \; diferentes$$
-
-~\\Tallos
-$$Bartlett's \;\; K-squared = 15.815, df = 19, p-value = 0.6696$$
-~\\Hojas verdes
-$$Bartlett's \;\; K-squared = 17.702, df = 19, p-value = 0.5424$$
-
-~\\Ahora que se cumple el supuesto de normalidad utilizamos la prueba de Bartlett y comprobamos que se sigue cumpliendo el supuesto de Homocedasticidad.
-
-\item[Independencia:]
-$$H_0:La \; muestra\; es\; aleatoria\; (los \; residuales \;son \; independientes)$$
-$$H_a:La \; muestra\; no \;es\; aleatoria\; (los \; residuales \; no\;son \; independientes)$$
-
-~\\Tallos
-$$Standard \; Normal = 1.8044, p-value = 0.07116$$
-
-~\\Hojas verdes
-$$Standard \; Normal = 1.4152, p-value = 0.06685$$
-
-~\\El supuesto de independencia aun se cumple, ahora podemos interpretar los resultados de la tabla ANOVA.
+~\\Como todos los supuestos se cumplen podemos confiar en los resultado arrojados por la tabla ANOVA.
 \end{itemize}
 
 ~\\\textbf{f.}
@@ -402,129 +361,19 @@ $$Standard \; Normal = 1.4152, p-value = 0.06685$$
 Para evaluar el control local del experimento nos centramos en la varianza estimada y en el coeficiente de variación
 
 ~\\Tallos
-$$\sigma^2=2.5571 \;\;\; \bar{y}_{....}=3.5425 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.4514025 \cdot 100\% \simeq 45.14025\%$$
+$$\sigma^2=8.704 \;\;\; \bar{y}_{....}=3.5425 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.832817 \cdot 100\% \simeq 83.2817\%$$
 
 ~\\Altura
-$$\sigma^2=3.1385 \;\;\; \bar{y}_{....}=24.96975 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.0709491 \cdot 100\% \simeq 7.09491\%$$
+$$\sigma^2=153.86 \;\;\; \bar{y}_{....}=24.96975 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.4967623 \cdot 100\% \simeq 49.67623\%$$
 
 ~\\Hojas verdes
-$$\sigma^2=3.2828 \;\;\; \bar{y}_{....}=5.5575 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.3260189 \cdot 100\% \simeq 32.60189\%$$
+$$\sigma^2=5.001 \;\;\; \bar{y}_{....}=5.5575 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.4023916 \cdot 100\% \simeq 40.23916\%$$
 
 
-~\\Podemos ver que existe mayor variabilidad en las variables Tallos y Hojas, para la variable Altura tenemos un coeficiente de variación relativamente bajo, así pues podemos decir que se ejerció un buen control local sin embargo el numero de tallos y la cantidad de hojas verdes totalmente expandidas resultan tener mayor variabilidad.
+~\\Podemos ver que para los modelos correspondientes a las variables Altura y Hojas verdes los coeficiente de variación no son muy distintos, sin embargo para la variable Tallos se observa un coeficiente alto, casi del doble, según esto sumado a que es un experimento en campo y existen dificultades a la hora de controlar ciertas variables, ademas dado que las varianzas observadas son altas podemos decir que el control local del experimento no fue muy bueno.
 
 ~\\\textbf{h.}
-~\\Dado que en la anova realizada para cada modelo se obtuvo que la interacción bloque-tratamiento resultó ser significativa, no es adecuado usar contrastes por factor individual, por lo que se van a realizar contrastes para las interacciones por cada modelo. Para realizar dichos contrastes, nos basamos en los gráficos de cajas realizados para las interacciones en cada uno de los modelos, observando en ellos posibles diferencias entre los distintos tratamientos. La metodología que se llevara a cabo es hacer contrastes entre tratamientos por cada bloque y finalmente se hará un contraste entre los mejores tratamientos de cada bloque, para así lograr saber qué interacción fue la que generó mejores resultados para cada una de las variables de respuesta, teniendo en cuenta lo anterior, se realizarán 6 contrastes(uno de cada uno de los cinco bloques y un contraste final entre los mejores de cada bloque) para cada uno de los modelos planteados.
-\begin{itemize}
-\item[1).] Tallos
-
-Con respecto al bloque 1, se pudo notar que al parecer el tratamiento 4 genera en promedio mayor número de tallos que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{41}-(\tau\rho)_{11}-(\tau\rho)_{21}-(\tau\rho)_{31}=0$$
-
-~\\Bajo la hipótesis nula, tenemos que el estadístico de prueba es:
-$$F=\frac{(\sum\limits_{i=1}^t a_i\bar{y_{i.}})^2}{{\hat{\sigma^2}\sum\limits_{i=1}^t \frac{{a_i}^2}{r_i}}}$$
-
-$$\rightarrow F=\frac{(1.15)^2}{0.7913 \cdot \frac{12}{20}}=2.7855$$
-
-~\\Como $F_{0.95(1,380)}=3.866 > F_{cal}=2.7855$, no se rechaza $H_0$ y concluimos que no hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 4 y los tratamientos 1,2 y 3 en el bloque 1 sobre el número de tallos de las plantas, es decir, se podría considerar que todos los tratamientos presentan el mismo efecto en este bloque.
-
-Con respecto al bloque 2, se pudo notar que al parecer el tratamiento 1 genera en promedio mayor número de tallos que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{12}-(\tau\rho)_{22}-(\tau\rho)_{32}-(\tau\rho)_{42}=0$$
-
-$$\rightarrow F=\frac{(3.2)^2}{0.7913 \cdot \frac{12}{20}}=21.5678$$
-
-~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=21.5678$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 1 y los tratamientos 2,3 y 4 en el bloque 2 sobre el número de tallos de las plantas.
-
-Con respecto al bloque 3, se pudo notar que al parecer el tratamiento 4 genera en promedio mayor número de tallos que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{43}-(\tau\rho)_{13}-(\tau\rho)_{23}-(\tau\rho)_{33}=0$$
-
-$$\rightarrow F=\frac{(5)^2}{0.7913 \cdot \frac{12}{20}}=52.656$$
-
-~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=52.656$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 4 y los tratamientos 1,2 y 3 en el bloque 3 sobre el número de tallos de las plantas.
-
-Con respecto al bloque 4, se pudo notar que al parecer el tratamiento 1 genera en promedio mayor número de tallos que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{14}-(\tau\rho)_{24}-(\tau\rho)_{34}-(\tau\rho)_{44}=0$$
-
-$$\rightarrow F=\frac{(1.6)^2}{0.7913 \cdot \frac{12}{20}}=5.3919$$
-
-~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=5.3919$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 1 y los tratamientos 2,3 y 4 en el bloque 4 sobre el número de tallos de las plantas.
-
-Con respecto al bloque 5, se pudo notar que al parecer el tratamiento 1 genera en promedio mayor número de tallos que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{15}-(\tau\rho)_{25}-(\tau\rho)_{35}-(\tau\rho)_{45}=0$$
-
-$$\rightarrow F=\frac{(1.6)^2}{0.7913 \cdot \frac{12}{20}}=5.3919$$
-
-~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=5.3919$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 1 y los tratamientos 2,3 y 4 en el bloque 5 sobre el número de tallos de las plantas.
-
-Finalmente, como se tuvo que los mejores tratamientos en cada uno de los bloques(eliminando el bloque 1 para el cual no se detectaron diferencias entre los diferentes tratamientos) son respectivamente el 1,4,1 y 1, se hará un contraste para darnos cuenta qué interacción generó mejores resultados en el número de tallos de las plantas. Observando los promedios de estas interacciones, se puede notar que aparentemente las interacciones que generaron un mayor promedio en cuanto a número de tallos fue la del bloque 2 - tratamiento 1, bloque 3 - tratamiento 4 y bloque 5 - tratamiento 1, las cuales tienen un promedio muy parecido (4.3, 4.35 y 4.35 respectivamente). Dicho lo anterior se planteó el siguiente contraste:
-$$(\tau\rho)_{12}+(\tau\rho)_{43}+(\tau\rho)_{15}-3(\tau\rho)_{14}=0$$
-
-$$\rightarrow F=\frac{(2.5)^2}{0.7913\cdot \frac{12}{20}}=13.164$$
-
-~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=13.164$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto de las interacciones bloque 2 - tratamiento 1, bloque 3 - tratamiento 4 y bloque 5 - tratamiento 1  contra la interacción bloque 4 - tratamiento 1 sobre el número de tallos de las plantas.
-~\\Teniendo en cuenta esto, se puede concluir que las interacciones que generaron mejores efectos sobre la altura de las plantas fueron el tratamiento 1 en los bloques 2 y 5 y el tratamiento 4 en el bloque 3.
-
-\item[2).] Altura
-
-Con respecto al bloque 1, se pudo notar que al parecer el tratamiento 4 genera mayores alturas que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{41}-(\tau\rho)_{11}-(\tau\rho)_{21}-(\tau\rho)_{31}=0$$
-
-$$\rightarrow F=\frac{(13.99)^2}{49.023\cdot \frac{12}{20}}=6.654$$
-
-~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=6.654$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 4 y los tratamientos 1,2 y 3 en el bloque 1 sobre la altura de las plantas.
-
-Con respecto al bloque 2, se pudo notar que al parecer el tratamiento 1 genera mayores alturas que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{12}-(\tau\rho)_{22}-(\tau\rho)_{32}-(\tau\rho)_{42}=0$$
-
-$$\rightarrow F=\frac{(21.34)^2}{49.023\cdot \frac{12}{20}}=15.48$$
-
-~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=15.48$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 1 y los tratamientos 2,3 y 4 en el bloque 2 sobre la altura de las plantas.
-
-Con respecto al bloque 3, se pudo notar que al parecer el tratamiento 4 genera mayores alturas que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{43}-(\tau\rho)_{13}-(\tau\rho)_{23}-(\tau\rho)_{33}=0$$
-
-$$\rightarrow F=\frac{(10.77)^2}{49.023\cdot \frac{12}{20}}=3.9435$$
-
-~\\Como $F_{0.95(1,380)}=3.866 < F_{cal}=3.9435$, se rechaza $H_0$ y concluimos que hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 4 y los tratamientos 1,2,y 3 en el bloque 3 sobre la altura de las plantas.
-
-Con respecto al bloque 4, se pudo notar en las descriptivas que al parecer el tratamiento 4 genera un mayor promedio en las alturas que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{44}-(\tau\rho)_{14}-(\tau\rho)_{24}-(\tau\rho)_{34}=0$$
-
-$$\rightarrow F=\frac{(7.7)^2}{49.023\cdot \frac{12}{20}}=2.0157$$
-
-~\\Como $F_{0.95(1,380)}=3.866 > F_{cal}=2.0157$, no se rechaza $H_0$ y concluimos que no hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 4 y los tratamientos 1,2,y 3 en el bloque 4 sobre la altura de las plantas, en otras palabras, se puede decir que el efecto de todos los tratamientos en este bloque sobre la altura de las plantas fue el mismo.
-
-Con respecto al bloque 5, se pudo notar en las descriptivas que al parecer el tratamiento 1 genera un mayor promedio en las alturas que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{15}-(\tau\rho)_{25}-(\tau\rho)_{35}-(\tau\rho)_{45}=0$$
-
-$$\rightarrow F=\frac{(6.72)^2}{49.023\cdot \frac{12}{20}}=1.5352$$
-
-~\\Como $F_{0.95(1,380)}=3.866 > F_{cal}=1.5352$, no se rechaza $H_0$ y concluimos que no hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 1 y los tratamientos 2,3 y 4 en el bloque 5 sobre la altura de las plantas, es decir, el efecto de los 4 tratamientos sobre la altura de las plantas fue el mismo en este bloque.
-
-Finalmente, como se tuvo que los mejores tratamientos en cada uno de los bloques(eliminando los bloques 4 y 5 donde no se detectaron diferencias) son respectivamente el 4,1 y 4. Se realizará un contraste para darnos cuenta qué interacción generó mejores resultados en la altura de las plantas. Observando los promedios de estas interacciones, se puede notar que aparentemente las interacciones que generaron un mayor promedio fue la del bloque 1 - tratamiento 4 y bloque 2 - tratamiento 1, las cuales tienen un promedio muy parecido (29.36 y 29.41 respectivamente). Dicho lo anterior se planteó el siguiente contraste:
-$$2(\tau\rho)_{41}+(\tau\rho)_{12}-2(\tau\rho)_{43}=0$$
-
-$$\rightarrow F=\frac{(3.73)^2}{49.023\cdot \frac{6}{20}}=0.9460$$
-
-~\\Como $F_{0.95(1,380)}=3.866 > F_{cal}=0.9460$, no se rechaza $H_0$ y concluimos que no hay evidencia estadística para decir que existen diferencias entre el efecto de las interacciones bloque 1 - tratamiento 4 y bloque 2 - tratamiento 1 contra la interacción bloque 3 - tratamiento 4 sobre la altura de las plantas.
-~\\Teniendo en cuenta esto, se puede concluir que las interacciones que generaron mejores efectos sobre la altura de las plantas fueron el tratamiento 4 en el bloque 1 y 3 y el tratamiento 1 en el bloque 2.
-\item[3).] Hojas Verdes
-
-Con respecto al bloque 1, se pudo notar que al parecer el tratamiento 4 genera en promedio mayor número de hojas verdes que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{41}-(\tau\rho)_{11}-(\tau\rho)_{21}-(\tau\rho)_{31}=0$$
-
-$$\rightarrow F=\frac{(1)^2}{173.86 \cdot \frac{12}{20}}=0.00958$$
-
-~\\Como $F_{0.95(1,380)}=3.866 > F_{cal}=0.00958$, no se rechaza $H_0$ y concluimos que no hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 4 y los tratamientos 1,2 y 3 en el bloque 1 sobre el número de hojas verdes completamente expandidas de las plantas, es decir, se podría considerar que todos los tratamientos presentan el mismo efecto en este bloque.
-
-Con respecto al bloque 2, se pudo notar que al parecer el tratamiento 1 genera en promedio mayor número de hojas verdes que los demás, para ello se plantea el siguiente contraste:
-$$H_0:3(\tau\rho)_{12}-(\tau\rho)_{22}-(\tau\rho)_{32}-(\tau\rho)_{42}=0$$
-
-$$\rightarrow F=\frac{(4.45)^2}{173.86 \cdot \frac{12}{20}}=0.1898$$
-
-~\\Como $F_{0.95(1,380)}=3.866 > F_{cal}=0.1898$, no se rechaza $H_0$ y concluimos que no hay evidencia estadística para decir que existen diferencias entre el efecto del tratamiento 4 y los tratamientos 1,2 y 3 en el bloque 1 sobre el número de hojas verdes completamente expandidas de las plantas, es decir, se podría considerar que todos los tratamientos presentan el mismo efecto en este bloque.
-\end{itemize}
-
+~\\Segun las tablas ANOVA no se rechazo ninguna de las hipotesis lo que nos indica que no existen diferencias significativas entre las diferentes dosis de fertilizante nitrogenado por lo que no tiene sentido realizar contrastes.
 
 ~\\\textbf{i.}
 ~\\\textbf{Para la primera hipótesis de la variable Tallos:}
