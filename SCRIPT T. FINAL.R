@@ -35,7 +35,7 @@ for (d in 1:length(a)) {
   se=data.frame(se,j)
 }#ciclo que me saca los datos por niveles del factor
 colnames(se)=c("#","B1","B2","B3","B4","B5")
-summary(se) #descriptivas por cada nivel
+summary(se[-1]) #descriptivas por cada nivel
 des=sd(se$B1)
 cv=(des/mean(se$B1))*100
 
@@ -54,7 +54,7 @@ for (d in 1:length(a)) {
   se=data.frame(se,j)
 }#ciclo que me saca los datos por niveles del factor
 colnames(se)=c("#","T1","T2","T3","T4")
-summary(se) #descriptivas por cada nivel
+summary(se[-1]) #descriptivas por cada nivel
 des=sd(se$T1)
 cv=(des/mean(se$T1))*100
 
@@ -69,7 +69,7 @@ for (d in 1:length(a)) {
   j=c()
   for (i in 1:length(inter)) {
     if(inter[i]==a[d]){
-      j=c(j,Altura[i])
+      j=c(j,HVerdes[i])
       
     }
     
@@ -81,34 +81,44 @@ summary(se[-1])
 des=sd(se$B4.T4)
 cv=(des/mean(se$B1.T1))*100
 
-
+mean(Tallos)
+mean(Altura)
+mean(HVerdes)
 #Tratamiento-Bloque
 #Altura
 x11()
-boxplot(Altura~Tratamiento*Bloque)
+boxplot(Altura~Bloque)
+x11()
+boxplot(Altura~Tratamiento)
 
 #Tallos
 x11()
-boxplot(Tallos~Tratamiento*Bloque)
+boxplot(Tallos~Bloque)
+x11()
+boxplot(Tallos~Tratamiento)
 
 #Hojas verdes
 x11()
-boxplot(HVerdes~Tratamiento*Bloque)
-
-
+boxplot(HVerdes~Bloque)
+x11()
+boxplot(HVerdes~Tratamiento)
 
 #Modelos:
 #Modelo 1
-mod1<-aov(Tallos~Tratamiento*Bloque)
+mod1<-aov(Tallos~Tratamiento+Bloque+Error(Parcela))
 summary(mod1)
-
+ad.test(residuals(mod1$Parcela))
+ad.test(residuals(mod1$Within))
 #Modelo 2
-mod2<-aov(Altura~Tratamiento*Bloque)
+mod2<-aov(Altura~Tratamiento+Bloque+Error(Parcela))
 summary(mod2)
-
+ad.test(residuals(mod2$Parcela))
+ad.test(residuals(mod2$Within))
 #Modelo 3
-mod3<-aov(HVerdes~Tratamiento*Bloque)
+mod3<-aov(HVerdes~Tratamiento+Bloque+Error(Parcela))
 summary(mod3)
+ad.test(residuals(mod3$Parcela))
+ad.test(residuals(mod3$Within))
 
 #Supuestos
 #Modelo 1
@@ -232,8 +242,164 @@ runs.test(factor(residualesfactor))
 #MODELO 1
 library(multcompView)
 library(lsmeans)
-leastsquare = lsmeans(mod1, ~Tratamiento|Bloque,  adjust="tukey")
+leastsquare = lsmeans(mod1, ~Bloque,  adjust="tukey")
 cld(leastsquare, alpha=.05, Letters=letters)
+#MODELO 2
+leastsquare1 = lsmeans(mod2, ~Bloque,  adjust="tukey")
+cld(leastsquare1, alpha=.05, Letters=letters)
+#MODELO 3
+leastsquare2 = lsmeans(mod3, ~Bloque,  adjust="tukey")
+cld(leastsquare2, alpha=.05, Letters=letters)
+
+
+#------------------------------------------------------------#
+#DADO QUE NO SE CUMPLE LA NORMALIDAD PARA LOS MODELOS 1 Y 3, 
+#SE DEBE APLICAR UNA TRANSFORMACIÓN A LOS DATOS
+#con box cox
+library(car)
+summary(powerTransform(Tallos))
+summary(powerTransform(HVerdes))
+#con jhonson
+install.packages("jtrans")
+library(jtrans)
+library(nortest)
+jh=jtrans(Tallos, test="ad.test")
+
+trTallos=jh$transformed
+trHojas=HVerdes^2
+trTallos2=sqrt(Tallos)
+
+#Descriptivas paras los datos transformados
+CAMPANA1$int <- interaction( Bloque,Tratamiento)
+inter=CAMPANA1$int
+j=c()
+a=c("B1.T1","B2.T1","B3.T1","B4.T1","B5.T1","B1.T2","B2.T2","B3.T2","B4.T2","B5.T2","B1.T3","B2.T3","B3.T3","B4.T3","B5.T3","B1.T4","B2.T4","B3.T4","B4.T4","B5.T4")
+se=data.frame(c(1:20))
+for (d in 1:length(a)) {
+  print(j)
+  j=c()
+  for (i in 1:length(inter)) {
+    if(inter[i]==a[d]){
+      j=c(j,trHojas[i])
+      
+    }
+    
+  }
+  se=data.frame(se,j)
+}
+colnames(se)=c("#","B1.T1","B2.T1","B3.T1","B4.T1","B5.T1","B1.T2","B2.T2","B3.T2","B4.T2","B5.T2","B1.T3","B2.T3","B3.T3","B4.T3","B5.T3","B1.T4","B2.T4","B3.T4","B4.T4","B5.T4")
+summary(se[-1])
+des=sd(se$B4.T4)
+cv=(des/mean(se$B1.T1))*100
+
+
+#Modelos nuevos
+#Modelo 1 transformado con jhonson
+mod1T<-aov(trTallos~Tratamiento*Bloque)
+summary(mod1T)
+  
+#Transformado con box cox
+mod1T2<-aov(trTallos2~Tratamiento*Bloque)
+summary(mod1T2)
+
+#Modelo 3 transformado
+mod3T<-aov(trHojas~Tratamiento*Bloque)
+summary(mod3T)
+
+#Supuestos para los nuevos modelos
+#Modelo 1 transformado
+residuales1T=residuals(mod1T)
+
+#La transformación de box cox no funciona muy bien:
+residuales1T2=residuals(mod1T2)
+ad.test(residuales1T2)
+x11()
+par(mfcol=c(1,2))
+hist(residuales1T2, density=5, freq=FALSE, main="Histograma residuos del modelo")
+curve(dnorm(x, mean=mean(residuales1T2), sd=sd(residuales1T2)), col="red",
+      lwd=2, add=TRUE, yaxt="n")
+qqnorm(residuales1T2, main="Q-Q Plot residuos modelo") ## el típico de R
+qqline(residuales1T2)
+
+#Normalidad
+#QQ plot e histograma con curva normal superpuesta
+x11()
+par(mfcol=c(1,2))
+hist(residuales1T, density=5, freq=FALSE, main="Histograma residuos del modelo")
+curve(dnorm(x, mean=mean(residuales1T), sd=sd(residuales1T)), col="red",
+      lwd=2, add=TRUE, yaxt="n")
+qqnorm(residuales1T, main="Q-Q Plot residuos modelo") ## el típico de R
+qqline(residuales1T)
+
+#Test Shapiro wilk(<30 datos)
+shapiro.test(residuales1T)
+
+#Anderson-Darling(>30 datos)
+library("nortest")
+ad.test(residuales1T)
+
+#Homocedasticidad de los residuos
+datos1 <- interaction(Tratamiento,Bloque)
+bartlett.test(residuales1T~datos1)
+
+#Independencia(no correlación) en los errores
+#Prueba de rachas: H0:Los residuales se distribuyen de manera aleatoria
+library("tseries")
+residuales1<-residuales[-31]
+residualesfactor<-c()
+for (i in 1:length(residuales1)) {
+  if (residuales1[i]>0){
+    residualesfactor[i]=1
+  }
+  if (residuales1[i]<0){
+    residualesfactor[i]=-1
+  }
+}
+runs.test(factor(residualesfactor))
+
+#Modelo 3 transformado
+residuales3T=residuals(mod3T)
+
+#Normalidad
+#QQ plot e histograma con curva normal superpuesta
+x11()
+par(mfcol=c(1,2))
+hist(residuales3T, density=5, freq=FALSE, main="Histograma residuos del modelo")
+curve(dnorm(x, mean=mean(residuales3T), sd=sd(residuales3T)), col="red",
+      lwd=2, add=TRUE, yaxt="n")
+qqnorm(residuales3T, main="Q-Q Plot residuos modelo") ## el típico de R
+qqline(residuales3T)
+
+#Test Shapiro wilk(<30 datos)
+shapiro.test(residuales3T)
+
+#Anderson-Darling(>30 datos)
+library("nortest")
+ad.test(residuales3T)
+
+#Homocedasticidad de los residuos
+datos1 <- interaction(Tratamiento,Bloque)
+bartlett.test(residuales1T~datos1)
+
+#Independencia(no correlación) en los errores
+#Prueba de rachas: H0:Los residuales se distribuyen de manera aleatoria
+library("tseries")
+residuales1<-residuales[-31]
+residualesfactor<-c()
+for (i in 1:length(residuales1)) {
+  if (residuales1[i]>0){
+    residualesfactor[i]=1
+  }
+  if (residuales1[i]<0){
+    residualesfactor[i]=-1
+  }
+}
+runs.test(factor(residualesfactor))
+#-----------------------------------------------------------#
+
+
+
+
 #----------------------------------------------------------#
 #Problema 2
 secado<-as.factor(c(rep("S",18),rep("A",18),rep("SA",18)))

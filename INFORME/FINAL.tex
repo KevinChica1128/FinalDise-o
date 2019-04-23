@@ -181,34 +181,32 @@ Hay un área efectiva para tomar las mediciones, esto quiere decir que las planta
 ~\\\textbf{a.}
 
 ~\\\textbf{b.}
-En este caso, se deben plantear tres modelos, uno para cada variable de respuesta (tallos, altura y hojas verdes), las variables independiente del modelo son las mismas para las tres variables de respuesta. Por ello se plantea el siguiente modelo:
-$$y_{ijk}=\mu+\tau_i+\rho_j+(\tau\rho)_{ij}+\varepsilon_{ijk} $$ 
+En este caso, se deben plantear tres modelos de bloques con submuestreo(ya que se seleccionó en varias ocasiones una planta de cada parcela en cada uno de los bloques y a esa planta se le midieron las tres variables de respuesta, se realizaron 20 submuestreos por tratamiento-bloque), uno para cada variable de respuesta (tallos, altura y hojas verdes), las variables independiente del modelo son las mismas para las tres variables de respuesta. Por ello se plantea el siguiente modelo:
+$$y_{ijk}=\mu+\tau_i+\rho_j+e_{ij}+\varepsilon_{ijk} $$ 
 $$ i=1,2,3,4 \;\;\;\; j=1,2,3,4,5 \;\;\;\; k=1,2,3,\cdots,20$$
 ~\\Donde:
-~\\$y_{ijk}$ es el número de tallos bajo la fertilización i, en el bloque j y de una planta en la k-ésima parcela.
+~\\$y_{ijk}$ es el número de tallos de la k-ésima submuestra en el bloque j bajo la fertilización i.
 ~\\$\mu$ es la media general del número de tallos sin tener en cuenta la fertilización ni el bloque.
 ~\\$\tau_i$ es el efecto de la i-ésima fertilización sobre el número de tallos.
 ~\\$\rho_j$ es el efecto del bloque j-ésimo sobre el  el número de tallos. 
-~\\$(\tau\rho)_{ij}$ es el efecto de la interacción entre la i-ésima fertilización y el j-ésimo bloque sobre el número de tallos.
-~\\$\varepsilon_{(ijk)l}$ es el error aleatorio debido a la i-ésima fertilizacón, al j-ésimo bloque y a una planta en la k-ésima parcela.
+~\\$e_{ij}$ es el efecto de error experimental aleatorio para la el bloque j del tratamiento i.
+~\\$\varepsilon_{ijk}$ es el efecto aleatorio para la k-ésima submuestra del bloque j del tratamiento i.
 
 ~\\Los otros dos modelos son exactamente iguales, modificando la variable de respuesta, para el modelo 2 y 3, se tiene que:
 
-$y_{ijk}$ es la altura bajo la fertilización i, en el bloque j y de una planta en la k-ésima parcela.
+$y_{ijk}$ es la altura de la k-ésima submuestra en el bloque j bajo la fertilización i.
 
 ~\\y
 
-$y_{ijk}$ es el número de hojas completamente expandidas bajo la fertilización i, en el bloque j y de una planta en la k-ésima parcela.
+$y_{ijk}$ es el número de hojas completamente expandidas de la k-ésima submuestra en el bloque j bajo la fertilización i.
 \\
 ~\\\textbf{c.}
-Las hipótesis a evaluar para los 3 modelos son:
+Las hipótesis a evaluar para los tres modelos son:
 \begin{itemize}
 \item[1).] $$H_0:\tau_1=\tau_2=\tau_3=\tau_4=\tau$$
 $$H_a:Al\; menos\; una\; de\; estas\; igualdades\; no\; se\; cumple$$
 \item[2).] $$H_0:\rho_1=\rho_2=\rho_3=\rho_4=\rho_5=\rho$$
 $$H_a:Al\; menos\; una\; de\; estas\; igualdades\; no\; se\; cumple$$
-\item[3).] $$H_0:(\tau\rho)_{ij}=0$$
-$$H_a:(\tau\rho)_{ij}\neq 0$$
 \end{itemize}
 
 ~\\\textbf{d.}
@@ -232,7 +230,7 @@ Total & 399 & 1509.28 &  &  &  & \\
 }
 \end{center}
 
-~\\Interpretacion.
+~\\Se puede notar que a un nivel de significancia $\alpha=0.05$, no se obtuvieron diferencias significativas entre los efectos de los diferentes tratamientos(fertilización) y entre los efectos de los distintos bloques sobre el número de tallos de las plantas. Cabe mencionar que como el p-valor correspondiente al error experimental resultó ser menor que $\alpha=0.05$ se puede decir que realizar el submuestreo ayudó a reducir el error del modelo.
 \item[2).] Altura
 
 \begin{center}
@@ -251,7 +249,7 @@ Total & 399 & 21136.9 &  &  &  & \\
 }
 \end{center}
 
-~\\Interpretacion...
+~\\Al igual que para la variable número de tallos, aquí también podemos ver que a un nivel de significancia $\alpha=0.05$, no se obtuvieron diferencias significativas entre los efectos de los diferentes tratamientos(fertilización) y entre los efectos de los distintos bloques sobre la altura de las plantas. Como el p-valor correspondiente al error experimental resultó ser menor que $\alpha=0.05$ se puede decir que realizar el submuestreo ayudó a reducir el error del modelo.
 
 
 \item[3).] Hojas verdes
@@ -271,11 +269,10 @@ Total & 399 & 676.68 &  &  &  & \\
 \end{tabular} 
 }
 \end{center}
+~\\Al igual que para las dos variables anteriores, se observa que a un nivel de significancia $\alpha=0.05$, no se obtuvieron diferencias significativas entre los efectos de los diferentes tratamientos(fertilización) y entre los efectos de los distintos bloques sobre la altura de las plantas. Como el p-valor correspondiente al error experimental resultó ser menor que $\alpha=0.05$ se puede decir que realizar el submuestreo ayudó a reducir el error del modelo.
 \end{itemize}
 
-~\\Interpretacion...
 
-~\\Interpretacion general...
 
 ~\\\textbf{e.}
 Probaremos los supuestos sobre el error para cada uno de los modelos planteados.
@@ -286,25 +283,24 @@ Probaremos los supuestos sobre el error para cada uno de los modelos planteados.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.35]{FigurasUV/HTA.pdf}
+  \includegraphics[scale=0.36]{FigurasUV/HTA.pdf}
 \end{figure}
 
-~\\Para la variable tallo los residuales en el QQ-plot no se salen de las bandas de confianza, esto y el histograma a priori nos indican que los residuales siguen una distribución normal
+~\\Para la variable Tallos, los residuales en el QQ-plot no se salen de las bandas de confianza y en el histograma no se nota un incumplimiento claro de la normalidad, esto nos indica a priori que los residuales parecen seguir una distribución normal.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.35]{FigurasUV/HAL.pdf}
+  \includegraphics[scale=0.36]{FigurasUV/HAL.pdf}
 \end{figure}
 
-~\\En el caso de la Altura el QQ-plot nos indica que a priori se cumple el supuesto sin embargo el histograma no parece indicar esto.
+~\\En el caso de la Altura, el QQ-plot nos indica que a priori se cumple el supuesto sin embargo, en el histograma no parece que los residuales siguieran una distribución normal.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.35]{FigurasUV/HHO.pdf}
+  \includegraphics[scale=0.36]{FigurasUV/HHO.pdf}
 \end{figure}
 
-~\\Para la variable Hojas verdes sucede igual que para la Altura, el QQ-plot indica normalidad sin embargo el histograma no, ya  veremos a continuación si esto es cierto con una prueba estadística.
-
+~\\Para la variable Hojas verdes tenemos la misma situación que para la Altura, el QQ-plot indica normalidad pero el histograma no refleja esto con claridad, por ello se plantea la prueba estadística, para confirmar lo que se observa gráficamente. 
 ~\\Los resultados para las pruebas estadísticas realizadas fueron:
 $$H_0:Los\; residuales\; provienen\; de\; una\; distribucion\; normal$$
 $$H_0:Los\; residuales\; no\; provienen\; de\; una\; distribucion\; normal$$
@@ -318,7 +314,7 @@ $$W = 0.95791, p-value = 0.5319$$
 $$W = 0.97675, p-value = 0.8983$$
 
 
-~\\Con las pruebas estadísticas comprobamos lo que habíamos observado en los gráficos, el supuesto de normalidad se cumple para los errores en todos los modelos.
+~\\Con las pruebas estadísticas se comprueba lo observado en los gráficos, el supuesto de normalidad en los errores parece cumplirse en todos los modelos.
 
 \item[Homocedasticidad:]
 ~\\Para analizar este supuesto se realizó el test de Bartlett, ya que bajo el cumplimiento de la normalidad este es más potente.
@@ -334,7 +330,7 @@ $$Bartlett's \;\; K-squared = 0.70377, df = 3, p-value = 0.8723$$
 ~\\Hojas verdes
 $$Bartlett's \;\; K-squared = 2.6903, df = 19, p-value = 0.4419$$
 
-~\\En este caso para los 3 modelos se cumple el supuesto de homogeneidad de varianzas.
+~\\En este caso para los tres modelos se cumple el supuesto de homogeneidad de varianzas.
 
 \item[Independencia:]
 ~\\Para analizar el supuesto de independencia se realizó el test de Rachas, ya que este no se puede evaluar con un test Durbin- Watson o un correlograma porque estos requieren conocer el orden en el cuál fueron obtenidos los datos y esa información no se tiene.
@@ -361,19 +357,19 @@ $$Standard \; Normal = 0.90584, p-value = 0.365$$
 Para evaluar el control local del experimento nos centramos en la varianza estimada y en el coeficiente de variación
 
 ~\\Tallos
-$$\sigma^2=8.704 \;\;\; \bar{y}_{....}=3.5425 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.832817 \cdot 100\% \simeq 83.2817\%$$
+$$\sigma^2=3.493 \;\;\; \bar{y}_{...}=3.5425 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{...}}=0.52758 \cdot 100\% \simeq 52.758\%$$
 
 ~\\Altura
-$$\sigma^2=153.86 \;\;\; \bar{y}_{....}=24.96975 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.4967623 \cdot 100\% \simeq 49.67623\%$$
+$$\sigma^2=49.023 \;\;\; \bar{y}_{...}=24.96975 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{...}}=0.2804 \cdot 100\% \simeq 28.04\%$$
 
 ~\\Hojas verdes
-$$\sigma^2=5.001 \;\;\; \bar{y}_{....}=5.5575 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{....}}=0.4023916 \cdot 100\% \simeq 40.23916\%$$
+$$\sigma^2=1.5322 \;\;\; \bar{y}_{...}=5.5575 \;\; \longrightarrow  CV=\frac{\sqrt{\sigma^2}}{\bar{y}_{...}}=0.2227 \cdot 100\% \simeq 22.27\%$$
 
 
-~\\Podemos ver que para los modelos correspondientes a las variables Altura y Hojas verdes los coeficiente de variación no son muy distintos, sin embargo para la variable Tallos se observa un coeficiente alto, casi del doble, según esto sumado a que es un experimento en campo y existen dificultades a la hora de controlar ciertas variables, ademas dado que las varianzas observadas son altas podemos decir que el control local del experimento no fue muy bueno.
+~\\Podemos ver que para los modelos correspondientes a las variables Altura y Hojas verdes los coeficiente de variación no difieren mucho, sin embargo para la variable Tallos se observa un coeficiente de variación considerablemente alto, según esto, sumado a que es un experimento en campo y existen dificultades a la hora de controlar ciertas variables naturales y dado que las desviaciones observadas no son tan altas teniendo en cuenta el contexto del problema, podemos concluir que el control local del experimento fue aceptable.
 
 ~\\\textbf{h.}
-~\\Segun las tablas ANOVA no se rechazo ninguna de las hipotesis lo que nos indica que no existen diferencias significativas entre las diferentes dosis de fertilizante nitrogenado por lo que no tiene sentido realizar contrastes.
+~\\Según las tablas ANOVA para cada uno de los modelos planteados, no se rechazo ninguna de las hipótesis lo que nos indica que no existen diferencias significativas entre los efectos de las diferentes dosis de fertilizante nitrogenado y tampoco existen diferencias entre el efecto de los bloques sobre las 3 variables de respuesta, por lo que no tiene sentido realizar contrastes para ninguno de los modelos, ya que no se van a detectar diferencias.
 
 ~\\\textbf{i.}
 ~\\\textbf{Para la primera hipótesis de la variable Tallos:}
