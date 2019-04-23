@@ -199,7 +199,7 @@ T4 & 3.76& 1.789525 & 47.59375 & 1 & 9 \\
 \hline 
 Altura& $\bar{X}$ & 	$S$ & $CV(\%)$ & $Min$ & $Max$ \\ 
 \hline 
-T1& 25.82 & 7.037041 & 27.25528 & 9 & 41 \\
+T1 & 25.82 & 7.037041 & 27.25528 & 9 & 41 \\
 T2 & 24.04 &7.060096 &29.37056 & 9 & 41 \\
 T3 & 23.76& 7.409638 & 31.18141 & 6.5 & 48.5 \\
 T4 & 26.26& 7.238275 & 27.56493 & 11 & 43.5 \\
@@ -220,9 +220,8 @@ T4 & 5.68& 1.207311 & 21.25548 & 2 & 8 \\
 \end{tabular} 
 \end{center}
 
-~\\La variable tallos y hojas tiene promedios muy parecidos,los promedios de hojas verdes son todos aproximadamente 6 y para el numero de tallos son aproximadamente 4. Para la variable altura pueden existir diferencias ya que se observan promedios "distintos".
-~\\En general los promedios para cada tratamiento en cada variable de respuesta son muy parecidos, se puede pensar a priori que no hay diferencias entre los tratamientos.
-~\\observando los CV vemos que la variable tallos es la que mayor varianza tiene, las varianzas para las otras dos variables son similares aunque Altura tiene en general un CV un poco mayor que Hojas.
+~\\Se puede observar que para la variable número de tallos y número de hojas verdes completamente expandidas, se tienen promedios casi iguales para todos los tratamientos, dado que estas variables son discretas, y los promedios difieren por decimales, se podría pensar que no se van a detectar diferencias significativas entre los efectos de los tratamientos sobre estas variables. Para la variable altura los promedios también fueron bastante parecidos, la mayor diferencia fue de 2.5 cms, lo que es una diferencia muy pequeña teniendo en cuenta la naturaleza de la variable, por lo que para esta variable, al igual que para las dos anteriores, se espera que no existan diferencias entre el efecto de los tratamientos.
+~\\Analizando las desviaciones estándar y los coeficientes de variación, para las variables número de tallos y número de hojas verdes completamente expandidas, se tienen desviaciones pequeñas teniendo en cuenta que estas variables en las plantas pueden llegar a presentar una mayor variación por la naturaleza de estas; para la variable altura se tienen desviaciones un poco más altas, de cerca de 7 cms en todos los tratamientos, esto se debe a que la altura presenta un rango mucho mayor y las plantas son muy heterogéneas en este sentido.
 
 ~\\\textbf{Bloques:}
 \begin{center}
@@ -266,12 +265,15 @@ B5 & 5.7& 1.208305 & 21.19833 & 3 & 8 \\
 \hline 
 \end{tabular} 
 \end{center}
-~\\En el caso de los bloques para los promedios en Tallos observamos que siguen siendo muy similares y en general tiene coeficientes de variación altos,en general se observan resultados similares a las descriptivas para los tratamientos, en donde a priori no parece haber diferencias grandes entre los promedios y donde las variables tienen varianzas altas.
+~\\En el caso de los bloques ocurre lo mismo que para los tratamientos, en general se tienen promedios, desviaciones estándar y coeficientes de variación muy parecidos en todos los bloques para cada una de las variables de respuesta. Por lo que se podría pensar al igual que para los tratamientos, entre bloques tampoco van a haber diferencias significativas para ninguna de las variables.
 \\
 ~\\\textbf{b.}
 En este caso, se deben plantear tres modelos de bloques con submuestreo(ya que se seleccionó en varias ocasiones una planta de cada parcela en cada uno de los bloques y a esa planta se le midieron las tres variables de respuesta, se realizaron 20 submuestreos por tratamiento-bloque), uno para cada variable de respuesta (tallos, altura y hojas verdes), las variables independiente del modelo son las mismas para las tres variables de respuesta. Por ello se plantea el siguiente modelo:
 $$y_{ijk}=\mu+\tau_i+\rho_j+e_{ij}+\varepsilon_{ijk} $$ 
 $$ i=1,2,3,4 \;\;\;\; j=1,2,3,4,5 \;\;\;\; k=1,2,3,\cdots,20$$
+~\\Supuestos: $$e_{ij}\simeq N(0,\sigma_e^2)$$
+$$\varepsilon_{ijk}\simeq N(0,\sigma_\varepsilon^2)$$
+$$Cov[e_{ij},\varepsilon_{ijk}]=0 $$
 ~\\Donde:
 ~\\$y_{ijk}$ es el número de tallos de la k-ésima submuestra en el bloque j bajo la fertilización i.
 ~\\$\mu$ es la media general del número de tallos sin tener en cuenta la fertilización ni el bloque.
@@ -282,7 +284,7 @@ $$ i=1,2,3,4 \;\;\;\; j=1,2,3,4,5 \;\;\;\; k=1,2,3,\cdots,20$$
 
 ~\\Los otros dos modelos son exactamente iguales, modificando la variable de respuesta, para el modelo 2 y 3, se tiene que:
 
-$y_{ijk}$ es la altura de la k-ésima submuestra en el bloque j bajo la fertilización i.
+$y_{ijk}$ es la altura(en cms) de la k-ésima submuestra en el bloque j bajo la fertilización i.
 
 ~\\y
 
@@ -339,7 +341,7 @@ Total & 399 & 21136.9 &  &  &  & \\
 
 ~\\Al igual que para la variable número de tallos, aquí también podemos ver que a un nivel de significancia $\alpha=0.05$, no se obtuvieron diferencias significativas entre los efectos de los diferentes tratamientos(fertilización) y entre los efectos de los distintos bloques sobre la altura de las plantas. Como el p-valor correspondiente al error experimental resultó ser menor que $\alpha=0.05$ se puede decir que realizar el submuestreo ayudó a reducir el error del modelo.
 
-
+\pagebreak
 \item[3).] Hojas verdes
 
 \begin{center}
@@ -371,27 +373,28 @@ Probaremos los supuestos sobre el error para cada uno de los modelos planteados.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.36]{FigurasUV/HTA.pdf}
+  \includegraphics[scale=0.45]{FigurasUV/HTA.pdf}
 \end{figure}
 
 ~\\Para la variable Tallos, los residuales en el QQ-plot no se salen de las bandas de confianza y en el histograma no se nota un incumplimiento claro de la normalidad, esto nos indica a priori que los residuales parecen seguir una distribución normal.
 
+\pagebreak
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.36]{FigurasUV/HAL.pdf}
+  \includegraphics[scale=0.45]{FigurasUV/HAL.pdf}
 \end{figure}
 
-~\\En el caso de la Altura, el QQ-plot nos indica que a priori se cumple el supuesto sin embargo, en el histograma no parece que los residuales siguieran una distribución normal.
+~\\En el caso de la Altura, el QQ-plot nos indica que a priori se cumple el supuesto sin embargo, en el histograma pareciera que los residuales no siguen una distribución normal.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.36]{FigurasUV/HHO.pdf}
+  \includegraphics[scale=0.45]{FigurasUV/HHO.pdf}
 \end{figure}
 
 ~\\Para la variable Hojas verdes tenemos la misma situación que para la Altura, el QQ-plot indica normalidad pero el histograma no refleja esto con claridad, por ello se plantea la prueba estadística, para confirmar lo que se observa gráficamente. 
-~\\Los resultados para las pruebas estadísticas realizadas fueron:
 $$H_0:Los\; residuales\; provienen\; de\; una\; distribucion\; normal$$
 $$H_0:Los\; residuales\; no\; provienen\; de\; una\; distribucion\; normal$$
+~\\Los resultados para las pruebas estadísticas realizadas fueron:
 ~\\Tallos
 $$W = 0.97874, p-value = 0.9268$$
 
@@ -436,11 +439,11 @@ $$Standard \; Normal = 1.4152, p-value = 0.157$$
 $$Standard \; Normal = 0.90584, p-value = 0.365$$
 
 ~\\El supuesto de independencia se cumple de igual forma para todos los modelos.
-~\\Como todos los supuestos se cumplen podemos confiar en los resultado arrojados por la tabla ANOVA.
+~\\Dado que todos los supuestos se cumplen, podemos confiar en los resultado de la ANOVA y realizar su respectivo análisis.
 \end{itemize}
 
 ~\\\textbf{f.}
-Se pudo observar desde el análisis exploratorio que los promedios no presentaban diferencias entre si, tanto para los tratamientos como para los bloques esto se verifico con las tablas ANOVA, las cuales arrojaron como resultado que el tratamiento (fertilización nitrogenada) en ninguno de sus niveles presenta un efecto significativo sobre las variables de respuesta, lo que podría significar que aplicar el fertilizante o no hacerlo daría los mismos resultados en cuanto a las variables medidas. Por otra parte el diseño con submuestreo resulto ser una alternativa efectiva para reducir el error experimental.
+Se pudo observar desde el análisis exploratorio que los promedios no presentaban diferencias entre si, tanto para los tratamientos como para los bloques esto se verificó con las tablas ANOVA, las cuales arrojaron como resultado que el tratamiento (fertilización nitrogenada) en ninguno de sus niveles presenta un efecto significativo sobre las variables de respuesta, lo que podría significar que aplicar el fertilizante o no hacerlo daría los mismos resultados en cuanto a las variables medidas. Por otra parte, el diseño con submuestreo resultó ser una alternativa efectiva para reducir el error experimental.
 
 ~\\\textbf{g.}
 Para evaluar el control local del experimento nos centramos en la varianza estimada y en el coeficiente de variación
@@ -458,7 +461,7 @@ $$\sigma^2=1.5322 \;\;\; \bar{y}_{...}=5.5575 \;\; \longrightarrow  CV=\frac{\sq
 ~\\Podemos ver que para los modelos correspondientes a las variables Altura y Hojas verdes los coeficiente de variación no difieren mucho, sin embargo para la variable Tallos se observa un coeficiente de variación considerablemente alto, según esto, sumado a que es un experimento en campo y existen dificultades a la hora de controlar ciertas variables naturales y dado que las desviaciones observadas no son tan altas teniendo en cuenta el contexto del problema, podemos concluir que el control local del experimento fue aceptable.
 
 ~\\\textbf{h.}
-~\\Según las tablas ANOVA para cada uno de los modelos planteados, no se rechazo ninguna de las hipótesis lo que nos indica que no existen diferencias significativas entre los efectos de las diferentes dosis de fertilizante nitrogenado y tampoco existen diferencias entre el efecto de los bloques sobre las 3 variables de respuesta, por lo que no tiene sentido realizar contrastes para ninguno de los modelos, ya que no se van a detectar diferencias.
+~\\Según las tablas ANOVA para cada uno de los modelos planteados, no se rechazo ninguna de las hipótesis, lo que nos indica que no existen diferencias significativas entre los efectos de las diferentes dosis de fertilizante nitrogenado y tampoco existen diferencias entre el efecto de los bloques sobre las 3 variables de respuesta, por lo que no tiene sentido realizar contrastes para ninguno de los modelos, ya que no se van a detectar diferencias.
 
 ~\\\textbf{i.}
 ~\\\textbf{Para la primera hipótesis:}
@@ -513,10 +516,11 @@ $$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(89.9820036)}{5}}=\sqrt{35.992801}=5.99
 ~\\Utilizando la tabla de la beta no central con $f_1=4$ grados de libertad en el numerador y $f_2=12$ grados de libertad en el denominador, se obtiene:
 $$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
 
-~\\Las potencias de las pruebas para cada una de las hipótesis dieron altas, todas muy próximas a 1 exceptuando la altura para los tratamientos la cual fue de 0.822.
-~\\Se opto por seleccionar dichas diferencias ya que son las que contextualmente nos parecieron mas factibles a la hora de detectar si un efecto es significativo.
+~\\Las potencias de las pruebas para cada una de las hipótesis dieron altas, todas muy próximas a 1 exceptuando la de la variable altura para los tratamientos, la cual fue de 0.822.
+~\\Se opto por seleccionar dichas diferencias ya que son las que contextualmente nos parecieron mas factibles a la hora de detectar si un efecto es significativo, pero cabe aclarar que en la practica estas diferencias las establece el experto en el tema o el dueño de la investigación.
+
 ~\\\textbf{j.}
-~\\Para concluir podemos decir que las diferentes dosis de fertilizante nitrogenado no tuvieron ningún efecto sobre las variables biofísicas, ademas el bloque tampoco fue significativo por lo que la cantidad de nitrógeno en el suelo al contrario de lo que se pensaba no afectaba a la planta de caña, ademas de esto se logro comprobar que el diseño de bloques con submuestreo en este caso logra reducir en gran parte el error experimental lo que logra que podamos confiar aun mas en las decisiones que se van a tomar con los resultados encontrados.
+~\\Como conclusión final, podemos decir que las diferentes dosis de fertilizante nitrogenado no tuvieron ningún efecto sobre las variables biofísicas, además el bloque tampoco fue significativo por lo que la cantidad de nitrógeno en el suelo al contrario de lo que se pensaba, no afecta a la planta de caña, aparte de esto, se logró comprobar que el diseño de bloques con submuestreo en este caso logra reducir en gran parte el error experimental lo que conlleva a que podamos confiar aún mas en las decisiones que se van a tomar con los resultados encontrados.
 \end{itemize}
 
 \pagebreak
