@@ -179,7 +179,95 @@ Hay un área efectiva para tomar las mediciones, esto quiere decir que las planta
 
 \item[2.]
 ~\\\textbf{a.}
+~\\\textbf{Tratamientos:}
 
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Tallos & $\bar{X}$ & 	$S$ & $CV(\%)$ & $Min$ & $Max$ \\ 
+\hline 
+T1& 3.55 & 2.056 & 57.917 & 1 & 10 \\
+T2 & 3.29 & 1.9813 & 60.2245 & 1 & 9 \\
+T3 & 3.57& 1.90397 & 53.332 & 1 & 9 \\
+T4 & 3.76& 1.789525 & 47.59375 & 1 & 9 \\
+\hline 
+\end{tabular} 
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Altura& $\bar{X}$ & 	$S$ & $CV(\%)$ & $Min$ & $Max$ \\ 
+\hline 
+T1& 25.82 & 7.037041 & 27.25528 & 9 & 41 \\
+T2 & 24.04 &7.060096 &29.37056 & 9 & 41 \\
+T3 & 23.76& 7.409638 & 31.18141 & 6.5 & 48.5 \\
+T4 & 26.26& 7.238275 & 27.56493 & 11 & 43.5 \\
+\hline 
+\end{tabular} 
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Hojas verdes & $\bar{X}$ & 	$S$ & $CV(\%)$ & $Min$ & $Max$ \\ 
+\hline 
+T1& 5.67 & 1.327064 & 23.40502 & 2 & 9 \\
+T2 & 5.49 & 1.252957 & 22.82252 & 2 & 8\\
+T3 & 5.39& 1.384883 & 25.69356 & 2 & 8 \\
+T4 & 5.68& 1.207311 & 21.25548 & 2 & 8 \\
+\hline 
+\end{tabular} 
+\end{center}
+
+~\\La variable tallos y hojas tiene promedios muy parecidos,los promedios de hojas verdes son todos aproximadamente 6 y para el numero de tallos son aproximadamente 4. Para la variable altura pueden existir diferencias ya que se observan promedios "distintos".
+~\\En general los promedios para cada tratamiento en cada variable de respuesta son muy parecidos, se puede pensar a priori que no hay diferencias entre los tratamientos.
+~\\observando los CV vemos que la variable tallos es la que mayor varianza tiene, las varianzas para las otras dos variables son similares aunque Altura tiene en general un CV un poco mayor que Hojas.
+
+~\\\textbf{Bloques:}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Tallos & $\bar{X}$ & 	$S$ & $CV(\%)$ & $Min$ & $Max$ \\ 
+\hline 
+B1& 4.062 & 1.886424 & 46.43504 & 1 & 9 \\
+B2 & 3.5 & 1.890767 & 54.02192 & 1 & 10\\
+B3 & 3.10& 1.907878 & 61.54446 & 1 & 9 \\
+B4 & 3.1& 1.74356 & 56.24386 & 1 & 9 \\
+B5 & 3.95& 2.054872 & 52.02208 & 1 & 9 \\
+\hline 
+\end{tabular} 
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Altura & $\bar{X}$ & 	$S$ & $CV(\%)$ & $Min$ & $Max$ \\ 
+\hline 
+B1& 25.86 & 7.005649 & 27.08937 & 9 & 40 \\
+B2 & 24.08  & 7.258327 & 30.14725 & 6.5 & 41\\
+B3 & 24.83& 8.231126 & 33.15493 & 9 & 48 \\
+B4 & 24.43& 7.084358 & 29.00454 & 9 & 43.5 \\
+B5 & 25.66& 6.490081 & 25.2926 & 11.5 & 42.5 \\
+\hline 
+\end{tabular} 
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Hojas verdes & $\bar{X}$ & 	$S$ & $CV(\%)$ & $Min$ & $Max$ \\ 
+\hline 
+B1& 5.95 & 1.192686 & 20.04514 & 3 & 9 \\
+B2 & 5.438 & 1.456398 & 26.78432 & 2 & 8\\
+B3 & 5.55& 1.223724 & 22.04908 & 2 & 8 \\
+B4 & 5.15& 1.265899 & 24.58056 & 2 & 7 \\
+B5 & 5.7& 1.208305 & 21.19833 & 3 & 8 \\
+\hline 
+\end{tabular} 
+\end{center}
+~\\En el caso de los bloques para los promedios en Tallos observamos que siguen siendo muy similares y en general tiene coeficientes de variación altos,en general se observan resultados similares a las descriptivas para los tratamientos, en donde a priori no parece haber diferencias grandes entre los promedios y donde las variables tienen varianzas altas.
+\\
 ~\\\textbf{b.}
 En este caso, se deben plantear tres modelos de bloques con submuestreo(ya que se seleccionó en varias ocasiones una planta de cada parcela en cada uno de los bloques y a esa planta se le midieron las tres variables de respuesta, se realizaron 20 submuestreos por tratamiento-bloque), uno para cada variable de respuesta (tallos, altura y hojas verdes), las variables independiente del modelo son las mismas para las tres variables de respuesta. Por ello se plantea el siguiente modelo:
 $$y_{ijk}=\mu+\tau_i+\rho_j+e_{ij}+\varepsilon_{ijk} $$ 
@@ -352,6 +440,7 @@ $$Standard \; Normal = 0.90584, p-value = 0.365$$
 \end{itemize}
 
 ~\\\textbf{f.}
+Se pudo observar desde el análisis exploratorio que los promedios no presentaban diferencias entre si, tanto para los tratamientos como para los bloques esto se verifico con las tablas ANOVA, las cuales arrojaron como resultado que el tratamiento (fertilización nitrogenada) en ninguno de sus niveles presenta un efecto significativo sobre las variables de respuesta, lo que podría significar que aplicar el fertilizante o no hacerlo daría los mismos resultados en cuanto a las variables medidas. Por otra parte el diseño con submuestreo resulto ser una alternativa efectiva para reducir el error experimental.
 
 ~\\\textbf{g.}
 Para evaluar el control local del experimento nos centramos en la varianza estimada y en el coeficiente de variación
@@ -372,76 +461,62 @@ $$\sigma^2=1.5322 \;\;\; \bar{y}_{...}=5.5575 \;\; \longrightarrow  CV=\frac{\sq
 ~\\Según las tablas ANOVA para cada uno de los modelos planteados, no se rechazo ninguna de las hipótesis lo que nos indica que no existen diferencias significativas entre los efectos de las diferentes dosis de fertilizante nitrogenado y tampoco existen diferencias entre el efecto de los bloques sobre las 3 variables de respuesta, por lo que no tiene sentido realizar contrastes para ninguno de los modelos, ya que no se van a detectar diferencias.
 
 ~\\\textbf{i.}
-~\\\textbf{Para la primera hipótesis de la variable Tallos:}
-~\\Las diferencias en valor absoluto entre los promedios de numero de tallos:
-$$\tau_1-\tau_2=41.06-45.12=4.06$$
-
-$$\tau_1-\tau_3=41.06-54.73=13.67$$
-
-$$\tau_2-\tau_3=45.12-54.73=9.61$$
-
-
-~\\Observando las diferencias y teniendo en cuenta los contrastes, donde nos decían que los efectos sobre el rendimiento del almidón de yuca de los 3 métodos de secado eran diferentes, nos parece razonable asumir una diferencia mínima de 4 kg para decir que existen diferencias entre los tratamientos, entonces, se tienen dos formulas esenciales para calcular la potencia del experimento:
+~\\\textbf{Para la primera hipótesis:}
+~\\observando las descriptivas de los tratamientos y dado que no se encontraron diferencias significativas se opta por seleccionar una diferencia mínima acorde al contexto, para esto las diferencias mínimas en cada variables y su respectiva potencia esta dada a continuación:
 $$\hat{\lambda}=\frac{\sum\limits_{i=1}^t (\tau_i - \bar{\tau})^2 r}{2\hat{\sigma^2}} \;\;\;\; , \;\;\;\; \hat{\varPhi}=\sqrt{\frac{2\hat{\lambda}}{t}}$$
 
-$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^3 (4)^2 18}{2\cdot 4.9}=\frac{3\cdot 16\cdot 18}{2(4.9)}=88.1632$$
-$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(88.1632)}{3}}=\sqrt{58.7754}=7.66$$
+~\\Tallos
+$$Diferencia\;Minima:\;2\;Tallos$$
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^4 (2)^2 20}{2\cdot 8.704}=\frac{4\cdot 4\cdot 20}{2(8.704)}=18.382352$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(18.382352)}{4}}=\sqrt{9.191176}=3.0316952$$
+~\\Utilizando la tabla de la beta no central con $f_1=3$ grados de libertad en el numerador y $f_2=12$ grados de libertad en el denominador, se obtiene:
+$$P(Error \;\; II)=0.006 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=0.994$$
 
-~\\Utilizando la tabla de la beta no central con $f_1=2$ grados de libertad en el numerador y $f_2=51$ grados de libertad en el denominador, se obtiene:
+~\\Altura
+$$Diferencia\;Minima:\;3\;cm$$
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^4 (3)^2 20}{2\cdot 153.86}=\frac{4\cdot 9\cdot 20}{2(153.86)}=2.339789$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(2.339789)}{4}}=\sqrt{1.169894}=1.0816167$$
+~\\Utilizando la tabla de la beta no central con $f_1=3$ grados de libertad en el numerador y $f_2=12$ grados de libertad en el denominador, se obtiene:
+$$P(Error \;\; II)=0.178 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=0.822$$
+
+~\\Hojas verdes
+$$Diferencia\;Minima:\;3\;Hojas\;Verdes$$
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^4 (3)^2 20}{2\cdot 5.001}=\frac{4\cdot 9\cdot 20}{2(5.001)}=71.985602$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(71.985602)}{4}}=\sqrt{35.992801}=5.9994$$
+
+~\\Utilizando la tabla de la beta no central con $f_1=3$ grados de libertad en el numerador y $f_2=12$ grados de libertad en el denominador, se obtiene:
 $$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
 
-~\\\textbf{Para la segunda hipótesis del literal g:}
-~\\Las diferencias en valor absoluto entre los promedios de rendimiento(en Kg) del almidón de yuca de las 2 rallanderias son:
-$$\alpha_1-\alpha_2=48.38-45.57=2.81$$
+~\\\textbf{Para la segunda hipótesis:}
+~\\observando las descriptivas de los bloques y dado que no se encontraron diferencias significativas se opta por seleccionar una diferencia mínima acorde al contexto, para esto las diferencias mínimas en cada variables y su respectiva potencia esta dada a continuación:
+$$\hat{\lambda}=\frac{\sum\limits_{i=1}^t (\rho_i - \bar{\rho})^2 r}{2\hat{\sigma^2}} \;\;\;\; , \;\;\;\; \hat{\varPhi}=\sqrt{\frac{2\hat{\lambda}}{b}}$$
 
-~\\Observando las diferencias y teniendo en cuenta los contrastes, donde nos decían que no había diferencias en los efectos de las dos rallanderias sobre el rendimiento del almidón de yuca, nos parece razonable asumir una diferencia mínima de 3 kg para decir que existen diferencias entre los tratamientos, entonces:
-$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^2 (3)^2 27}{2\cdot 4.9}=\frac{2\cdot 9\cdot 27}{2(4.9)}=49.5918$$
-$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(49.5918)}{2}}=\sqrt{49.5918}=7.04$$
+~\\Tallos
+$$Diferencia\;Minima:\;2\;Tallos$$
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^5 (2)^2 20}{2\cdot 8.704}=\frac{5\cdot 4\cdot 20}{2(8.704)}=22.977941$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(22.977941)}{5}}=\sqrt{9.191176}=3.0316953$$
+~\\Utilizando la tabla de la beta no central con $f_1=4$ grados de libertad en el numerador y $f_2=12$ grados de libertad en el denominador, se obtiene:
+$$P(Error \;\; II)=0.003 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=0.997$$
 
-~\\Utilizando la tabla de la beta no central con $f_1=1$ grados de libertad en el numerador y $f_2=52$ grados de libertad en el denominador, se obtiene:
+~\\Altura
+$$Diferencia\;Minima:\;3\;cm$$
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^5 (3)^2 20}{2\cdot 153.86}=\frac{5\cdot 9\cdot 20}{2(153.86)}=2.924736$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(2.924736)}{5}}=\sqrt{11.1698947}=1.081616$$
+~\\Utilizando la tabla de la beta no central con $f_1=4$ grados de libertad en el numerador y $f_2=12$ grados de libertad en el denominador, se obtiene:
 $$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
 
-~\\\textbf{Para la tercera hipótesis del literal g:}
-~\\Las diferencias en valor absoluto entre los promedios de rendimiento(en Kg) del almidón agrio de yuca de los 3 trabajadores dentro de cada una de las 2 rallanderias son:
-$$\gamma_{1(1)}-\gamma_{2(1)}=46.06-53.68=7.62 \;\;\;\;\;\;\; \gamma_{1(2)}-\gamma_{2(2)}=43.38-50.88=7.5$$
+~\\Hojas verdes
+$$Diferencia\;Minima:\;3\;Hojas\;Verdes$$
+$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^5 (3)^2 20}{2\cdot 5.001}=\frac{5\cdot 9\cdot 20}{2(5.001)}=89.9820036$$
+$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(89.9820036)}{5}}=\sqrt{35.992801}=5.9994$$
 
-$$\gamma_{1(1)}-\gamma_{3(1)}=46.06-45.4=0.66 \;\;\;\;\;\;\; \gamma_{1(2)}-\gamma_{3(2)}=43.38-42.44=0.94$$
-
-$$\gamma_{2(1)}-\gamma_{3(1)}=53.68-45.4=8.28 \;\;\;\;\;\;\; \gamma_{2(2)}-\gamma_{3(2)}=50.88-42.44=8.44$$
-
-~\\Observando las diferencias y teniendo en cuenta los contrastes, donde nos decían que no había diferencias en los efectos de los trabajadores 1 y 3 en cada rallanderia sobre el rendimiento del almidón de yuca, nos parece razonable asumir una diferencia mínima de 7 kg para decir que existen diferencias entre los efectos de los trabajadores, entonces, para los trabajadores de la \textbf{rallanderia 1}, se tiene:
-$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^3 (7)^2 9}{2\cdot 4.9}=\frac{3\cdot 49\cdot 9}{2(4.9)}=135$$
-$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(135)}{3}}=\sqrt{90}=9.48$$
-
-~\\Utilizando la tabla de la beta no central con $f_1=2$ grados de libertad en el numerador y $f_2=51$ grados de libertad en el denominador, se obtiene:
+~\\Utilizando la tabla de la beta no central con $f_1=4$ grados de libertad en el numerador y $f_2=12$ grados de libertad en el denominador, se obtiene:
 $$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
 
-~\\Para los trabajadores de la \textbf{rallanderia 2}, como se asume la misma diferencia mínima de 7 kg, se obtienen los mismos resultados:
-
-$$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
-
-~\\Por lo tanto, como la potencia de las hipótesis para los trabajadores en las dos rallanderias es 1, podemos cocnluir que la \textbf{potencia global para la hipótesis 3 del literal g es de 1}.
-
-~\\\textbf{Para la cuarta hipótesis del literal g:}
-~\\En este caso no se mostrarán las diferencias entre los promedios de rendimiento(en Kg) del almidón agrio de yuca de la interacción entre método de secado y rallanderia, ya que se tienen un total de $\binom{6}{2}=15$ combinaciones entre pares de tratamientos, lo cual hace bastante extenso poner todas las diferencias.
-
-~\\Realizando todas las diferencias y teniendo en cuenta los resultados de la anova, donde se obtuvo que el efecto de la interacción método de secado-rallanderia no era significativo sobre el rendimiento del almidón de yuca, nos parece razonable asumir una diferencia mínima de 4 kg para decir que existen diferencias entre los efectos de las interacciones, entonces:
-$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^6 (4)^2 9}{2\cdot 4.9}=\frac{6\cdot 16\cdot 9}{2(4.9)}=88.1632$$
-$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(88.1632)}{6}}=\sqrt{29.38}=5.4210$$
-
-~\\Utilizando la tabla de la beta no central con $f_1=5$ grados de libertad en el numerador y $f_2=49$ grados de libertad en el denominador, se obtiene:
-$$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
-
-~\\\textbf{Para la quinta hipótesis del literal g:}
-~\\En este caso al igual que en el anterior, no se mostrarán las diferencias entre los promedios de rendimiento(en Kg) del almidón agrio de yuca de la interacción entre método de secado y el trabajador dentro de cada rallanderia, ya que se tienen muchas combinaciones entre pares de tratamientos, lo cual hace bastante extenso poner todas las diferencias.
-
-~\\Realizando todas las diferencias y teniendo en cuenta los resultados de la anova, donde se obtuvo que el efecto de la interacción método de secado-trabajador era significativo sobre el rendimiento del almidón de yuca, nos parece razonable asumir una diferencia mínima de 6 kg para decir que existen diferencias entre los efectos de las interacciones, entonces:
-$$\rightarrow \hat{\lambda}=\frac{\sum\limits_{i=1}^9 (6)^2 9}{2\cdot 4.9}=\frac{9\cdot 36\cdot 9}{2(4.9)}=297.5510$$
-$$\rightarrow \hat{\varPhi}=\sqrt{\frac{2(297.5510)}{9}}=\sqrt{66.12}=8.1315$$
-
-~\\Utilizando la tabla de la beta no central con $f_1=8$ grados de libertad en el numerador y $f_2=45$ grados de libertad en el denominador, se obtiene:
-$$P(Error \;\; II)=0 \;\;\;\;\; \rightarrow \;\;\;\;\; \beta=Potencia=1-P(Error \;\; II)=1$$
+~\\Las potencias de las pruebas para cada una de las hipótesis dieron altas, todas muy próximas a 1 exceptuando la altura para los tratamientos la cual fue de 0.822.
+~\\Se opto por seleccionar dichas diferencias ya que son las que contextualmente nos parecieron mas factibles a la hora de detectar si un efecto es significativo.
 ~\\\textbf{j.}
+~\\Para concluir podemos decir que las diferentes dosis de fertilizante nitrogenado no tuvieron ningún efecto sobre las variables biofísicas, ademas el bloque tampoco fue significativo por lo que la cantidad de nitrógeno en el suelo al contrario de lo que se pensaba no afectaba a la planta de caña, ademas de esto se logro comprobar que el diseño de bloques con submuestreo en este caso logra reducir en gran parte el error experimental lo que logra que podamos confiar aun mas en las decisiones que se van a tomar con los resultados encontrados.
 \end{itemize}
 
 \pagebreak
